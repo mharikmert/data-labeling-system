@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import org.apache.log4j.Logger;
 
 public class RandomMechanism extends LabelingMechanism{
 
@@ -9,7 +10,7 @@ public class RandomMechanism extends LabelingMechanism{
 
     @Override
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , long maxNumberOfLabels) {
-
+        final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
         int numberOfLabels = (int)(Math.random()*(maxNumberOfLabels-1))+1;
 
@@ -34,7 +35,7 @@ public class RandomMechanism extends LabelingMechanism{
                 // add the label to instance
                 instance.addLabelToInstance(randomLabel);
             }
-
+            logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
         }
         user.addInstanceToUser(instance);
     }
