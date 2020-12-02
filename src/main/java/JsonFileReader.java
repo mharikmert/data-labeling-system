@@ -3,10 +3,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import org.apache.log4j.Logger;
 
 //JsonFileReader class
 class JsonFileReader {
@@ -75,6 +75,7 @@ class JsonFileReader {
 
     //readUserFile method to read users type json file with a path parameter
     public ArrayList<User> readUserFile(String path){
+        final Logger logger = Logger.getLogger("UserManager");
         //create a json parser to parse objects
         JSONParser jsonParser = new JSONParser();
         //create a file reader first in try catch
@@ -94,6 +95,7 @@ class JsonFileReader {
                         (String) ((JSONObject) o).get("userName"), (String) ((JSONObject) o).get("userType"));
                 //adding users to the users
                 users.add(currentUser);
+                logger.info("userManager: created " + currentUser.getUserName() + " as " + currentUser.getUserType());
             }
             //return users arraylist
             return this.users;
