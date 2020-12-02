@@ -1,5 +1,7 @@
 import java.util.ArrayList;
-
+/*
+    Dataset Class
+ */
 public class Dataset {
 
     //Class attributes definitions
@@ -10,7 +12,7 @@ public class Dataset {
     private ArrayList<Instance> instances;
 
     //Overloaded Constructor
-    public Dataset(long id, String datasetName, String instanceType, long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances) {
+    public Dataset(long id, String datasetName,long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances) {
         this.id = id;
         this.datasetName = datasetName;
         this.maxNumberOfLabelsPerInstance = maxNumberOfLabelsPerInstance;
@@ -18,7 +20,7 @@ public class Dataset {
         this.instances = instances;
     }
 
-    //Overrided toString Method
+    //Overridden toString Method for DataSet class
     @Override
     public String toString() {
         return "Dataset{" +
