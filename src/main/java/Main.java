@@ -19,12 +19,13 @@ public class Main {
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
 
-        
-        
-        
+        Solution solution = new Solution();
+        solution.solveProblem(dataset1, users);
+
         // writing a JSON output file
         JsonFileWriter jsonfilewriter=new JsonFileWriter("output.json");
         jsonfilewriter.Export(dataset1, users);
+
     }
 
 }
