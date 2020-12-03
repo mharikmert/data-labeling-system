@@ -1,3 +1,4 @@
+// import necessary libraries
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,20 +9,24 @@ import java.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
+// JsonFileWriter class
 public class JsonFileWriter {
-	
+	// private data field
 	private String path="";
-
+    // class constructor
     public JsonFileWriter(String path){
         this.path=path;
     }
+    // export method takes dataset and users as parameters then puts the information to a json object	
     public void Export(Dataset dataset,ArrayList<User> users){
-        JSONObject details = new JSONObject();
+        
+	 // dataset part   
+	JSONObject details = new JSONObject();
         details.put("dateset id",dataset.getId());
         details.put("dateset name",dataset.getDatasetName());
         details.put("maximum number of labels per instance",dataset.getMaxNumberOfLabelsPerInstance());
         
+	 // label part
         JSONArray classLabels = new JSONArray();
         for(Label label: dataset.getLabels()){
             JSONObject classLabel=new JSONObject();
@@ -30,7 +35,7 @@ public class JsonFileWriter {
             classLabels.put(classLabel);
         }
         details.put("class labels",classLabels);
-
+        // instances part
         JSONArray instances = new JSONArray();
         for (Instance instance:dataset.getInstances()) {
             JSONObject instanceObject=new JSONObject();
@@ -42,7 +47,7 @@ public class JsonFileWriter {
         
         
 	    
-	    
+	 // writing the results of assignmets   
         JSONArray assignments = new JSONArray();
         for (Instance instance:dataset.getInstances()) {
             for(User user:users){
@@ -55,7 +60,8 @@ public class JsonFileWriter {
                         	labelIDs.put(label.getId());
                         }
                         assignmentObject.put("class label ids",labelIDs);
-                        LocalDateTime myDateObj = LocalDateTime.now();
+                        // date time operations
+			LocalDateTime myDateObj = LocalDateTime.now();
                         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy , HH:mm:ss");
                         String formattedDate = myDateObj.format(myFormatObj);
                         assignmentObject.put("date time",formattedDate);
@@ -65,7 +71,7 @@ public class JsonFileWriter {
             }
         }
         details.put("class label assignments",assignments);
-
+        // writing user information 
         JSONArray userList = new JSONArray();
         for(User user:users){
             JSONObject userJSONobject = new JSONObject();
@@ -75,7 +81,7 @@ public class JsonFileWriter {
             userList.put(userJSONobject);
         }
         details.put("users",userList);
-
+        // try-catch part
         try (FileWriter file = new FileWriter(path)) {
  
             file.write(details.toString());
