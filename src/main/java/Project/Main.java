@@ -1,30 +1,34 @@
-//import necessary libraries
+package Project;//import necessary libraries
+
+import Project.JsonIO.JsonFileReader;
+import Project.JsonIO.JsonFileWriter;
+import Project.Solution.Solution;
+
 import java.util.ArrayList;
 
 /*
-    Main class
+    com.Main class
  */
 public class Main {
     /*
-        Main method
+        com.Main method
     */
     public static void main(String[] args) {
         //create a json file reader
         JsonFileReader jsonFileReader = new JsonFileReader();
 
         //create dataset object for json files with readDatasetFile method
-        Dataset dataset1 = jsonFileReader.readDatasetFile("input_dataset1.json");
-        Dataset dataset2 = jsonFileReader.readDatasetFile("input_dataset2.json");
+        Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
 
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
 
         Solution solution = new Solution();
-        solution.solveProblem(dataset1, users);
+        solution.solveProblem(dataset, users);
 
         // writing a JSON output file
         JsonFileWriter jsonfilewriter=new JsonFileWriter("output.json");
-        jsonfilewriter.Export(dataset1, users);
+        jsonfilewriter.Export(dataset, users);
 
     }
 

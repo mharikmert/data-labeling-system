@@ -1,3 +1,7 @@
+package Project;
+
+import Project.Labeling.Label;
+
 import java.util.ArrayList;
 
 public class Instance {
@@ -24,12 +28,12 @@ public class Instance {
         this.id = id;
     }
 
-    //Get method for Instance
+    //Get method for com.Instance
     public String getInstance() {
         return instance;
     }
 
-    //Set method for Instance
+    //Set method for com.Instance
     public void setInstance(String instance) {
         this.instance = instance;
     }
@@ -45,7 +49,7 @@ public class Instance {
     }
 
     //This method is for add label to the instance
-    void addLabelToInstance(Label label){
+    public void addLabelToInstance(Label label){
         labels.add(label);
     }
 

@@ -1,15 +1,18 @@
-// import necessary libraries
+package Project.JsonIO;// import necessary libraries
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.time.LocalDateTime; 
-import java.time.format.DateTimeFormatter; 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+import Project.Instance;
+import Project.Dataset;
+import Project.Labeling.Label;
+import Project.User;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-// JsonFileWriter class
+// com.JsonIO.JsonFileWriter class
 public class JsonFileWriter {
 	// private data field
 	private String path="";
@@ -18,7 +21,7 @@ public class JsonFileWriter {
         this.path=path;
     }
     // export method takes dataset and users as parameters then puts the information to a json object	
-    public void Export(Dataset dataset,ArrayList<User> users){
+    public void Export(Dataset dataset, ArrayList<User> users){
         
 	 // dataset part   
 	JSONObject details = new JSONObject();
@@ -35,6 +38,8 @@ public class JsonFileWriter {
             classLabels.put(classLabel);
         }
         details.put("class labels",classLabels);
+
+
         // instances part
         JSONArray instances = new JSONArray();
         for (Instance instance:dataset.getInstances()) {
@@ -71,6 +76,8 @@ public class JsonFileWriter {
             }
         }
         details.put("class label assignments",assignments);
+
+
         // writing user information 
         JSONArray userList = new JSONArray();
         for(User user:users){
@@ -81,6 +88,8 @@ public class JsonFileWriter {
             userList.put(userJSONobject);
         }
         details.put("users",userList);
+
+
         // try-catch part
         try (FileWriter file = new FileWriter(path)) {
  

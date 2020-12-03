@@ -1,3 +1,8 @@
+package Project.Labeling;
+
+import Project.Instance;
+import Project.User;
+
 import java.util.ArrayList;
 
 public abstract class LabelingMechanism {

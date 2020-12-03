@@ -1,3 +1,5 @@
+package Project.Labeling;
+
 public class Label {
 
     //Class attributes definitions

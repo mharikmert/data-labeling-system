@@ -1,6 +1,10 @@
+package Project;
+
+import Project.Labeling.Label;
+
 import java.util.ArrayList;
 /*
-    Dataset Class
+    com.Dataset Class
  */
 public class Dataset {
 
@@ -23,7 +27,7 @@ public class Dataset {
     //Overridden toString Method for DataSet class
     @Override
     public String toString() {
-        return "Dataset{" +
+        return "com.Dataset{" +
                 "id=" + id +
                 ", datasetName='" + datasetName + '\'' +
                 ", maxNumberOfLabelsPerInstance=" + maxNumberOfLabelsPerInstance +
@@ -80,4 +84,5 @@ public class Dataset {
     public void setInstances(ArrayList<Instance> instances) {
         this.instances = instances;
     }
+
 }

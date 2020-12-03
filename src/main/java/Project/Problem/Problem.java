@@ -1,3 +1,9 @@
+package Project.Problem;
+
+import Project.Labeling.LabelingMechanism;
+import Project.Dataset;
+import Project.User;
+
 import java.util.ArrayList;
 
 public abstract class Problem {

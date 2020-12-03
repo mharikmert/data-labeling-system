@@ -1,4 +1,8 @@
-//import necessary libraries
+package Project.JsonIO;//import necessary libraries
+import Project.Dataset;
+import Project.Instance;
+import Project.Labeling.Label;
+import Project.User;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -8,8 +12,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
-//JsonFileReader class
-class JsonFileReader {
+//com.JsonIO.JsonFileReader class
+public class JsonFileReader {
 
     //private data fields
     private final ArrayList<Label> labels;
@@ -47,7 +51,7 @@ class JsonFileReader {
 
             //iterate through in classLabels json array
             for (Object classLabel : classLabels) {
-                //create a Label object current label and give the each label attributes for each object
+                //create a com.labeling.Label object current label and give the each label attributes for each object
                 Label currentLabel = new Label((long) ((JSONObject) classLabel).get("label id"), (String) ((JSONObject) classLabel).get("label text"));
                 //add to current label to the labels arraylist
                 labels.add(currentLabel);

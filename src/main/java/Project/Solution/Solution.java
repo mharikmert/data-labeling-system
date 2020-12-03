@@ -1,3 +1,10 @@
+package Project.Solution;
+
+import Project.Dataset;
+import Project.User;
+import Project.Problem.Problem;
+import Project.Problem.SelectedProblem;
+
 import java.util.ArrayList;
 
     public class Solution {

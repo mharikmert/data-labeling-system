@@ -1,11 +1,18 @@
+package Project.Problem;
+
+import Project.Dataset;
+import Project.Instance;
+import Project.Solution.RandomMechanism;
+import Project.User;
+
 import java.util.ArrayList;
 
-public class SelectedProblem extends Problem{
+public class SelectedProblem extends Problem {
     /*
         For the first iteration , instance of this class will be used
     */
 
-    //Solution mechanism for this class
+    //com.solution.Solution mechanism for this class
     @Override
     public void runMechanism(ArrayList<User> users, Dataset dataset) {
         // defining problem type , for now we just use randomLabeling
@@ -33,7 +40,6 @@ public class SelectedProblem extends Problem{
                     case "RandomBot":
                         // create a new randomMechanism object and awake its labeling method with the parameters which we selected
                         // the user , the instance and all labels with the numberOfLabels
-
                         super.labelingMechanism = new RandomMechanism();
                         super.labelingMechanism.labelingMechanism(selectedUser, tempInstance,
                                 dataset.getLabels(), dataset.getMaxNumberOfLabelsPerInstance());
@@ -51,8 +57,8 @@ public class SelectedProblem extends Problem{
         }
     }
 
-    // in this method , we create User array which we select the number of user and select the user or users randomly.
-    ArrayList<User> selectRandomUser(ArrayList<User> users,ArrayList<User> selectedUsers){
+    // in this method , we create com.User array which we select the number of user and select the user or users randomly.
+    ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers){
 
         int userCount = (int)(1+Math.random()*(users.size()));          // randomly select how many user will be label the instance
         int randomUserIndex ;                                           // this variable keeps the selected random user index
@@ -74,7 +80,7 @@ public class SelectedProblem extends Problem{
 
     // in this method , we check if one user added before the selectedUsers array , if user added before , return false and while
     // we find new user it works again and again
-    boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users ,int random){
+    boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users , int random){
 
         for (int i=0 ; i<selectedUsers.size() ; i++){
             if (selectedUsers.get(i).getUserID() == users.get(random).getUserID()){
@@ -83,4 +89,5 @@ public class SelectedProblem extends Problem{
         }
         return true ;
     }
+
 }

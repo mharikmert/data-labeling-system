@@ -1,7 +1,14 @@
+package Project.Solution;
+
 import java.util.ArrayList;
+
+import Project.Instance;
+import Project.Labeling.Label;
+import Project.Labeling.LabelingMechanism;
+import Project.User;
 import org.apache.log4j.Logger;
 
-public class RandomMechanism extends LabelingMechanism{
+public class RandomMechanism extends LabelingMechanism {
 
     /*
         For the first iteration , instance of this class will be used for random solution
