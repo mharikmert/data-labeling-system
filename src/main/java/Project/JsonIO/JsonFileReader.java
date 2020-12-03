@@ -110,4 +110,16 @@ public class JsonFileReader {
         //return null if any exception occurred in method body
         return null;
     }
+
+    public ArrayList<Label> getLabels() {
+        return labels;
+    }
+
+    public ArrayList<Instance> getInstances() {
+        return instances;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
 }
