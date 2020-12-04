@@ -1,4 +1,4 @@
-package Project.Labeling;
+package Project;
 
 public class Label {
 
