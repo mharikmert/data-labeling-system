@@ -12,7 +12,7 @@ public class SelectedProblem extends Problem {
         For the first iteration , instance of this class will be used
     */
 
-    //com.solution.Solution mechanism for this class
+    //Solution mechanism for this class
     @Override
     public void runMechanism(ArrayList<User> users, Dataset dataset) {
         // defining problem type , for now we just use randomLabeling
@@ -27,7 +27,6 @@ public class SelectedProblem extends Problem {
 
             // selectRandomUser() method -> select # of users randomly and add these users to selectedUsers array.
             selectedUsers = selectRandomUser(users,selectedUsers);
-
             // after select the number of users , for each user , create the copy of instance which we looking now and add this instance
             // users seperately , because when we add label for user1's instance1 , it is update the user2's instance1 , because of this
             // we create copy of instances for each user
@@ -53,8 +52,8 @@ public class SelectedProblem extends Problem {
 
             }
             selectedUsers.clear();
-
         }
+
     }
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
@@ -80,7 +79,7 @@ public class SelectedProblem extends Problem {
 
     // in this method , we check if one user added before the selectedUsers array , if user added before , return false and while
     // we find new user it works again and again
-    boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users , int random){
+    public boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users , int random){
 
         for (int i=0 ; i<selectedUsers.size() ; i++){
             if (selectedUsers.get(i).getUserID() == users.get(random).getUserID()){
