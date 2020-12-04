@@ -2,7 +2,7 @@ package Project.Problem;
 
 import Project.Dataset;
 import Project.Instance;
-import Project.Solution.RandomMechanism;
+import Project.Labeling.RandomMechanism;
 import Project.User;
 
 import java.util.ArrayList;

@@ -41,8 +41,10 @@ public class SelectedProblemTest {
         selectedUsers.add(new User(1,"test","test"));
         int testRandom = 0 ;
         SelectedProblem selectedProblem = new SelectedProblem();
-        // in userControl method , if users.get(testRandom) equals any of the user in selectedUsers array
-        // method should return false .
+        /*
+        *  in userControl method , if users.get(testRandom) equals any of the user in selectedUsers array
+        *  method should return false .
+        */
         Assert.assertFalse(selectedProblem.userControl(selectedUsers, users, testRandom));
 
     }

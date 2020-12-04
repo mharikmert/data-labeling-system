@@ -1,7 +1,7 @@
 package Project.JsonIO;//import necessary libraries
 import Project.Dataset;
 import Project.Instance;
-import Project.Labeling.Label;
+import Project.Label;
 import Project.User;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

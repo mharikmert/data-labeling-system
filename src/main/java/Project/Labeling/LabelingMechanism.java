@@ -1,6 +1,7 @@
 package Project.Labeling;
 
 import Project.Instance;
+import Project.Label;
 import Project.User;
 
 import java.util.ArrayList;

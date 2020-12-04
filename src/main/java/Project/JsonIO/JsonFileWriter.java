@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 
 import Project.Instance;
 import Project.Dataset;
-import Project.Labeling.Label;
+import Project.Label;
 import Project.User;
 import org.json.JSONArray;
 import org.json.JSONObject;
