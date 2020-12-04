@@ -44,7 +44,9 @@ public class RandomMechanism extends LabelingMechanism {
             }
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
         }
+
         user.addInstanceToUser(instance);
+        
     }
 
     public Label createRandomLabel(ArrayList<Label> labels){

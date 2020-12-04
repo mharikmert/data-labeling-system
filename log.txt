@@ -1,0 +1,30 @@
+04/12/2020 18:18:50.505 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+04/12/2020 18:18:50.507 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+04/12/2020 18:18:50.507 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+04/12/2020 18:18:50.518 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+04/12/2020 18:18:50.518 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+04/12/2020 18:18:50.518 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+04/12/2020 18:18:56.324 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+04/12/2020 18:18:56.328 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+04/12/2020 18:18:56.328 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+04/12/2020 18:18:56.336 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+04/12/2020 18:18:56.336 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+04/12/2020 18:18:56.336 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+04/12/2020 18:19:01.096 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+04/12/2020 18:19:01.097 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+04/12/2020 18:19:01.097 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+04/12/2020 18:19:01.100 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+04/12/2020 18:19:01.100 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+04/12/2020 18:19:01.101 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+04/12/2020 18:19:01.101 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+04/12/2020 18:19:01.101 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+04/12/2020 18:19:01.101 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+04/12/2020 18:19:01.101 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+04/12/2020 18:19:01.102 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+04/12/2020 18:19:01.102 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+04/12/2020 18:19:01.102 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+04/12/2020 18:19:01.102 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+04/12/2020 18:19:01.102 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:8 with class label 2:Negative instance:"şarjı hemen bitiriyor"
+04/12/2020 18:19:01.103 [InstanceTagger] INFO user id:2 RandomLabelingMechanism2 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+04/12/2020 18:19:01.103 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+04/12/2020 18:19:01.103 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 2:Negative instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"

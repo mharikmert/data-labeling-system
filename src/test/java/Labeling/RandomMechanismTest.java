@@ -2,12 +2,9 @@ package Solution;
 
 import Project.Dataset;
 import Project.JsonIO.JsonFileReader;
-import Project.Labeling.Label;
-import Project.Solution.RandomMechanism;
+import Project.Labeling.RandomMechanism;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class RandomMechanismTest {
 
