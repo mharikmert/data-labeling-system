@@ -1,10 +1,9 @@
-package Project.Solution;
+package Project.Labeling;
 
 import java.util.ArrayList;
 
 import Project.Instance;
-import Project.Labeling.Label;
-import Project.Labeling.LabelingMechanism;
+import Project.Label;
 import Project.User;
 import org.apache.log4j.Logger;
 
@@ -14,7 +13,6 @@ public class RandomMechanism extends LabelingMechanism {
         For the first iteration , instance of this class will be used for random solution
 
      */
-
     @Override
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , long maxNumberOfLabels) {
         final Logger logger = Logger.getLogger("InstanceTagger");
@@ -46,7 +44,7 @@ public class RandomMechanism extends LabelingMechanism {
         }
 
         user.addInstanceToUser(instance);
-        
+
     }
 
     public Label createRandomLabel(ArrayList<Label> labels){
