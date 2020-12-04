@@ -28,7 +28,7 @@ public class SelectedProblem extends Problem {
             // selectRandomUser() method -> select # of users randomly and add these users to selectedUsers array.
             selectedUsers = selectRandomUser(users,selectedUsers);
             // after select the number of users , for each user , create the copy of instance which we looking now and add this instance
-            // users seperately , because when we add label for user1's instance1 , it is update the user2's instance1 , because of this
+            // users separately , because when we add label for user1's instance1 , it is update the user2's instance1 , because of this
             // we create copy of instances for each user
             for (User selectedUser : selectedUsers) {
                 // create copy instance
@@ -81,9 +81,9 @@ public class SelectedProblem extends Problem {
     // we find new user it works again and again
     public boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users , int random){
 
-        for (int i=0 ; i<selectedUsers.size() ; i++){
-            if (selectedUsers.get(i).getUserID() == users.get(random).getUserID()){
-                return false ;
+        for (User selectedUser : selectedUsers) {
+            if (selectedUser.getUserID() == users.get(random).getUserID()) {
+                return false;
             }
         }
         return true ;
