@@ -47,7 +47,7 @@ public class RandomMechanism extends LabelingMechanism {
         user.addInstanceToUser(instance);
     }
 
-    Label createRandomLabel(ArrayList<Label> labels){
+    public Label createRandomLabel(ArrayList<Label> labels){
         // randomly select one label from labels array
         return labels.get((int)(Math.random()*labels.size()));
 
