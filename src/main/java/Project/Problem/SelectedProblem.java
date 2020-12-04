@@ -58,7 +58,7 @@ public class SelectedProblem extends Problem {
     }
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
-    ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers){
+    public ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers){
 
         int userCount = (int)(1+Math.random()*(users.size()));          // randomly select how many user will be label the instance
         int randomUserIndex ;                                           // this variable keeps the selected random user index
