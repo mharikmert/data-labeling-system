@@ -1,9 +1,11 @@
 package Project.JsonIO;// import necessary libraries
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.LinkedHashMap;
 
 import Project.Instance;
 import Project.Dataset;
@@ -22,13 +24,26 @@ public class JsonFileWriter {
     }
     // export method takes dataset and users as parameters then puts the information to a json object	
     public void Export(Dataset dataset, ArrayList<User> users){
-        
+
 	 // dataset part   
 	JSONObject details = new JSONObject();
+
+	//This part enable us to print everything in order
+        try{
+            Field changeMap = details.getClass().getDeclaredField("map");
+            changeMap.setAccessible(true);
+            changeMap.set(details,new LinkedHashMap<>());
+            changeMap.setAccessible(false);
+        }catch(IllegalAccessException | NoSuchFieldException e){
+            e.printStackTrace();
+        }
+
+
         details.put("dateset id",dataset.getId());
         details.put("dateset name",dataset.getDatasetName());
         details.put("maximum number of labels per instance",dataset.getMaxNumberOfLabelsPerInstance());
-        
+
+
 	 // label part
         JSONArray classLabels = new JSONArray();
         for(Label label: dataset.getLabels()){
@@ -89,19 +104,15 @@ public class JsonFileWriter {
         }
         details.put("users",userList);
 
-
         // try-catch part
         try (FileWriter file = new FileWriter(path)) {
  
-            file.write(details.toString());
+            file.write(details.toString(2));
             file.flush();
  
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-	
-	
-	
-	
+
 }
