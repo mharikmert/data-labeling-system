@@ -16,14 +16,8 @@ import org.json.JSONObject;
 
 // com.JsonIO.JsonFileWriter class
 public class JsonFileWriter {
-	// private data field
-	private String path="";
-    // class constructor
-    public JsonFileWriter(String path){
-        this.path=path;
-    }
-    // export method takes dataset and users as parameters then puts the information to a json object	
-    public void Export(Dataset dataset, ArrayList<User> users){
+    // export method takes dataset and users as parameters then puts the information to a json object
+    public void export(Dataset dataset, ArrayList<User> users, String path){
 
 	 // dataset part   
 	JSONObject details = new JSONObject();
@@ -67,7 +61,7 @@ public class JsonFileWriter {
         
         
 	    
-	 // writing the results of assignmets   
+	 // writing the results of assignments
         JSONArray assignments = new JSONArray();
         for (Instance instance:dataset.getInstances()) {
             for(User user:users){
