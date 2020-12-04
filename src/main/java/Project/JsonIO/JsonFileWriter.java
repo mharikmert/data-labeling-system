@@ -16,43 +16,41 @@ import org.json.JSONObject;
 
 // com.JsonIO.JsonFileWriter class
 public class JsonFileWriter {
+    private JSONObject newJSONObject(){
+	JSONObject newjsonobject = new JSONObject();
+	//This part enable us to print everything in order
+	try{
+	    Field changeMap = newjsonobject.getClass().getDeclaredField("map");
+	    changeMap.setAccessible(true);
+	    changeMap.set(newjsonobject,new LinkedHashMap<>());
+	    changeMap.setAccessible(false);
+	}catch(IllegalAccessException | NoSuchFieldException e){
+	    e.printStackTrace();
+        }
+        return newjsonobject;
+    }
     // export method takes dataset and users as parameters then puts the information to a json object
     public void export(Dataset dataset, ArrayList<User> users, String path){
-
 	 // dataset part   
-	JSONObject details = new JSONObject();
-
-	//This part enable us to print everything in order
-        try{
-            Field changeMap = details.getClass().getDeclaredField("map");
-            changeMap.setAccessible(true);
-            changeMap.set(details,new LinkedHashMap<>());
-            changeMap.setAccessible(false);
-        }catch(IllegalAccessException | NoSuchFieldException e){
-            e.printStackTrace();
-        }
-
-
+	JSONObject details = newJSONObject();
         details.put("dateset id",dataset.getId());
         details.put("dateset name",dataset.getDatasetName());
         details.put("maximum number of labels per instance",dataset.getMaxNumberOfLabelsPerInstance());
 
-
 	 // label part
         JSONArray classLabels = new JSONArray();
         for(Label label: dataset.getLabels()){
-            JSONObject classLabel=new JSONObject();
+            JSONObject classLabel=newJSONObject();
             classLabel.put("label id",label.getId());
             classLabel.put("label text",label.getText());
             classLabels.put(classLabel);
         }
         details.put("class labels",classLabels);
 
-
         // instances part
         JSONArray instances = new JSONArray();
         for (Instance instance:dataset.getInstances()) {
-            JSONObject instanceObject=new JSONObject();
+            JSONObject instanceObject=newJSONObject();
             instanceObject.put("id",instance.getId());
             instanceObject.put("instance",instance.getInstance());
             instances.put(instanceObject);
@@ -67,7 +65,7 @@ public class JsonFileWriter {
             for(User user:users){
                 for (Instance usr_inst:user.getInstances()){
                     if (instance.getId()==usr_inst.getId()){
-                        JSONObject assignmentObject=new JSONObject();
+                        JSONObject assignmentObject=newJSONObject();
                         assignmentObject.put("instance id",instance.getId());
                         JSONArray labelIDs = new JSONArray();
                         for(Label label:usr_inst.getLabels()) {
@@ -91,7 +89,7 @@ public class JsonFileWriter {
         // writing user information 
         JSONArray userList = new JSONArray();
         for(User user:users){
-            JSONObject userJSONobject = new JSONObject();
+            JSONObject userJSONobject = newJSONObject();
             userJSONobject.put("user id",user.getUserID());
             userJSONobject.put("user name",user.getUserName());
             userJSONobject.put("user type",user.getUserType());
