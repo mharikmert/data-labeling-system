@@ -80,6 +80,7 @@ public class JsonFileWriter {
                         	labelIDs.put(label.getId());
                         }
                         assignmentObject.put("class label ids",labelIDs);
+                        assignmentObject.put("user id",user.getUserID());
                         // date time operations
 			LocalDateTime myDateObj = LocalDateTime.now();
                         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy , HH:mm:ss");
