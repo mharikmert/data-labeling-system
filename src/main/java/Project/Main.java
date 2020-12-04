@@ -23,8 +23,7 @@ public class Main {
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
 
-        Solution solution = new Solution();
-        solution.solveProblem(dataset, users);
+        Solution.getSolution().solveProblem(dataset, users);
 
         // writing a JSON output file
         JsonFileWriter jsonfilewriter=new JsonFileWriter();
