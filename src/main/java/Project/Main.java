@@ -27,8 +27,8 @@ public class Main {
         solution.solveProblem(dataset, users);
 
         // writing a JSON output file
-        JsonFileWriter jsonfilewriter=new JsonFileWriter("output.json");
-        jsonfilewriter.Export(dataset, users);
+        JsonFileWriter jsonfilewriter=new JsonFileWriter();
+        jsonfilewriter.export(dataset, users, "output_json");
 
     }
 
