@@ -1,5 +1,6 @@
 package Project.JsonIO;//import necessary libraries
 import Project.Dataset;
+import Project.Exception.InputValidationException;
 import Project.Instance;
 import Project.Label;
 import Project.User;
@@ -56,6 +57,10 @@ public class JsonFileReader {
                 //add to current label to the labels arraylist
                 labels.add(currentLabel);
             }
+
+            if (labels.size()<maxNumberOfLabelsPerInstance)
+                throw new InputValidationException() ;
+
             //create a json array to hold instances in it
             JSONArray classInstances = (JSONArray) jsonObject.get("instances");
             //iterate through in instances
@@ -71,6 +76,8 @@ public class JsonFileReader {
         //catch io or parse exception
         } catch (IOException | ParseException e) {
             e.printStackTrace();
+        } catch (InputValidationException exception) {
+            exception.InputValidationExceptionMessage();
         }
         //return null if any exception occurred in method body
         return null;
@@ -122,4 +129,5 @@ public class JsonFileReader {
     public ArrayList<User> getUsers() {
         return users;
     }
+
 }
