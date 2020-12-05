@@ -4,8 +4,7 @@
 "maximum number of labels per instance":10,
 "class labels":[ 
 {"label id":1,"label text":"bayi "}, 
-{"label id":2,"label text":"numara "}, 
-{"label id":3,"label text":"hat "}, 
+{"label id":2,"label text":"numara "},
 {"label id":3,"label text":"işlem"}, 
 {"label id":4,"label text":"müşteri"}, 
 {"label id":5,"label text":"bilgi "}, 
