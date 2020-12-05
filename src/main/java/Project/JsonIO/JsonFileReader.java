@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
-//com.JsonIO.JsonFileReader class
+//JsonIO.JsonFileReader class
 public class JsonFileReader {
 
     //private data fields

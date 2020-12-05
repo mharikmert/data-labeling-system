@@ -14,10 +14,11 @@ import Project.User;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-// com.JsonIO.JsonFileWriter class
+//JsonFileWriter class
 public class JsonFileWriter {
     private JSONObject newJSONObject(){
 	JSONObject newjsonobject = new JSONObject();
+
 	//This part enable us to print everything in order
 	try{
 	    Field changeMap = newjsonobject.getClass().getDeclaredField("map");
@@ -33,7 +34,7 @@ public class JsonFileWriter {
     public void export(Dataset dataset, ArrayList<User> users, String path){
 	 // dataset part   
 	JSONObject details = newJSONObject();
-        details.put("dateset id",dataset.getId());
+        details.put("dataset id",dataset.getId());
         details.put("dateset name",dataset.getDatasetName());
         details.put("maximum number of labels per instance",dataset.getMaxNumberOfLabelsPerInstance());
 

@@ -1,9 +1,8 @@
 package Project;
 
 import java.util.ArrayList;
-/*
-    com.Dataset Class
- */
+
+
 public class Dataset {
 
     //Class attributes definitions
@@ -25,7 +24,7 @@ public class Dataset {
     //Overridden toString Method for DataSet class
     @Override
     public String toString() {
-        return "com.Dataset{" +
+        return "Dataset{" +
                 "id=" + id +
                 ", datasetName='" + datasetName + '\'' +
                 ", maxNumberOfLabelsPerInstance=" + maxNumberOfLabelsPerInstance +
