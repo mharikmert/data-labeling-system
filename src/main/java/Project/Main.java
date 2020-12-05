@@ -15,7 +15,7 @@ public class Main {
         JsonFileReader jsonFileReader = new JsonFileReader();
 
         //create dataset object for json files with readDatasetFile method
-        Dataset dataset = jsonFileReader.readDatasetFile("input_dataset2.json");
+        Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
 
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
