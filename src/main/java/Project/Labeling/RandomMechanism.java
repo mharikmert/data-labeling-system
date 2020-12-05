@@ -17,8 +17,7 @@ public class RandomMechanism extends LabelingMechanism {
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , long maxNumberOfLabels) {
         final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
-        int numberOfLabels = (int)(Math.random()*(maxNumberOfLabels-1))+1;
-
+        int numberOfLabels = (int)(Math.random()*(maxNumberOfLabels))+1;
         // in this for loop , we select the labels
         for (int i=0 ; i<numberOfLabels ; i++){
             // select random label with createRandomLabel method
@@ -34,7 +33,8 @@ public class RandomMechanism extends LabelingMechanism {
                     // this instance , don't add same label again
                     while (instance.getLabels().get(j).getId() == randomLabel.getId()){
                         // create new label
-                        randomLabel = createRandomLabel(labels) ;
+                        randomLabel = createRandomLabel(labels);
+                        j=0 ;
                     }
                 }
                 // add the label to instance
