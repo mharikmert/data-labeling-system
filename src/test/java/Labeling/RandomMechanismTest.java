@@ -17,7 +17,7 @@ public class RandomMechanismTest {
     JsonFileReader jsonFileReader = new JsonFileReader();
     Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
     RandomMechanism randomMechanism = new RandomMechanism();
-
+/*
     @Test
     public void testLabelingMechanism(){
 
@@ -25,7 +25,7 @@ public class RandomMechanismTest {
          *   After this method , the parameter instance must be added into user's 'instances' and
          *   one of the label in labels array (in this test we just have 1 label in labels array) ,
          *   must be added into instance's labels array.
-         * */
+         *
 
         User user = new User(1,"test","test user");
         Instance instance = new Instance(1,"test instance");
@@ -44,10 +44,10 @@ public class RandomMechanismTest {
         /*
          * After running this method , createRandomLabel method should return not null value
          *
-         * */
+         *
 
         Assert.assertNotNull(randomMechanism.createRandomLabel(dataset.getLabels()));
 
     }
-
+*/
 }
