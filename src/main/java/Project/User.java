@@ -8,13 +8,15 @@ public class User {
     private long userID;
     private String userName;
     private String userType;
+    private double consistenctCheckProbability;
     private ArrayList<Instance> instances ;
 
     //Overloaded Constructor
-    public User(long userID, String userName, String userType) {
+    public User(long userID, String userName, String userType, double consistenctCheckProbability) {
         this.userID = userID;
         this.userName = userName;
         this.userType = userType;
+        this.consistenctCheckProbability = consistenctCheckProbability ;
         this.instances = new ArrayList<>();
     }
 
@@ -71,4 +73,22 @@ public class User {
         }
     }
 
+    public double getConsistenctCheckProbability() {
+        return consistenctCheckProbability;
+    }
+
+    public void setConsistenctCheckProbability(double consistenctCheckProbability) {
+        this.consistenctCheckProbability = consistenctCheckProbability;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", userName='" + userName + '\'' +
+                ", userType='" + userType + '\'' +
+                ", consistenctCheckProbability=" + consistenctCheckProbability +
+                ", instances=" + instances +
+                '}';
+    }
 }
