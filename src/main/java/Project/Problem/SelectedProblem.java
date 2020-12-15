@@ -6,6 +6,7 @@ import Project.Labeling.RandomMechanism;
 import Project.User;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class SelectedProblem extends Problem {
     /*
@@ -21,60 +22,58 @@ public class SelectedProblem extends Problem {
         // for each instance , users labels the instances different.
 
         ArrayList<User> selectedUsers = new ArrayList<>();
+        selectedUsers = selectRandomUser(users,selectedUsers,dataset.getNumberOfUser());    // select users randomly
+        selectedUsers.sort(new Comparator<User>() {             // sort the list
+            @Override
+            public int compare(User o1, User o2) {
+                return Long.compare(o1.getUserID(), o2.getUserID());
+            }
+        });
+        dataset.setAssignedUsers(selectedUsers);                // write users to dataset
 
-        // this for loop traverse the instances one by one .
-        for(int i=0 ; i<dataset.getInstances().size() ; i++){
+        RandomMechanism randomMechanism = new RandomMechanism();
+        for(User currentUser : selectedUsers){
 
-            // selectRandomUser() method -> select # of users randomly and add these users to selectedUsers array.
-            selectedUsers = selectRandomUser(users,selectedUsers);
-            // after select the number of users , for each user , create the copy of instance which we looking now and add this instance
-            // users separately , because when we add label for user1's instance1 , it is update the user2's instance1 , because of this
-            // we create copy of instances for each user
-            for (User selectedUser : selectedUsers) {
-                // create copy instance
-                Instance tempInstance = new Instance(dataset.getInstances().get(i).getId(),dataset.getInstances().get(i).getInstance());
-                // in this switch case statement , we look the userType and run its labelingMechanism , for 1st iteration we only
-                // have randomLabeling
-                switch (selectedUser.getUserType()) {
-                    case "RandomBot":
-                        // create a new randomMechanism object and awake its labeling method with the parameters which we selected
-                        // the user , the instance and all labels with the numberOfLabels
-                        super.labelingMechanism = new RandomMechanism();
-                        super.labelingMechanism.labelingMechanism(selectedUser, tempInstance,
-                                dataset.getLabels(), dataset.getMaxNumberOfLabelsPerInstance());
-                        break;
-                    case "MachineLearningBot":
-                        // System.out.println("We dont have this");
-                        break;
-                    default:
-                        break;
+            for(Instance currentInstance : dataset.getInstances()){
+
+                // yüzde 10 ihtimalle öncekilerden alacak
+                double consistencyCheckRandom = (int)(Math.random()*100);
+                double consistencyCheckProbability = currentUser.getConsistenctCheckProbability()*100;
+                if (consistencyCheckRandom < consistencyCheckProbability && currentUser.getInstances().size()!=0){
+                    int previousSelectRandom = (int)(Math.random()*(currentUser.getInstances().size()));
+                    Instance copyInstance = new Instance(currentUser.getInstances().get(previousSelectRandom).getId(),
+                                                         currentUser.getInstances().get(previousSelectRandom).getInstance());
+                    randomMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset.getMaxNumberOfLabelsPerInstance());
+                }
+                // yüzde 60 sıradakini ekleyecek
+                int nextCheckRandom = (int)(Math.random()*100);
+                if (nextCheckRandom < 60){
+                    Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
+                    randomMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset.getMaxNumberOfLabelsPerInstance());
                 }
 
             }
-            selectedUsers.clear();
         }
 
     }
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
-    public ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers){
+    public ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers,long numberofuser){
 
-        int userCount = (int)(1+Math.random()*(users.size()));          // randomly select how many user will be label the instance
-        int randomUserIndex ;                                           // this variable keeps the selected random user index
-        // in this for loop , users will be selected
-        for(int u=0 ; u<userCount ; u++){
-            randomUserIndex = (int)(Math.random()*(users.size()));      // select the user index randomly between 0 and #of user
-            if(!users.get(randomUserIndex).getUserType().equals("RandomBot")){
-                randomUserIndex = (int)(Math.random()*(users.size()));
-            }
-            // in this while statement , if there is no user in selectedUsers array , we don't need to control the user
-            // if it is added before or not , add directly , after adding first user .
-            while (!userControl(selectedUsers,users,randomUserIndex) && selectedUsers.size()!=0){
-                randomUserIndex = (int)(Math.random()*(users.size()));
+        for(int i=0 ; i<9 ; i++){
+
+            int randomUserIndex = (int)(Math.random()*users.size());
+            for (int j=0 ; j<selectedUsers.size() ; j++){
+                while (!userControl(selectedUsers,users,randomUserIndex) || !users.get(randomUserIndex).getUserType().equals("RandomBot")){
+                    randomUserIndex = (int)(Math.random()*users.size());
+                    j=0;
+                }
             }
             selectedUsers.add(users.get(randomUserIndex));
         }
+
         return selectedUsers ;
+
     }
 
     // in this method , we check if one user added before the selectedUsers array , if user added before , return false and while
