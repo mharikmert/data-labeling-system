@@ -11,8 +11,8 @@ public class RandomMechanism extends LabelingMechanism {
 
     /*
         For the first iteration , instance of this class will be used for random solution
+    i*/
 
-     */
     @Override
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , long maxNumberOfLabels) {
         final Logger logger = Logger.getLogger("InstanceTagger");
