@@ -38,4 +38,5 @@ import java.util.ArrayList;
                     System.out.println("Undetermined problem type !");
             }
         }
+
 }
