@@ -8,17 +8,20 @@ public class Dataset {
     //Class attributes definitions
     private long id;
     private String datasetName;
+    private long numberOfUser;
     private long maxNumberOfLabelsPerInstance;
     private ArrayList<Label> labels;
     private ArrayList<Instance> instances;
+    private ArrayList<User> assignedUsers;
 
     //Overloaded Constructor
-    public Dataset(long id, String datasetName,long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances) {
+    public Dataset(long id, String datasetName,long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances,long numberOfUser) {
         this.id = id;
         this.datasetName = datasetName;
         this.maxNumberOfLabelsPerInstance = maxNumberOfLabelsPerInstance;
         this.labels = labels;
         this.instances = instances;
+        this.numberOfUser = numberOfUser ;
     }
 
     //Overridden toString Method for DataSet class
@@ -80,6 +83,22 @@ public class Dataset {
     //Set method for instances
     public void setInstances(ArrayList<Instance> instances) {
         this.instances = instances;
+    }
+
+    public long getNumberOfUser() {
+        return numberOfUser;
+    }
+
+    public void setNumberOfUser(long numberOfUser) {
+        this.numberOfUser = numberOfUser;
+    }
+
+    public ArrayList<User> getAssignedUsers() {
+        return assignedUsers;
+    }
+
+    public void setAssignedUsers(ArrayList<User> assignedUsers) {
+        this.assignedUsers = assignedUsers;
     }
 
 }
