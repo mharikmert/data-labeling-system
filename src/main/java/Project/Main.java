@@ -15,10 +15,16 @@ public class Main {
         JsonFileReader jsonFileReader = new JsonFileReader();
 
         //create dataset object for json files with readDatasetFile method
-        Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
+
+        String getPath = jsonFileReader.getDatasetPath("config.json");
+        if(getPath.equals("Path not found")){
+            System.err.println("Path not found");
+        }
+
+        Dataset dataset = jsonFileReader.readDatasetFile(getPath);
 
         //create a users arrayList to hold inside users in json file
-        ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
+        ArrayList<User> users = jsonFileReader.readUserFile("config.json");
 
         //get solution with solve problem method
         Solution.getSolution().solveProblem(dataset, users);
@@ -26,7 +32,6 @@ public class Main {
         // writing a JSON output file
         JsonFileWriter jsonfilewriter=new JsonFileWriter();
         jsonfilewriter.export(dataset, users, "output.json");
-
 
     }
 
