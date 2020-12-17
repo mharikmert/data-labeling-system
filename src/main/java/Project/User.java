@@ -9,7 +9,7 @@ public class User {
     private String userName;
     private String userType;
     private double consistenctCheckProbability;
-    private ArrayList<Instance> instances ;
+    private ArrayList<Dataset> datasets;
 
     //Overloaded Constructor
     public User(long userID, String userName, String userType, double consistenctCheckProbability) {
@@ -17,7 +17,7 @@ public class User {
         this.userName = userName;
         this.userType = userType;
         this.consistenctCheckProbability = consistenctCheckProbability ;
-        this.instances = new ArrayList<>();
+        this.datasets = new ArrayList<>();
     }
 
     //Get method for ID
@@ -50,27 +50,52 @@ public class User {
         this.userType = userType;
     }
 
+    public ArrayList<Dataset> getDatasets(){
+        return datasets;
+    }
+    public void assignDataset(Dataset dataset){
+        Dataset newDataset;
+        newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>());
+        datasets.add(newDataset);
+    }
+    public Dataset assignedDataset(Dataset dataset){
+        for(Dataset d:datasets)
+            if(d.getId()==dataset.getId()){
+                return d;
+        }
+        return null;
+    }
+
     //Get method for Instances
-    public ArrayList<Instance> getInstances() {
-        return instances;
+    public ArrayList<Instance> getInstances(Dataset dataset) {
+        for (Dataset d:datasets)
+            if (dataset.getId()==d.getId())
+                return d.getInstances();
+        return null;
     }
 
     //Set method for Instances
-    public void setInstances(ArrayList<Instance> instances) {
-        this.instances = instances;
+    public void setInstances(Dataset dataset,ArrayList<Instance> instances) {
+        for(Dataset d:datasets)
+            if(dataset.getId()==d.getId())
+                d.setInstances(instances);
     }
 
     //This method is for to add instance to the user
-    public void addInstanceToUser(Instance instance){
-        instances.add(instance);
+    //This method is for to add instance to the user
+    public void addInstanceToUser(Dataset dataset,Instance instance){
+        for(Dataset d:datasets)
+            if(dataset.getId()==d.getId())
+                d.getInstances().add(instance);
     }
 
     //This method to print the instances of current user
     public void writeInstances(){
-        for(int i=0 ; i<instances.size() ; i++){
-            System.out.println("instance id ->"+instances.get(i).getId());
-            instances.get(i).writeLabels();
-        }
+        for(Dataset d:datasets)
+            for(Instance instance:d.getInstances()){
+                System.out.println("instance id ->"+instance.getId());
+                instance.writeLabels();
+            }
     }
 
     public double getConsistenctCheckProbability() {
@@ -88,7 +113,7 @@ public class User {
                 ", userName='" + userName + '\'' +
                 ", userType='" + userType + '\'' +
                 ", consistenctCheckProbability=" + consistenctCheckProbability +
-                ", instances=" + instances +
+                ", instances=" + 
                 '}';
     }
 }
