@@ -22,7 +22,7 @@ public class JsonFileReader {
     private final ArrayList<Label> labels;
     private final ArrayList<Instance> instances;
     private final ArrayList<User> users;
-    private long numberofuser ;
+    private final ArrayList<Integer> userIDs ;
 
     //class constructor
     public JsonFileReader() {
@@ -30,12 +30,12 @@ public class JsonFileReader {
         labels = new ArrayList<>();
         instances = new ArrayList<>();
         users = new ArrayList<>();
+        userIDs = new ArrayList<>();
     }
 
 
     public String getDatasetPath(String path){
 
-        String datasetPath = "";
 
         JSONParser jsonParser = new JSONParser();
 
@@ -53,8 +53,12 @@ public class JsonFileReader {
 
             for (Object o : datasetsJSON) {
                 //create a current user in the same manner
-                numberofuser = (long) ((JSONObject) o).get("number of user");
+
                 if((long) ((JSONObject) o).get("dataset id") == currentDatasetId){
+                    JSONArray usersJson = (JSONArray)((JSONObject) o).get("users");
+                    for (Object a: usersJson) {
+                        userIDs.add(Integer.valueOf((a.toString())));
+                    }
                     return (String) ((JSONObject) o).get("path");
                 }
             }
@@ -109,7 +113,7 @@ public class JsonFileReader {
                 instances.add(currentInstance);
             }
             //return a dataset object with attributes in json file
-            return new Dataset(id, datasetName,maxNumberOfLabelsPerInstance, labels, instances, numberofuser);
+            return new Dataset(id, datasetName,maxNumberOfLabelsPerInstance, labels, instances,userIDs);
 
         //catch io or parse exception
         } catch (IOException | ParseException e) {
@@ -120,6 +124,8 @@ public class JsonFileReader {
         //return null if any exception occurred in method body
         return null;
     }
+
+
 
 
     //readUserFile method to read users type json file with a path parameter

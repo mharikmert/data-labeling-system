@@ -22,7 +22,7 @@ public class SelectedProblem extends Problem {
         // for each instance , users labels the instances different.
 
         ArrayList<User> selectedUsers = new ArrayList<>();
-        selectedUsers = selectRandomUser(users,selectedUsers,dataset.getNumberOfUser());    // select users randomly
+        selectedUsers = selectUsers(users,selectedUsers,dataset.getAssignedUserIDs());    // select users randomly
         selectedUsers.sort(new Comparator<User>() {             // sort the list
             @Override
             public int compare(User o1, User o2) {
@@ -58,19 +58,17 @@ public class SelectedProblem extends Problem {
     }
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
-    public ArrayList<User> selectRandomUser(ArrayList<User> users, ArrayList<User> selectedUsers,long numberofuser){
+    public ArrayList<User> selectUsers(ArrayList<User> users, ArrayList<User> selectedUsers,ArrayList<Integer> userIDs){
 
-        for(int i=0 ; i<9 ; i++){
-
-            int randomUserIndex = (int)(Math.random()*users.size());
-            for (int j=0 ; j<selectedUsers.size() ; j++){
-                while (!userControl(selectedUsers,users,randomUserIndex) || !users.get(randomUserIndex).getUserType().equals("RandomBot")){
-                    randomUserIndex = (int)(Math.random()*users.size());
-                    j=0;
+        for (Integer id: userIDs) {
+            for (User user: users) {
+                if(user.getUserID() == id && userControl(user)){
+                    selectedUsers.add(user);
                 }
             }
-            selectedUsers.add(users.get(randomUserIndex));
+
         }
+
 
         return selectedUsers ;
 
@@ -78,14 +76,10 @@ public class SelectedProblem extends Problem {
 
     // in this method , we check if one user added before the selectedUsers array , if user added before , return false and while
     // we find new user it works again and again
-    public boolean userControl(ArrayList<User> selectedUsers , ArrayList<User> users , int random){
+    public boolean userControl(User user){
 
-        for (User selectedUser : selectedUsers) {
-            if (selectedUser.getUserID() == users.get(random).getUserID()) {
-                return false;
-            }
-        }
-        return true ;
+        return user.getUserType().equals("RandomBot") ;
+
     }
 
 }
