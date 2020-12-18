@@ -46,23 +46,21 @@ public class UserMetrics {
     //         } catch (ClassCastException e) { }
     //     return ((float)totalNumberOftheSame/(float)numberOfInstancesLabeled(user))*100;
     // }
-    public static void test(User user){
-        System.out.println(FrequencyListOfInstances(user.getDatasets().get(0),user));
-    }
+
 
     protected static HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
         HashMap<Object,Object> list=new HashMap<>();
         if(!user.getDatasets().contains(userDataset))
             return null;
         for(Instance instance:user.getInstances(userDataset))
-            {
-                HashMap<Object,Object> subList=new HashMap<>();
-                for(Label label:instance.getLabels()){
-                    if(!subList.containsKey(label.getId()))subList.put(label.getId(), 1);
-                    else subList.replace(label.getId(),(int)subList.get(label.getId())+1);
-                }
-                list.put(instance.getId(), subList);
+        {
+            HashMap<Object,Object> subList=new HashMap<>();
+            for(Label label:instance.getLabels()){
+                if(!subList.containsKey(label.getId()))subList.put(label.getId(), 1);
+                else subList.replace(label.getId(),(int)subList.get(label.getId())+1);
             }
+            list.put(instance.getId(), subList);
+        }
         return list;
     }
 

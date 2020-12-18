@@ -9,7 +9,7 @@ public class User {
     private String userName;
     private String userType;
     private double consistenctCheckProbability;
-    private ArrayList<Dataset> datasets;
+    private ArrayList<Dataset> datasets ;
 
     //Overloaded Constructor
     public User(long userID, String userName, String userType, double consistenctCheckProbability) {
@@ -50,22 +50,6 @@ public class User {
         this.userType = userType;
     }
 
-    public ArrayList<Dataset> getDatasets(){
-        return datasets;
-    }
-    public void assignDataset(Dataset dataset){
-        Dataset newDataset;
-        newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>());
-        datasets.add(newDataset);
-    }
-    public Dataset assignedDataset(Dataset dataset){
-        for(Dataset d:datasets)
-            if(d.getId()==dataset.getId()){
-                return d;
-        }
-        return null;
-    }
-
     //Get method for Instances
     public ArrayList<Instance> getInstances(Dataset dataset) {
         for (Dataset d:datasets)
@@ -82,8 +66,7 @@ public class User {
     }
 
     //This method is for to add instance to the user
-    //This method is for to add instance to the user
-    public void addInstanceToUser(Dataset dataset,Instance instance){
+    public void addInstanceToUser(Dataset dataset , Instance instance){
         for(Dataset d:datasets)
             if(dataset.getId()==d.getId())
                 d.getInstances().add(instance);
@@ -95,7 +78,24 @@ public class User {
             for(Instance instance:d.getInstances()){
                 System.out.println("instance id ->"+instance.getId());
                 instance.writeLabels();
+        }
+    }
+
+    public ArrayList<Dataset> getDatasets() {
+        return datasets;
+    }
+
+    public void assignDataset(Dataset dataset){
+        Dataset newDataset;
+        newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>(), dataset.getAssignedUserIDs());
+        datasets.add(newDataset);
+    }
+    public Dataset assignedDataset(Dataset dataset){
+        for(Dataset d:datasets)
+            if(d.getId()==dataset.getId()){
+                return d;
             }
+        return null;
     }
 
     public double getConsistenctCheckProbability() {
@@ -106,14 +106,5 @@ public class User {
         this.consistenctCheckProbability = consistenctCheckProbability;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userID=" + userID +
-                ", userName='" + userName + '\'' +
-                ", userType='" + userType + '\'' +
-                ", consistenctCheckProbability=" + consistenctCheckProbability +
-                ", instances=" + 
-                '}';
-    }
+
 }

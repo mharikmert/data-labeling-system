@@ -19,7 +19,7 @@ public class DatasetMetrics {
         */
         HashMap<Object,Object> list=new HashMap<>();
         for(User user:assignedUsers(dataset,users))
-           for(Dataset userDataset:user.getDatasets())
+            for(Dataset userDataset:user.getDatasets())
                 if(userDataset.getId()==dataset.getId()){
                     list.put("user"+user.getUserID(),((float)UserMetrics.FrequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");
                     break;}
@@ -37,7 +37,7 @@ public class DatasetMetrics {
         }
         return userList;
     }
-    
+
     protected static HashSet<Object> LabeledInstanceList(Dataset dataset,ArrayList<User>users){
         HashSet<Object> list = new HashSet<>();
         for(User user:users)

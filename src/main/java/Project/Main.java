@@ -2,6 +2,7 @@ package Project;//import necessary libraries
 
 import Project.JsonIO.JsonFileReader;
 import Project.JsonIO.JsonFileWriter;
+import Project.Metrics.UserMetrics;
 import Project.Solution.Solution;
 
 import java.io.File;
@@ -26,13 +27,15 @@ public class Main {
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("config.json");
 
+        for (User u : users) {
+            u.assignDataset(dataset);
+        }
+
+
         //get solution with solve problem method
         Solution.getSolution().solveProblem(dataset, users);
 
-        // writing a JSON output file
-        JsonFileWriter jsonfilewriter=new JsonFileWriter();
-        jsonfilewriter.export(dataset, users, "output.json");
-
+        
     }
 
 }

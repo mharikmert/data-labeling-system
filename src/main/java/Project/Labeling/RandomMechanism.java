@@ -2,6 +2,7 @@ package Project.Labeling;
 
 import java.util.ArrayList;
 
+import Project.Dataset;
 import Project.Instance;
 import Project.Label;
 import Project.User;
@@ -14,14 +15,14 @@ public class RandomMechanism extends LabelingMechanism {
     i*/
 
     @Override
-    public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , long maxNumberOfLabels) {
+    public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset) {
         final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
-        int numberOfLabels = (int)(Math.random()*(maxNumberOfLabels))+1;
+        int numberOfLabels = (int)(Math.random()*(dataset.getMaxNumberOfLabelsPerInstance()))+1;
         // in this for loop , we select the labels
         for (int i=0 ; i<numberOfLabels ; i++){
             // select random label with createRandomLabel method
-            Label randomLabel = createRandomLabel(labels);
+            Label randomLabel = createRandomLabel(dataset.getLabels());
             // if the instance has no label , add the label directly , we don't need to control.
             if (instance.getLabels().size() == 0){
                 instance.addLabelToInstance(randomLabel);
@@ -33,17 +34,18 @@ public class RandomMechanism extends LabelingMechanism {
                     // this instance , don't add same label again
                     while (instance.getLabels().get(j).getId() == randomLabel.getId()){
                         // create new label
-                        randomLabel = createRandomLabel(labels);
+                        randomLabel = createRandomLabel(dataset.getLabels());
                         j=0 ;
                     }
                 }
                 // add the label to instance
                 instance.addLabelToInstance(randomLabel);
             }
+
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
         }
 
-        user.addInstanceToUser(instance);
+        user.addInstanceToUser(dataset,instance);
 
     }
 

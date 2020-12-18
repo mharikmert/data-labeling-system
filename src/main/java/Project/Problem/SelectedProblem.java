@@ -22,7 +22,7 @@ public class SelectedProblem extends Problem {
         // for each instance , users labels the instances different.
 
         ArrayList<User> selectedUsers = new ArrayList<>();
-        selectedUsers = selectUsers(users,selectedUsers,dataset.getAssignedUserIDs());    // select users randomly
+        selectedUsers = selectUsers(users,selectedUsers,dataset.getAssignedUserIDs());    // select users from dataset
         selectedUsers.sort(new Comparator<User>() {             // sort the list
             @Override
             public int compare(User o1, User o2) {
@@ -31,26 +31,14 @@ public class SelectedProblem extends Problem {
         });
         dataset.setAssignedUsers(selectedUsers);                // write users to dataset
 
-        RandomMechanism randomMechanism = new RandomMechanism();
         for(User currentUser : selectedUsers){
+            if(currentUser.assignedDataset(dataset)==null)continue;
 
             for(Instance currentInstance : dataset.getInstances()){
 
-                // yüzde 10 ihtimalle öncekilerden alacak
-                double consistencyCheckRandom = (int)(Math.random()*100);
-                double consistencyCheckProbability = currentUser.getConsistenctCheckProbability()*100;
-                if (consistencyCheckRandom < consistencyCheckProbability && currentUser.getInstances().size()!=0){
-                    int previousSelectRandom = (int)(Math.random()*(currentUser.getInstances().size()));
-                    Instance copyInstance = new Instance(currentUser.getInstances().get(previousSelectRandom).getId(),
-                                                         currentUser.getInstances().get(previousSelectRandom).getInstance());
-                    randomMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset.getMaxNumberOfLabelsPerInstance());
-                }
-                // yüzde 60 sıradakini ekleyecek
-                int nextCheckRandom = (int)(Math.random()*100);
-                if (nextCheckRandom < 60){
-                    Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
-                    randomMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset.getMaxNumberOfLabelsPerInstance());
-                }
+                //labeling
+
+
 
             }
         }
