@@ -17,26 +17,19 @@ import org.json.JSONObject;
 
 //JsonFileWriter class
 public class JsonFileWriter {
-    private JSONObject newJSONObject(){
-	JSONObject newjsonobject = new JSONObject();
+    final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
-	//This part enable us to print everything in order
-	try{
-	    Field changeMap = newjsonobject.getClass().getDeclaredField("map");
-	    changeMap.setAccessible(true);
-	    changeMap.set(newjsonobject,new LinkedHashMap<>());
-	    changeMap.setAccessible(false);
-	}catch(IllegalAccessException | NoSuchFieldException e){
-	    e.printStackTrace();
-        }
-        return newjsonobject;
+    public void export(ArrayList<Dataset> datasets,ArrayList<User> users){
+        for(Dataset dataset:datasets)
+            export(dataset,users);
     }
+
     // export method takes dataset and users as parameters then puts the information to a json object
-    public void export(Dataset dataset, ArrayList<User> users, String path){
+    private void export(Dataset dataset, ArrayList<User> users){
 	 // dataset part   
 	JSONObject details = newJSONObject();
         details.put("dataset id",dataset.getId());
-        details.put("dateset name",dataset.getDatasetName());
+        details.put("dataset name",dataset.getDatasetName());
         details.put("maximum number of labels per instance",dataset.getMaxNumberOfLabelsPerInstance());
 
 	 // label part
@@ -69,12 +62,11 @@ public class JsonFileWriter {
             userList.put(userJSONobject);
         }
         details.put("users",userList);
-
 	    
 	 // writing the results of assignments
         JSONArray assignments = new JSONArray();
-        for (Instance instance:dataset.getInstances()) {
-            for(User user:users){
+         for (Instance instance:dataset.getInstances()) {
+             for(User user:users)
                 try {
                     for (Instance usr_inst:user.getInstances(dataset)){
                         if (instance.getId()==usr_inst.getId()){
@@ -87,10 +79,8 @@ public class JsonFileWriter {
                             assignmentObject.put("class label ids",labelIDs);
                             assignmentObject.put("user id",user.getUserID());
                             // date time operations
-                            LocalDateTime myDateObj = LocalDateTime.now();
-                            DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy , HH:mm:ss");
-                            String formattedDate = myDateObj.format(myFormatObj);
-                            assignmentObject.put("date time",formattedDate);
+                            LocalDateTime myDateObj = usr_inst.getTimeStamp();
+                            assignmentObject.put("date time",myDateObj.format(datetimeFormat));
                             assignments.put(assignmentObject);
                         }
                     }
@@ -98,25 +88,54 @@ public class JsonFileWriter {
                     e.printStackTrace();
                 }
             }
-        }
-        details.put("class label assignments",assignments);
-
-        try (FileWriter file = new FileWriter(path+".tmp")) {
+        details.put("class label assignments",SortingForAssignments(assignments,"date time"));
+           
+        try (FileWriter file = new FileWriter(dataset.getPath()+".tmp")) {
             file.write(details.toString(2));
             file.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         while(true){
-            File f1 = new File(path+".tmp");
+            File f1 = new File(dataset.getPath()+".tmp");
             if(f1.length()!=0){
-                File f2=new File(path);
+                File f2=new File(dataset.getPath());
                 f2.delete();
-                f2=new File(path);
+                f2=new File(dataset.getPath());
                 if(f1.renameTo(f2))break;
             }
         }
 
+    }
+
+    private JSONObject newJSONObject(){
+        JSONObject newjsonobject = new JSONObject();
+        //This part enable us to print everything in order
+        try{
+            Field changeMap = newjsonobject.getClass().getDeclaredField("map");
+            changeMap.setAccessible(true);
+            changeMap.set(newjsonobject,new LinkedHashMap<>());
+            changeMap.setAccessible(false);
+        }catch(IllegalAccessException | NoSuchFieldException e){
+            e.printStackTrace();
+            }
+            return newjsonobject;
+    }
+    
+    private JSONArray SortingForAssignments(JSONArray list,String key){
+        for(int i=list.length();i>0;i--){
+            int index=0;
+            for(int j=1;j<i;j++) 
+            {
+                LocalDateTime tempTime=LocalDateTime.parse(((JSONObject)list.get(index)).getString(key),datetimeFormat);
+                if(tempTime.isAfter(LocalDateTime.parse(((JSONObject)list.get(j)).getString(key),datetimeFormat)))
+                   index=j;
+            }
+            Object tempObject=list.get(index);
+            list.remove(index);
+            list.put(tempObject);
+        }
+        return list;
     }
 
 }
