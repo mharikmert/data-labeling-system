@@ -27,15 +27,17 @@ public class Main {
         //create a users arrayList to hold inside users in json file
         ArrayList<User> users = jsonFileReader.readUserFile("config.json");
 
-        for (User u : users) {
+        for (User u : users
+        ) {
             u.assignDataset(dataset);
         }
 
-
+        ArrayList<Dataset> datasets =new ArrayList<>();
+        datasets.add(dataset);
         //get solution with solve problem method
         Solution.getSolution().solveProblem(dataset, users);
 
-        
+
     }
 
 }
