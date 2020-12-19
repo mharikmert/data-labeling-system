@@ -1,41 +1,0 @@
- ˛∫æ   4 ∞
- ) Z [
-  Z
- \ ]
- ( ^ _
-  `
-  a
- \ b
-  c d e d f g
-  h
- \ i j
- k l@Y      
-  m
-  n
-  o
-  p
-  q
-  r
-  s	 ) t
- \ u
- v w x
-  Z y
-  z
-   {
- ( |
-  }
-  ~ 
- Ä Å Ç É InnerClasses <init> ()V Code LineNumberTable LocalVariableTable this !LProject/Problem/SelectedProblem; runMechanism )(Ljava/util/ArrayList;LProject/Dataset;)V previousSelectRandom I copyInstance LProject/Instance; consistencyCheckRandom D consistencyCheckProbability nextCheckRandom currentInstance currentUser LProject/User; users Ljava/util/ArrayList; dataset LProject/Dataset; selectedUsers LocalVariableTypeTable %Ljava/util/ArrayList<LProject/User;>; StackMapTable [ Ñ g j 	Signature 9(Ljava/util/ArrayList<LProject/User;>;LProject/Dataset;)V selectUsers V(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/util/ArrayList; user id Ljava/lang/Integer; userIDs *Ljava/util/ArrayList<Ljava/lang/Integer;>; y õ(Ljava/util/ArrayList<LProject/User;>;Ljava/util/ArrayList<LProject/User;>;Ljava/util/ArrayList<Ljava/lang/Integer;>;)Ljava/util/ArrayList<LProject/User;>; userControl (LProject/User;)Z 
-SourceFile SelectedProblem.java + , java/util/ArrayList Ö Ü á M N !Project/Problem/SelectedProblem$1 + à â ä ã å ç é Ñ è ê ë í Project/User ì î ï á Project/Instance ñ ó ò ô ò ï ö õ ú ù û ü † ° ¢ + £ § • ¶ á ß § ®  Project/Labeling/RandomMechanism java/lang/Integer © † ™ ú V W ´ ¨ ≠ ¢ 	RandomBot Æ Ø ¨ Project/Problem/SelectedProblem Project/Problem/Problem java/util/Iterator Project/Dataset getAssignedUserIDs ()Ljava/util/ArrayList; $(LProject/Problem/SelectedProblem;)V sort (Ljava/util/Comparator;)V setAssignedUsers (Ljava/util/ArrayList;)V iterator ()Ljava/util/Iterator; hasNext ()Z next ()Ljava/lang/Object; assignedDataset $(LProject/Dataset;)LProject/Dataset; getInstances java/lang/Math random ()D getConsistenctCheckProbability ((LProject/Dataset;)Ljava/util/ArrayList; size ()I get (I)Ljava/lang/Object; getId ()J getInstance ()Ljava/lang/String; (JLjava/lang/String;)V labelingMechanism $LProject/Labeling/LabelingMechanism; 	getLabels "Project/Labeling/LabelingMechanism I(LProject/User;LProject/Instance;Ljava/util/ArrayList;LProject/Dataset;)V 	getUserID intValue add (Ljava/lang/Object;)Z getUserType java/lang/String equals ! ( )       + ,  -   /     *∑ ±    .        /        0 1    2 3  -  ]    'ª Y∑ N*+-,∂ ∂ N-ª Y*∑ ∂ ,-∂ 	-∂ 
-:π  ô ıπ  ¿ :,∂ « ßˇ·,∂ ∂ 
-:π  ô «π  ¿ :∏  kéá9∂  k9
-
-òú [,∂ ∂ ô O∏ ,∂ ∂ áké6ª Y,∂ ∂ ¿ ∂ ,∂ ∂ ¿ ∂ ∑ :*¥ ,∂ ,∂ ∏  ké6<¢ 1ª Y∂ ∂ ∑ :*ª Y∑ µ *¥ ,∂ ,∂ ßˇ5ßˇ±    .   Z            $ " @ # L % k * v + Å - ï . ¶ / æ 0 — 1 · 6 Î 7 Ú 8 9 :  =# >& @ /   z  ¶ ; 4 5  —  6 7   6 7  v ™ 8 9  Å ü : 9 
- Î 5 ; 5  k µ < 7  @ „ = >   ' 0 1    ' ? @   ' A B   C @  D      ' ? E   C E  F   ( ˝ * G H¸ ! I¸  H˛ ã J¯ >˘ ˙  K    L  M N  -       _-∂ 
-:π  ô Pπ  ¿  :+∂ 
-:π  ô 1π  ¿ :∂ !∂ "Öîö *∂ #ô 
-,∂ $WßˇÀßˇ¨,∞    .       E  F 8 G P H W J Z L ] O /   >  8  O >   > P Q    _ 0 1     _ ? @    _ C @    _ R @  D        _ ? E    _ C E    _ R S  F    ¸  H˝  T H4˘ ˙  K    U  V W  -   >     
-+∂ %&∂ '¨    .       W /       
- 0 1     
- O >   X    Y *   
-        
