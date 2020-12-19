@@ -10,7 +10,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserMetrics {
-    public static int numberOfDatasetsAssigned(User user){
+
+    // this class can not be instantiated
+    private UserMetrics(){};
+
+    //create an object of UserMetrics
+    private static final UserMetrics userMetrics = new UserMetrics();
+
+    //get the only available object
+    public static UserMetrics getUserMetrics(){
+        return userMetrics;
+    }
+
+
+    public int numberOfDatasetsAssigned(User user){
         return user.getDatasets().size();
     }
     public static LinkedHashMap<Object,Object> completenessPercentageOfDatasets(ArrayList<Dataset> datasets,User user){
@@ -18,25 +31,25 @@ public class UserMetrics {
         for(Dataset dataset:datasets){
             Dataset userDataset=user.assignedDataset(dataset);
             if(userDataset==null)continue;
-            complenessPercentage.put("dataset"+dataset.getId(),((float)FrequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");}
+            complenessPercentage.put("dataset"+dataset.getId(),((float)getUserMetrics().FrequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");}
         return complenessPercentage;
     }
 
-    public static int numberOfInstancesLabeled(User user){
+    public int numberOfInstancesLabeled(User user){
         int totalNumber=0;
         for (Dataset dateset:user.getDatasets())
             totalNumber+=dateset.getInstances().size();
         return totalNumber;
     }
 
-    public static int numberOfUniqueInstancesLabeled(User user){
+    public int numberOfUniqueInstancesLabeled(User user){
         int totalNumber=0;
         for(Dataset dataset:user.getDatasets())
             totalNumber+=FrequencyListOfInstances(dataset,user).keySet().size();
         return totalNumber;
     }
 
-    // public static float consistencyPercentage(User user){
+    // public float consistencyPercentage(User user){
     //     // NEEDS TO BE REVISED AGAIN !!!!
     //     int totalNumberOftheSame=0;
     //     for(Object key:FrequencyListOfInstances(user).values())
@@ -48,7 +61,7 @@ public class UserMetrics {
     // }
 
 
-    protected static HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
+    protected HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
         HashMap<Object,Object> list=new HashMap<>();
         if(!user.getDatasets().contains(userDataset))
             return null;
