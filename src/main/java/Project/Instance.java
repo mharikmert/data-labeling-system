@@ -1,5 +1,6 @@
 package Project;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Instance {
@@ -9,6 +10,7 @@ public class Instance {
     private String instance;
     private ArrayList<Label> labels ;
     private long timeElapsed ;
+    private LocalDateTime timestamp;  
 
     //Overloaded constructor
     public Instance(long id, String instance) {
@@ -65,5 +67,13 @@ public class Instance {
 
     public void setTimeElapsed(long timeElapsed) {
         this.timeElapsed = timeElapsed;
+    }
+
+    public LocalDateTime getTimeStamp(){
+        return this.timestamp;        
+    }
+
+    public void setTimeStamp(LocalDateTime timestamp){
+        this.timestamp=timestamp;
     }
 }
