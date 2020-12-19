@@ -26,6 +26,7 @@ public class UserMetrics {
     public int numberOfDatasetsAssigned(User user){
         return user.getDatasets().size();
     }
+
     public static LinkedHashMap<Object,Object> completenessPercentageOfDatasets(ArrayList<Dataset> datasets,User user){
         LinkedHashMap<Object,Object> complenessPercentage=new LinkedHashMap<>();
         for(Dataset dataset:datasets){
