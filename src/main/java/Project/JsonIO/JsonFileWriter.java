@@ -1,4 +1,5 @@
 package Project.JsonIO;// import necessary libraries
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -93,21 +94,29 @@ public class JsonFileWriter {
                             assignments.put(assignmentObject);
                         }
                     }
-                } catch (Exception e) { }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         details.put("class label assignments",assignments);
 
-
-        // try-catch part
-        try (FileWriter file = new FileWriter(path)) {
- 
+        try (FileWriter file = new FileWriter(path+".tmp")) {
             file.write(details.toString(2));
-            file.flush();
- 
-        } catch (IOException e) {
+            file.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        while(true){
+            File f1 = new File(path+".tmp");
+            if(f1.length()!=0){
+                File f2=new File(path);
+                f2.delete();
+                f2=new File(path);
+                if(f1.renameTo(f2))break;
+            }
+        }
+
     }
 
 }
