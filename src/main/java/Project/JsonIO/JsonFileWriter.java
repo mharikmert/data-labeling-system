@@ -57,7 +57,17 @@ public class JsonFileWriter {
             instances.put(instanceObject);
         }
         details.put("instances",instances);
-        
+
+        // writing user information
+        JSONArray userList = new JSONArray();
+        for(User user:users){
+            JSONObject userJSONobject = newJSONObject();
+            userJSONobject.put("user id",user.getUserID());
+            userJSONobject.put("user name",user.getUserName());
+            userJSONobject.put("user type",user.getUserType());
+            userList.put(userJSONobject);
+        }
+        details.put("users",userList);
 
 	    
 	 // writing the results of assignments
@@ -88,17 +98,6 @@ public class JsonFileWriter {
         }
         details.put("class label assignments",assignments);
 
-
-        // writing user information 
-        JSONArray userList = new JSONArray();
-        for(User user:users){
-            JSONObject userJSONobject = newJSONObject();
-            userJSONobject.put("user id",user.getUserID());
-            userJSONobject.put("user name",user.getUserName());
-            userJSONobject.put("user type",user.getUserType());
-            userList.put(userJSONobject);
-        }
-        details.put("users",userList);
 
         // try-catch part
         try (FileWriter file = new FileWriter(path)) {
