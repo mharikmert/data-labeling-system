@@ -1,0 +1,51 @@
+ ˛∫æ   4 Ω
+ - l
+ , m
+ $ n
+ , o
+  n
+ $ p q r q s t
+ 	 u v
+  w
+  x y
+  w
+ , z
+  { | p
+  } ~
+  B»  
+ Ä Å
+  Ç
+ , Éø      
+ Ñ Ö Ü
+  l
+  á à p
+  â
+  ä
+  ã å
+ $ l
+  ç é
+ 	 è
+ ê ë
+ ' w
+ $ í ì î <init> ()V Code LineNumberTable LocalVariableTable this !LProject/Metrics/InstanceMetrics; numberOfLabelAssignments ;(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList;)I dataset LProject/Dataset; instance LProject/Instance; users Ljava/util/ArrayList; LocalVariableTypeTable %Ljava/util/ArrayList<LProject/User;>; 	Signature K(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList<LProject/User;>;)I numberOfUniqueLabelAssignments numberOfUsers userInstance userDataset user LProject/User; totalNumber I StackMapTable ï t v $frequencyListOfLabelsWithPercentages M(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList;)Ljava/util/HashMap; labelId Ljava/lang/Object; list Ljava/util/HashMap; numberOflabelAssignment 9Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>; Ü É(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList<LProject/User;>;)Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>; entropy ;(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList;)D numberofLabels numberOfUniqueLabels D y å K(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList<LProject/User;>;)D frequencyListOfLabels LabelId hashMapObject î labelAssignments O(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList;)Ljava/util/ArrayList; subList label LProject/Label; PLjava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>;>; ö(LProject/Dataset;LProject/Instance;Ljava/util/ArrayList<LProject/User;>;)Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>;>; 
+SourceFile InstanceMetrics.java . / c d ñ ó _ N ò ô ï ö õ ú ù Project/User û ü Project/Dataset † ° ¢ ü Project/Instance 5 6 £ § • ¶ ß java/lang/Integer ® ó © ™ ´ ¨ ≠ A 6 Æ Ø ∞ java/util/HashMap ± ≤ ≥ ¥ µ ™ ∂ ∑ ≠ java/util/ArrayList ∏ ü Project/Label π ° ∫ ™ ª º µ Project/Metrics/InstanceMetrics java/lang/Object java/util/Iterator size ()I iterator ()Ljava/util/Iterator; hasNext ()Z next ()Ljava/lang/Object; getDatasets ()Ljava/util/ArrayList; getId ()J getInstances keySet ()Ljava/util/Set; java/util/Set get &(Ljava/lang/Object;)Ljava/lang/Object; intValue java/lang/Float valueOf (F)Ljava/lang/Float; replace 8(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; java/lang/Math log (D)D values ()Ljava/util/Collection; java/util/Collection containsKey (Ljava/lang/Object;)Z (I)Ljava/lang/Integer; put 	getLabels 	getUserID java/lang/Long (J)Ljava/lang/Long; add ! , -       . /  0   /     *∑ ±    1        2        3 4   	 5 6  0   Z     
+*+,∏ ∂ ¨    1        2        
+ 7 8     
+ 9 :    
+ ; <  =       
+ ; >  ?    @ 	 A 6  0   Z     
+*+,∏ ∂ ¨    1        2        
+ 7 8     
+ 9 :    
+ ; <  =       
+ ; >  ?    @ 	 B 6  0  ]  
+   ã>,∂ :π  ô zπ  ¿ 	:∂ 
+∂ :π  ô Wπ  ¿ :∂ *∂ îö ;*∂ ∂ :π  ô %π  ¿ :	+∂ 	∂ îö 	Ñß ßˇ◊ß ßˇ•ßˇÇ¨    1   2         >  K  j  z  }  Ä  É  Ü  â  2   H  j  C : 	 > E D 8   h E F    ã 7 8     ã 9 :    ã ; <   â G H  =       ã ; >  I   ( ˝  J˝  K J˝ + L J(˙ ˙ ˘ ˙  ?    @ 	 M N  0   Ì     P*+,∏ N*+,∏ 6-∂ π  :π  ô -π  :--∂ ¿ ∂ ÜÜnj∏ ∂ Wßˇœ-∞    1       "  #  $ - % N & 2   >  -  O P    P 7 8     P 9 :    P ; <   I Q R   A S H  =       P ; >   I Q T  I    ˛  U J˙ 3 ?    V 	 W X  0  =  
+   u*+,∏ >*+,∏ 6*+,∏ :9∂ π  :π  ô Eπ  :		∂ ¿ ∂ á káo	∂ ¿ ∂ ááo∏ á∏ okc9ßˇ∑Ø    1       *  +  ,  -  . 9 / r 0 2   R  9 6 O P 	   u 7 8     u 9 :    u ; <   n Y H   f Z H   ^ Q R   [ W [  =       u ; >   ^ Q T  I    ˇ &  L \ ] U J  ˙ K ?    ^ 
+ _ N  0  <     ª Y∑ N*+,∏ ∂ :π  ô cπ  :¿ ∂ π   :π  ô >π  :-∂ !ö -∏ "∂ #Wß --∂ ¿ ∂ `∏ "∂ Wßˇæßˇô-∞    1   "    4  5 & 6 H 7 _ 8 w 7 z 6 } 9 2   >  H / ` P  & T a P     7 8      9 :     ; <   w Q R  =        ; >   w Q T  I   # ˝  U J˝ ! b J¸ ) b˙ ˘ ˙  ?    V 
+ c d  0  ˆ     ÿª $Y∑ %N,∂ :π  ô ¡π  ¿ 	:∂ 
+∂ :π  ô ûπ  ¿ :*∂ ∂ îö Ç∂ ∂ :π  ô kπ  ¿ :	+∂ 	∂ îö O	∂ &∂ :
+
+π  ô 8
+π  ¿ ':ª Y∑ :∂ (∏ )∂ *∏ )∂ #W-∂ +Wßˇƒß ßˇëß ßˇ^ßˇ;-∞    1   F    =  > $ ? D @ Q A q B ~ D û F ß G Ω H ƒ I « J   B Õ L – @ ” ? ÷ N 2   \ 	 ß  e R  û & f g  q Y C : 	 D å D 8  $ Ø E F    ÿ 7 8     ÿ 9 :    ÿ ; <   – Q <  =      ß  e T    ÿ ; >   – Q h  I   8 
+˝  ] J˝  K J˝ , L J˝ , \ J˙ >˙ ˙ ˙ ˘ ˙  ?    i  j    k
