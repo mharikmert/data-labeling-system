@@ -1,5 +1,7 @@
 package Project.Labeling;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 
 import Project.Dataset;
@@ -13,12 +15,13 @@ public class RandomMechanism extends LabelingMechanism {
 
     /*
         For the first iteration , instance of this class will be used for random solution
-    i*/
+    */
 
     @Override
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset, ArrayList<User> users) {
         final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
+        long start = System.currentTimeMillis();
         int numberOfLabels = (int)(Math.random()*(dataset.getMaxNumberOfLabelsPerInstance()))+1;
         // in this for loop , we select the labels
         for (int i=0 ; i<numberOfLabels ; i++){
@@ -43,24 +46,20 @@ public class RandomMechanism extends LabelingMechanism {
                 instance.addLabelToInstance(randomLabel);
             }
 
-            if (i%2==0){
-                JsonFileWriter jsonfilewriter=new JsonFileWriter();
-                jsonfilewriter.export(dataset, users, "output.json");
-            }else{
-                JsonFileWriter jsonfilewriter=new JsonFileWriter();
-                jsonfilewriter.export(dataset, users, "output2.json");
-            }
+            JsonFileWriter jsonfilewriter=new JsonFileWriter();
+            jsonfilewriter.export(dataset, users, "output1.json");
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
             // writing a JSON output file
-
         }
 
+        long finish = System.currentTimeMillis();
+        instance.setTimeElapsed(finish-start);
+        System.out.println(instance.getTimeElapsed());
         user.addInstanceToUser(dataset,instance);
 
     }

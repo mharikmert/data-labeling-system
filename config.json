@@ -1,22 +1,22 @@
 {
-  "currentDatasetID": 1 ,
+  "currentDatasetID": 3 ,
   "datasets":[
     {
       "dataset id":1,
       "dataset name":"Sentiment Dataset",
-      "path":"C:\\Users\\Enes\\IdeaProjects\\OOSD\\v13\\CSE3063F20P1_GRP22\\input_dataset1.json",
+      "path":"input_dataset1.json",
       "users": [1 , 3 , 5]
     },
     {
       "dataset id":2,
       "dataset name":"Multi-label Topic Classification Dataset",
-      "path":"C:\\Users\\Enes\\IdeaProjects\\OOSD\\v13\\CSE3063F20P1_GRP22\\input_dataset2.json",
+      "path":"input_dataset2.json",
       "users": [1 , 3 , 5, 2]
     },
     {
       "dataset id":3,
       "dataset name":"Sentiment Dataset",
-      "path":"C:\\Users\\Enes\\IdeaProjects\\OOSD\\v13\\CSE3063F20P1_GRP22\\input_dataset3.json",
+      "path":"input_dataset3.json",
       "users": [1 , 2 , 3 , 5]
     }
   ],
