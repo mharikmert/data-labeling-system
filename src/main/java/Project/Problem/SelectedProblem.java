@@ -36,9 +36,24 @@ public class SelectedProblem extends Problem {
 
             for(Instance currentInstance : dataset.getInstances()){
 
-                //labeling
+               // yüzde 10 ihtimalle öncekilerden alacak
+                double consistencyCheckRandom = (int)(Math.random()*100);
+                double consistencyCheckProbability = currentUser.getConsistenctCheckProbability()*100;
 
+                if (consistencyCheckRandom < consistencyCheckProbability && currentUser.getInstances(dataset).size()!=0){
+                    int previousSelectRandom = (int)(Math.random()*(currentUser.getInstances(dataset).size()));
+                    Instance copyInstance = new Instance(currentUser.getInstances(dataset).get(previousSelectRandom).getId(),
+                                                         currentUser.getInstances(dataset).get(previousSelectRandom).getInstance());
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users);
+                }
 
+                // yüzde 60 sıradakini ekleyecek
+                int nextCheckRandom = (int)(Math.random()*100);
+                if (nextCheckRandom < 60){
+                    Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
+                    super.labelingMechanism = new RandomMechanism();
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users);
+                }
 
             }
         }
@@ -56,7 +71,6 @@ public class SelectedProblem extends Problem {
             }
 
         }
-
 
         return selectedUsers ;
 
