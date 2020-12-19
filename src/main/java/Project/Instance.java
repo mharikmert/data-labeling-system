@@ -8,6 +8,7 @@ public class Instance {
     private long id;
     private String instance;
     private ArrayList<Label> labels ;
+    private long timeElapsed ;
 
     //Overloaded constructor
     public Instance(long id, String instance) {
@@ -58,4 +59,11 @@ public class Instance {
         }
     }
 
+    public long getTimeElapsed() {
+        return timeElapsed;
+    }
+
+    public void setTimeElapsed(long timeElapsed) {
+        this.timeElapsed = timeElapsed;
+    }
 }
