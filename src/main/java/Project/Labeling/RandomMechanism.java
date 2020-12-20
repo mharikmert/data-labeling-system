@@ -48,7 +48,7 @@ public class RandomMechanism extends LabelingMechanism {
             }
 
             JsonFileWriter jsonfilewriter=new JsonFileWriter();
-            jsonfilewriter.export(datasets, users);
+            jsonfilewriter.export(datasets, users, user);
            instance.setTimeStamp(LocalDateTime.now());
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
             // writing a JSON output file
@@ -56,7 +56,7 @@ public class RandomMechanism extends LabelingMechanism {
 
         long finish = System.currentTimeMillis();
         instance.setTimeElapsed(finish-start);
-     //   System.out.println(instance.getTimeElapsed());
+		
         user.addInstanceToUser(dataset,instance);
 
     }
