@@ -1,4 +1,5 @@
 package Project.JsonIO;//import necessary libraries
+
 import Project.Dataset;
 import Project.Exception.InputValidationException;
 import Project.Instance;
@@ -13,6 +14,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
@@ -20,6 +23,7 @@ import javax.xml.crypto.Data;
 
 //JsonIO.JsonFileReader class
 public class JsonFileReader {
+    final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
     //class constructor
     public JsonFileReader(String path,ArrayList<Dataset> datasets,ArrayList<User> users) {
@@ -111,7 +115,6 @@ public class JsonFileReader {
                 if(a==0){
                     //add current instances to the instances arraylist
                     temp.addInstance(new Instance((long) ((JSONObject) classInstance).get("id"), (String) ((JSONObject) classInstance).get("instance")));
-
                 }
 
             }
@@ -167,7 +170,7 @@ public class JsonFileReader {
         JSONParser jsonParser = new JSONParser();
 
         for (Dataset dataset : datasets){
-            System.out.println("1");
+
             try (FileReader fileReader = new FileReader(dataset.getPath())) {
                 //create an Object obj to parse file
                 Object obj = jsonParser.parse(fileReader);
@@ -201,7 +204,9 @@ public class JsonFileReader {
                                         }
 
                                     }
-
+                                    try {
+                                        tempInstance.setTimeStamp(LocalDateTime.parse(((JSONObject) assignments).get("date time").toString(),datetimeFormat)); 
+                                    } catch (Exception e) {}
                                     user.addInstanceToUser(dataset,tempInstance);
                                     break;
                                 }
