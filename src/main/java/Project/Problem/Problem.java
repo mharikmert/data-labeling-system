@@ -12,6 +12,6 @@ public abstract class Problem {
      */
 
     LabelingMechanism labelingMechanism ;
-    public abstract void runMechanism(ArrayList<User> users, Dataset dataset);
+    public abstract void runMechanism(ArrayList<User> users, Dataset dataset,ArrayList<Dataset> datasets);
 
 }
