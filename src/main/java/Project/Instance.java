@@ -19,6 +19,17 @@ public class Instance {
         labels = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "Instance{" +
+                "id=" + id +
+                ", instance='" + instance + '\'' +
+                ", labels=" + labels +
+                ", timeElapsed=" + timeElapsed +
+                ", timestamp=" + timestamp +
+                '}';
+    }
+
     //Get method for ID
     public long getId() {
         return id;

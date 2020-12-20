@@ -20,6 +20,16 @@ public class User {
         this.datasets = new ArrayList<>();
     }
 
+    public String toString() {
+        return "\nUser{" +
+                "userID=" + userID +
+                ", userName='" + userName + '\'' +
+                ", userType='" + userType + '\'' +
+                ", consistenctCheckProbability=" + consistenctCheckProbability +
+                ", \ndatasets=" + datasets.toString() +
+                "'}'";
+    }
+
     //Get method for ID
     public long getUserID() {
         return userID;
@@ -87,7 +97,7 @@ public class User {
 
     public void assignDataset(Dataset dataset){
         Dataset newDataset;
-        newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>(), dataset.getAssignedUserIDs());
+        newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>(),null,false);
         datasets.add(newDataset);
     }
     public Dataset assignedDataset(Dataset dataset){

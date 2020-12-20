@@ -2,6 +2,8 @@ package Project;
 
 import java.util.ArrayList;
 
+import javax.swing.text.StringContent;
+
 
 public class Dataset {
 
@@ -11,17 +13,24 @@ public class Dataset {
     private long maxNumberOfLabelsPerInstance;
     private ArrayList<Label> labels;
     private ArrayList<Instance> instances;
-    private ArrayList<Integer> assignedUserIDs;
-    private ArrayList<User> assignedUsers;
+    private String path;
+    private Boolean flag;
+
+    public Dataset(){
+        labels = new ArrayList<>() ;
+        instances = new ArrayList<>() ;
+        flag=false ;
+    }
 
     //Overloaded Constructor
-    public Dataset(long id, String datasetName,long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances,ArrayList<Integer> assignedUserIDs) {
+    public Dataset(long id, String datasetName,long maxNumberOfLabelsPerInstance, ArrayList<Label> labels, ArrayList<Instance> instances, String path, Boolean flag) {
         this.id = id;
         this.datasetName = datasetName;
         this.maxNumberOfLabelsPerInstance = maxNumberOfLabelsPerInstance;
         this.labels = labels;
         this.instances = instances;
-        this.assignedUserIDs = assignedUserIDs;
+        this.path=path;
+        this.flag=flag;
     }
 
     //Overridden toString Method for DataSet class
@@ -31,8 +40,8 @@ public class Dataset {
                 "id=" + id +
                 ", datasetName='" + datasetName + '\'' +
                 ", maxNumberOfLabelsPerInstance=" + maxNumberOfLabelsPerInstance +
-                ", labels=" + labels +
-                ", instances=" + instances +
+                ",\nlabels=" + labels +
+                ",\ninstances=" + instances +
                 '}';
     }
     //Get method for ID
@@ -85,20 +94,28 @@ public class Dataset {
         this.instances = instances;
     }
 
-    public ArrayList<Integer> getAssignedUserIDs() {
-        return assignedUserIDs;
+    public String getPath(){
+        return path;
+    }
+    
+    public void setPath(String path){
+        this.path=path;
+    }
+    
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 
-    public void setAssignedUserIDs(ArrayList<Integer> assignedUserIDs) {
-        this.assignedUserIDs = assignedUserIDs;
+    public boolean isFlag() {
+        return flag;
     }
 
-    public ArrayList<User> getAssignedUsers() {
-        return assignedUsers;
+    public void addLabel(Label label){
+        this.labels.add(label);
     }
 
-    public void setAssignedUsers(ArrayList<User> assignedUsers) {
-        this.assignedUsers = assignedUsers;
+    public void addInstance(Instance instance){
+        this.instances.add(instance);
     }
 
 }

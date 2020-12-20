@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class RandomMechanismTest {
 
     //Creating necessary objects
-    JsonFileReader jsonFileReader = new JsonFileReader();
-    Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
+    // JsonFileReader jsonFileReader = new JsonFileReader();
+    // Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
     RandomMechanism randomMechanism = new RandomMechanism();
 /*
     @Test

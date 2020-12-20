@@ -24,21 +24,18 @@ import java.util.ArrayList;
             return solution;
         }
         //Solutions will be in there
-        public void solveProblem(ArrayList<User> users, ArrayList<Dataset> datasets){
+        public void solveProblem(Dataset dataset, ArrayList<User> users, ArrayList<Dataset> datasets){
             Problem problem;
-            for(Dataset dataset:datasets)
-                if (dataset.isFlag()){
-                // in this switch case statement , solutions differ for datasets , but for first iteration , we have just random labeling and we
-                // can not create different problem types , we just create selectedProblem() object.
-                switch(dataset.getDatasetName()){
-                    case "Sentiment Dataset":
-                    case "Multi-label Topic Classification Dataset":
-                        problem = new SelectedProblem();
-                        problem.runMechanism(users,dataset,datasets);
-                        break;
-                    default:
-                        System.out.println("Undetermined problem type !");
-                }
+            // in this switch case statement , solutions differ for datasets , but for first iteration , we have just random labeling and we
+            // can not create different problem types , we just create selectedProblem() object.
+            switch(dataset.getDatasetName()){
+                case "Sentiment Dataset":
+                case "Multi-label Topic Classification Dataset":
+                    problem = new SelectedProblem();
+                    problem.runMechanism(users,dataset,datasets);
+                    break;
+                default:
+                    System.out.println("Undetermined problem type !");
             }
         }
 }
