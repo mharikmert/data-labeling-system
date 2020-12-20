@@ -19,9 +19,9 @@ import org.json.JSONObject;
 public class JsonFileWriter {
     final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
-    public void export(ArrayList<Dataset> datasets,ArrayList<User> users){
+    public void export(ArrayList<Dataset> datasets,ArrayList<User> users,User user){
         for(Dataset dataset:datasets)
-            export(dataset,users);
+            if(user.assignedDataset(dataset)!=null)export(dataset,users);
     }
 
     // export method takes dataset and users as parameters then puts the information to a json object
@@ -84,8 +84,8 @@ public class JsonFileWriter {
                             assignments.put(assignmentObject);
                         }
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (NullPointerException e) {
+                   // e.printStackTrace();
                 }
             }
         details.put("class label assignments",SortingForAssignments(assignments,"date time"));
