@@ -16,21 +16,21 @@ public class SelectedProblem extends Problem {
 
     //Solution mechanism for this class
     @Override
-    public void runMechanism(ArrayList<User> users, Dataset dataset) {
+    public void runMechanism(ArrayList<User> users, Dataset dataset,ArrayList<Dataset>datasets) {
         // defining problem type , for now we just use randomLabeling
         // with this method , we randomly select the number of users which labels the instance , for example
         // for 1. instance , program selects random number of users , it can select 1 user or 3 user for 1 instance ,
         // for each instance , users labels the instances different.
 
         ArrayList<User> selectedUsers = new ArrayList<>();
-        selectedUsers = selectUsers(users,selectedUsers,dataset.getAssignedUserIDs());    // select users from dataset
+        selectedUsers = selectUsers(users,selectedUsers,dataset);    // select users from dataset
         selectedUsers.sort(new Comparator<User>() {             // sort the list
             @Override
             public int compare(User o1, User o2) {
                 return Long.compare(o1.getUserID(), o2.getUserID());
             }
         });
-        dataset.setAssignedUsers(selectedUsers);                // write users to dataset
+   //     dataset.setAssignedUsers(selectedUsers);                // write users to dataset
 
         for(User currentUser : selectedUsers){
             if(currentUser.assignedDataset(dataset)==null)continue;
@@ -45,7 +45,7 @@ public class SelectedProblem extends Problem {
                     int previousSelectRandom = (int)(Math.random()*(currentUser.getInstances(dataset).size()));
                     Instance copyInstance = new Instance(currentUser.getInstances(dataset).get(previousSelectRandom).getId(),
                                                          currentUser.getInstances(dataset).get(previousSelectRandom).getInstance());
-                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users);
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
                 // yüzde 60 sıradakini ekleyecek
@@ -53,7 +53,7 @@ public class SelectedProblem extends Problem {
                 if (nextCheckRandom < 60){
                     Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
                     super.labelingMechanism = new RandomMechanism();
-                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users);
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
             }
@@ -63,15 +63,11 @@ public class SelectedProblem extends Problem {
     }
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
-    public ArrayList<User> selectUsers(ArrayList<User> users, ArrayList<User> selectedUsers,ArrayList<Integer> userIDs){
-
-        for (Integer id: userIDs) {
+    public ArrayList<User> selectUsers(ArrayList<User> users, ArrayList<User> selectedUsers,Dataset dataset){
             for (User user: users) {
-                if(user.getUserID() == id && userControl(user)){
+                if(user.assignedDataset(dataset)!=null && userControl(user)){
                     selectedUsers.add(user);
                 }
-            }
-
         }
 
         return selectedUsers ;
