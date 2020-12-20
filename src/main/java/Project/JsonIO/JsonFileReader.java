@@ -12,28 +12,25 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
+
+import javax.xml.crypto.Data;
 
 //JsonIO.JsonFileReader class
 public class JsonFileReader {
 
-    //private data fields
-    private final ArrayList<Label> labels;
-    private final ArrayList<Instance> instances;
-    private final ArrayList<User> users;
-    private final ArrayList<Integer> userIDs ;
-
     //class constructor
-    public JsonFileReader() {
+    public JsonFileReader(String path,ArrayList<Dataset> datasets,ArrayList<User> users) {
         //initialize arraylists in constructor
-        labels = new ArrayList<>();
-        instances = new ArrayList<>();
-        users = new ArrayList<>();
-        userIDs = new ArrayList<>();
+        readUserFile(users,path);
+        getDatasetPath(datasets,users,path);
+        readClassLabelAssignments(datasets,users);
+
     }
 
-    public String getDatasetPath(String path){
+    public void getDatasetPath(ArrayList<Dataset> datasets,ArrayList<User> users,String path){
 
         JSONParser jsonParser = new JSONParser();
 
@@ -52,20 +49,22 @@ public class JsonFileReader {
             for (Object o : datasetsJSON) {
                 //create a current user in the same manner
 
-                if((long) ((JSONObject) o).get("dataset id") == currentDatasetId){
+                    datasets.add(readDatasetFile((String)((JSONObject)o).get("path")));
+                    datasets.get(datasets.size()-1).setFlag(datasets.get(datasets.size() - 1).getId() == currentDatasetId);
+
                     JSONArray usersJson = (JSONArray)((JSONObject) o).get("users");
                     for (Object a: usersJson) {
-                        userIDs.add(Integer.valueOf((a.toString())));
+                        for (User user : users) {
+                            if (user.getUserID() == (Long) a && datasets.size() != 0) {
+                                user.assignDataset(datasets.get(datasets.size() - 1));
+                            }
+                        }
                     }
-                    return (String) ((JSONObject) o).get("path");
-                }
             }
 
         }catch (IOException | ParseException e){
             e.printStackTrace();
         }
-
-        return "Path not found" ;
 
     }
 
@@ -73,6 +72,7 @@ public class JsonFileReader {
     public Dataset readDatasetFile(String path) {
         //creating a json parser to parse read json file
         JSONParser jsonParser = new JSONParser();
+        Dataset temp = new Dataset() ;
         //create a fileReader first and put the path as parameter in try catch to avoid exceptions
         try (FileReader fileReader = new FileReader(path)) {
             //create an Object obj to parse file
@@ -80,26 +80,22 @@ public class JsonFileReader {
             //create a json object from obj ready to create objects from jsonObject
             JSONObject jsonObject = (JSONObject) obj;
             //read dataset id form file as long casting
-            long id = (long) jsonObject.get("dataset id");
+            temp.setId((long) jsonObject.get("dataset id"));
             //next attribute dataset name with string casting
-            String datasetName = (String) jsonObject.get("dataset name");
+            temp.setDatasetName((String) jsonObject.get("dataset name"));
             //and maxNumberOfLabelsPerInstance with long casting
-            long maxNumberOfLabelsPerInstance = (long) jsonObject.get("maximum number of labels per instance");
-
+            temp.setMaxNumberOfLabelsPerInstance((long) jsonObject.get("maximum number of labels per instance"));
+            temp.setPath(path);
             //Arrays in json file
             //create a json array object to read classLabels in file
             JSONArray classLabels = (JSONArray) jsonObject.get("class labels");
 
             //iterate through in classLabels json array
             for (Object classLabel : classLabels) {
-                //create a com.labeling.Label object current label and give the each label attributes for each object
-                Label currentLabel = new Label((long) ((JSONObject) classLabel).get("label id"), (String) ((JSONObject) classLabel).get("label text"));
-                //add to current label to the labels arraylist
-                labels.add(currentLabel);
-            }
 
-            if (labels.size()<maxNumberOfLabelsPerInstance)
-                throw new InputValidationException() ;
+                temp.addLabel(new Label((long) ((JSONObject) classLabel).get("label id"), (String) ((JSONObject) classLabel).get("label text")));
+
+            }
 
             //create a json array to hold instances in it
             JSONArray classInstances = (JSONArray) jsonObject.get("instances");
@@ -107,33 +103,33 @@ public class JsonFileReader {
             for (Object classInstance : classInstances) {
                 //like the class labels create a current instance
                 int a=0;
-                for (Instance instance : instances) {
+                for (Instance instance : temp.getInstances()) {
                     if (instance.getId()==((long) ((JSONObject) classInstance).get("id")) &&
                         instance.getInstance().equals((String) ((JSONObject) classInstance).get("instance")))
                         a=1;
                 }
                 if(a==0){
                     //add current instances to the instances arraylist
-                    Instance currentInstance = new Instance((long) ((JSONObject) classInstance).get("id"), (String) ((JSONObject) classInstance).get("instance"));
-                    instances.add(currentInstance);
+                    temp.addInstance(new Instance((long) ((JSONObject) classInstance).get("id"), (String) ((JSONObject) classInstance).get("instance")));
+
                 }
 
             }
             //return a dataset object with attributes in json file
-            return new Dataset(id, datasetName,maxNumberOfLabelsPerInstance, labels, instances,userIDs);
+
+            return temp ;
 
         //catch io or parse exception
         } catch (IOException | ParseException e) {
             e.printStackTrace();
-        } catch (InputValidationException exception) {
-            exception.InputValidationExceptionMessage();
         }
-        //return null if any exception occurred in method body
-        return null;
+
+        return null ;
+
     }
 
     //readUserFile method to read users type json file with a path parameter
-    public ArrayList<User> readUserFile(String path){
+    public void readUserFile(ArrayList<User> users,String path){
         final Logger logger = Logger.getLogger("UserManager");
         //create a json parser to parse objects
         JSONParser jsonParser = new JSONParser();
@@ -157,26 +153,81 @@ public class JsonFileReader {
                 users.add(currentUser);
                 logger.info("userManager: created " + currentUser.getUserName() + " as " + currentUser.getUserType());
             }
-            //return users arraylist
-            return this.users;
+
         //catch exceptions
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        //return null if any exception occurred in method body
-        return null;
+
     }
 
-    public ArrayList<Label> getLabels() {
-        return labels;
-    }
+    public void readClassLabelAssignments(ArrayList<Dataset> datasets , ArrayList<User> users){
 
-    public ArrayList<Instance> getInstances() {
-        return instances;
-    }
+        //creating a json parser to parse read json file
+        JSONParser jsonParser = new JSONParser();
 
-    public ArrayList<User> getUsers() {
-        return users;
+        for (Dataset dataset : datasets){
+            System.out.println("1");
+            try (FileReader fileReader = new FileReader(dataset.getPath())) {
+                //create an Object obj to parse file
+                Object obj = jsonParser.parse(fileReader);
+                JSONObject jsonObject = (JSONObject) obj;
+
+                JSONArray classLabelsAssignments = (JSONArray) jsonObject.get("class label assignments");
+
+                //iterate through in classLabels json array
+                for (Object assignments : classLabelsAssignments) {
+
+                    for (User user : users){
+
+                        if (user.getUserID()==((long) ((JSONObject) assignments).get("user id"))){
+
+                            for (Instance instance : dataset.getInstances()){
+
+                                if (instance.getId()==((long) ((JSONObject) assignments).get("instance id"))){
+
+                                    Instance tempInstance = new Instance(((long) ((JSONObject) assignments).get("instance id")),
+                                            instance.getInstance());
+
+                                    JSONArray classLabel = (JSONArray) ((JSONObject) assignments).get("class label ids") ;
+
+                                    for (Object labels : classLabel) {
+
+                                        for(Label label : dataset.getLabels()){
+
+                                            if (label.getId() == (long)labels )
+                                                tempInstance.addLabelToInstance(label);
+
+                                        }
+
+                                    }
+
+                                    user.addInstanceToUser(dataset,tempInstance);
+                                    break;
+                                }
+
+                            }
+
+                            break;
+
+                        }
+
+                    }
+
+
+                }
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
     }
 
 }
