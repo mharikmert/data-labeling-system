@@ -2,6 +2,7 @@ package Project.Labeling;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import Project.Dataset;
@@ -18,7 +19,7 @@ public class RandomMechanism extends LabelingMechanism {
     */
 
     @Override
-    public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset, ArrayList<User> users) {
+    public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset, ArrayList<User> users,ArrayList<Dataset>datasets) {
         final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
         long start = System.currentTimeMillis();
@@ -47,19 +48,15 @@ public class RandomMechanism extends LabelingMechanism {
             }
 
             JsonFileWriter jsonfilewriter=new JsonFileWriter();
-            jsonfilewriter.export(dataset, users, "output1.json");
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            jsonfilewriter.export(datasets, users, user);
+           instance.setTimeStamp(LocalDateTime.now());
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
             // writing a JSON output file
         }
 
         long finish = System.currentTimeMillis();
         instance.setTimeElapsed(finish-start);
-        System.out.println(instance.getTimeElapsed());
+   //     System.out.println(instance.getTimeElapsed());
         user.addInstanceToUser(dataset,instance);
 
     }
