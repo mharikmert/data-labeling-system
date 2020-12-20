@@ -55,6 +55,7 @@ public class JsonFileWriter {
         // writing user information
         JSONArray userList = new JSONArray();
         for(User user:users){
+            if(user.assignedDataset(dataset)==null)continue;
             JSONObject userJSONobject = newJSONObject();
             userJSONobject.put("user id",user.getUserID());
             userJSONobject.put("user name",user.getUserName());
