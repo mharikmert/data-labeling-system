@@ -12,31 +12,15 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        //create a json file reader
-        JsonFileReader jsonFileReader = new JsonFileReader();
 
-        //create dataset object for json files with readDatasetFile method
-
-        String getPath = jsonFileReader.getDatasetPath("config.json");
-        if(getPath.equals("Path not found")){
-            System.err.println("Path not found");
-        }
-
-        Dataset dataset = jsonFileReader.readDatasetFile(getPath);
-
-        //create a users arrayList to hold inside users in json file
-        ArrayList<User> users = jsonFileReader.readUserFile("config.json");
-
-        for (User u : users
-        ) {
-            u.assignDataset(dataset);
-        }
-
+        ArrayList<User> users = new ArrayList<>();
         ArrayList<Dataset> datasets =new ArrayList<>();
-        datasets.add(dataset);
+        
+        //create a json file reader to load users and datasets
+        JsonFileReader jsonFileReader = new JsonFileReader("config.json",datasets,users);
+    
         //get solution with solve problem method
-        Solution.getSolution().solveProblem(dataset, users);
-
+        Solution.getSolution().solveProblem(users,datasets);
 
     }
 
