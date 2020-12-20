@@ -1,8 +1,16 @@
-{"dataset id":3,
-"dataset name":"Sentiment Dataset",
-"maximum number of labels per instance":4,
-"class labels":[{"label id":1, "label text":"test1"}, {"label id": 2, "label text": "test2"
-},
+{
+  "dataset id": 3,
+  "dataset name": "Sentiment Dataset",
+  "maximum number of labels per instance": 4,
+  "class labels": [
+    {
+      "label id": 1,
+      "label text": "test1"
+    },
+    {
+      "label id": 2,
+      "label text": "test2"
+    },
     {
       "label id": 3,
       "label text": "test3"
@@ -28,7 +36,7 @@
       "label text": "test8"
     }
   ],
-  "instances":[
+  "instances": [
     {
       "id": 1,
       "instance": "1text"
@@ -4029,5 +4037,58 @@
       "id": 1000,
       "instance": "1000text"
     }
-  ]
+  ],
+  "users": [
+    {
+      "user id": 1,
+      "user name": "RandomLabelingMechanism1",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 2,
+      "user name": "RandomLabelingMechanism2",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 3,
+      "user name": "RandomLabelingMechanism3",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 4,
+      "user name": "RandomLabelingMechanism4",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 5,
+      "user name": "RandomLabelingMechanism5",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 6,
+      "user name": "RandomLabelingMechanism6",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 7,
+      "user name": "RandomLabelingMechanism7",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 8,
+      "user name": "RandomLabelingMechanism8",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 9,
+      "user name": "RandomLabelingMechanism9",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 10,
+      "user name": "MachineLearningLabelingMechanism",
+      "user type": "MachineLearningBot"
+    }
+  ],
+  "class label assignments": []
 }
