@@ -4050,44 +4050,9 @@
       "user type": "RandomBot"
     },
     {
-      "user id": 3,
-      "user name": "RandomLabelingMechanism3",
-      "user type": "RandomBot"
-    },
-    {
-      "user id": 4,
-      "user name": "RandomLabelingMechanism4",
-      "user type": "RandomBot"
-    },
-    {
       "user id": 5,
       "user name": "RandomLabelingMechanism5",
       "user type": "RandomBot"
-    },
-    {
-      "user id": 6,
-      "user name": "RandomLabelingMechanism6",
-      "user type": "RandomBot"
-    },
-    {
-      "user id": 7,
-      "user name": "RandomLabelingMechanism7",
-      "user type": "RandomBot"
-    },
-    {
-      "user id": 8,
-      "user name": "RandomLabelingMechanism8",
-      "user type": "RandomBot"
-    },
-    {
-      "user id": 9,
-      "user name": "RandomLabelingMechanism9",
-      "user type": "RandomBot"
-    },
-    {
-      "user id": 10,
-      "user name": "MachineLearningLabelingMechanism",
-      "user type": "MachineLearningBot"
     }
   ],
   "class label assignments": []
