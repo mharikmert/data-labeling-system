@@ -35,16 +35,42 @@ public class SelectedProblem extends Problem {
         for(User currentUser : selectedUsers){
             if(currentUser.assignedDataset(dataset)==null)continue;
 
+            ArrayList<Instance> instancesToLabel = new ArrayList<>() ;
+            ArrayList<Instance> labeledInstances = new ArrayList<>() ;
+            boolean control = false ;
             for(Instance currentInstance : dataset.getInstances()){
+                for (Instance userInstances : currentUser.getInstances(dataset)){
+                    if (userInstances.getId()==currentInstance.getId() &&
+                            userInstances.getInstance().equals(currentInstance.getInstance())){
+                        labeledInstances.add(currentInstance);
+                        control = true ;
+                        break;
+                    }
+                }
+                if (!control)
+                    instancesToLabel.add(currentInstance);
+                control=false ;
+            }
+
+            System.out.println("\n\nuser : " + currentUser.getUserID());
+            System.out.println("labellanacakların listesi");
+            for(Instance currentInstance : instancesToLabel)
+                System.out.println(currentInstance.getId());
+            System.out.println("labellanmışların listesi");
+            for (Instance currentInstance : labeledInstances)
+                System.out.println(currentInstance.getId());
+            System.out.println("\n\n");
+            for(Instance currentInstance : instancesToLabel){
 
                // yüzde 10 ihtimalle öncekilerden alacak
                 double consistencyCheckRandom = (int)(Math.random()*100);
                 double consistencyCheckProbability = currentUser.getConsistenctCheckProbability()*100;
 
-                if (consistencyCheckRandom < consistencyCheckProbability && currentUser.getInstances(dataset).size()!=0){
-                    int previousSelectRandom = (int)(Math.random()*(currentUser.getInstances(dataset).size()));
-                    Instance copyInstance = new Instance(currentUser.getInstances(dataset).get(previousSelectRandom).getId(),
-                                                         currentUser.getInstances(dataset).get(previousSelectRandom).getInstance());
+                if (consistencyCheckRandom < consistencyCheckProbability && labeledInstances.size()!=0){
+                    int previousSelectRandom = (int)(Math.random()*(labeledInstances.size()));
+                    Instance copyInstance = new Instance(labeledInstances.get(previousSelectRandom).getId(),
+                                                         labeledInstances.get(previousSelectRandom).getInstance());
+                    super.labelingMechanism = new RandomMechanism();
                     super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
@@ -57,6 +83,9 @@ public class SelectedProblem extends Problem {
                 }
 
             }
+
+            labeledInstances.clear();
+            instancesToLabel.clear();
 
         }
 
