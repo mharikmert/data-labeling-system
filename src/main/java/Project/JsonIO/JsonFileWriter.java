@@ -12,6 +12,10 @@ import Project.Instance;
 import Project.Dataset;
 import Project.Label;
 import Project.User;
+import Project.Metrics.DatasetMetrics;
+import Project.Metrics.InstanceMetrics;
+import Project.Metrics.UserMetrics;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -48,6 +52,18 @@ public class JsonFileWriter {
             JSONObject instanceObject=newJSONObject();
             instanceObject.put("id",instance.getId());
             instanceObject.put("instance",instance.getInstance());
+            JSONObject MetricObject=newJSONObject();
+            MetricObject.put("Total number of label assignments",InstanceMetrics.getInstanceMetrics().numberOfLabelAssignments(dataset, instance, users));
+            MetricObject.put("Number of unique label assignments",InstanceMetrics.getInstanceMetrics().numberOfUniqueLabelAssignments(dataset, instance, users));
+            MetricObject.put("Number of unique users",InstanceMetrics.getInstanceMetrics().numberOfUniqueLabelAssignments(dataset, instance, users));
+            MetricObject.put("Most frequent class label and percentage","");
+            MetricObject.put("Class labels and percentages",InstanceMetrics.getInstanceMetrics().frequencyListOfLabelsWithPercentages(dataset, instance, users));
+            try {
+                MetricObject.put("Entropy",InstanceMetrics.getInstanceMetrics().entropy(dataset, instance, users)); 
+            } catch (Exception e) {
+                MetricObject.put("Entropy","NaN");                
+            }
+            instanceObject.put("Metrics",MetricObject);
             instances.put(instanceObject);
         }
         details.put("instances",instances);
@@ -60,33 +76,46 @@ public class JsonFileWriter {
             userJSONobject.put("user id",user.getUserID());
             userJSONobject.put("user name",user.getUserName());
             userJSONobject.put("user type",user.getUserType());
+            JSONObject MetricObject=newJSONObject();
+            MetricObject.put("Number of datasets assigned",UserMetrics.getUserMetrics().numberOfDatasetsAssigned(user));
+            MetricObject.put("all datasets with their completeness percentage",UserMetrics.getUserMetrics().completenessPercentageOfDatasets(user.getDatasets(),user));
+            MetricObject.put("Total number of instances labeled ",UserMetrics.getUserMetrics().numberOfInstancesLabeled(user));
+            MetricObject.put("Total number of unique instances labeled ",UserMetrics.getUserMetrics().numberOfUniqueInstancesLabeled(user));
+            MetricObject.put("Consistency Percentage","");
+            MetricObject.put("Average time spent in labeling an instance in seconds","");
+            MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","");
+            userJSONobject.put("Metrics",MetricObject);
             userList.put(userJSONobject);
         }
         details.put("users",userList);
-	    
-	 // writing the results of assignments
+
+        JSONObject DatasetMetricObject=newJSONObject();
+        DatasetMetricObject.put("Completeness percentage",DatasetMetrics.getDatasetMetrics().complenessPercentage(dataset, users));
+        DatasetMetricObject.put("Class distribution based on final instance labels","");
+        DatasetMetricObject.put("List number of unique instances for each class label","");
+        DatasetMetricObject.put("Number of users assigned to this dataset",DatasetMetrics.getDatasetMetrics().numberOfUsersAssigned(dataset, users));
+        DatasetMetricObject.put("List of users assigned and their completeness percentage",DatasetMetrics.getDatasetMetrics().listOfAssignedUsersWithComplenessPercentage(dataset, users));
+        DatasetMetricObject.put("List of users assigned and their consistency percentag","");
+        details.put("Metrics",DatasetMetricObject);
+        // writing the results of assignments
         JSONArray assignments = new JSONArray();
-         for (Instance instance:dataset.getInstances()) {
-             for(User user:users){
-                if(user.assignedDataset(dataset)==null)continue;
-                    for (Instance usr_inst:user.getInstances(dataset)){
-                        if (instance.getId()==usr_inst.getId()){
-                            JSONObject assignmentObject=newJSONObject();
-                            assignmentObject.put("instance id",instance.getId());
-                            JSONArray labelIDs = new JSONArray();
-                            for(Label label:usr_inst.getLabels()) {
-                                labelIDs.put(label.getId());
-                            }
-                            assignmentObject.put("class label ids",labelIDs);
-                            assignmentObject.put("user id",user.getUserID());
-                            // date time operations
-                            LocalDateTime myDateObj = usr_inst.getTimeStamp();
-                            assignmentObject.put("date time",myDateObj.format(datetimeFormat));
-                            assignments.put(assignmentObject);
+        for(User user:users){
+            if(user.assignedDataset(dataset)==null)continue;
+                for (Instance instance:user.getInstances(dataset)){
+                        JSONObject assignmentObject=newJSONObject();
+                        assignmentObject.put("instance id",instance.getId());
+                        JSONArray labelIDs = new JSONArray();
+                        for(Label label:instance.getLabels()) {
+                            labelIDs.put(label.getId());
                         }
+                        assignmentObject.put("class label ids",labelIDs);
+                        assignmentObject.put("user id",user.getUserID());
+                        // date time operations
+                        LocalDateTime myDateObj = instance.getTimeStamp();
+                        assignmentObject.put("date time",myDateObj.format(datetimeFormat));
+                        assignments.put(assignmentObject);
                     }
-              }
-            }
+        }
         details.put("class label assignments",SortingForAssignments(assignments,"date time"));
            
         try (FileWriter file = new FileWriter(dataset.getPath()+".tmp")) {
