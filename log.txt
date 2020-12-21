@@ -532,3 +532,264 @@
 21/12/2020 12:28:51.795 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 12:fatura  instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
 21/12/2020 12:28:51.806 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 10:hat  instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
 21/12/2020 12:28:51.819 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 8:firma  instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
+21/12/2020 12:36:44.122 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 12:36:44.123 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 12:36:44.123 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 12:36:44.123 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 12:36:44.123 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 12:36:44.123 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 12:36:44.124 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 12:36:44.124 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 12:36:44.124 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 12:36:44.124 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 12:36:44.303 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:3 with class label 9:cihaz instance:"bursa anatolium müşteriyi kandırma 15 eylül günü bursa anatolium turkcell mağazasına iphone cihazım için şarj kablosu almaya gittim. aksesuar için etikette yazan fiyat 89,90dı turkcell uygulamada son bahar indiriminden dolayı fiyatın 63 tl olduğunu gösterdim; aldığım cevap uygulamadaki ürünün orijinal olmadığıydı. "o ürün orijinal değil, sıkıntı yaşamak istemiyorsanız bunu alın" gibi bir cevap verildi. ürünü aldım kartımı uzattım şifremi girmek için cihaza yöneldiğimde ekranda 90,00 tl yazdığını fark ettim. sorduğumda ben size 10 kuruş geri veririm ablacım diye bit yanıt aldım. bugün turkcell müşteri hizmetlerini aradım ve uygulamadaki ürünün orijinal olduğunu satış fiyatının farklı olabileceğini öğrendim. satış fiyatı farklı olabilir evet, ama turkcell'i temsil eden bir çalışan nasıl ürünün sahte olduğunu söyleyebilir, ikincisi benden 10 kuruş başkasından 50 kuruş diye diye neyin hesabı bu?"
+21/12/2020 12:36:44.324 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:3 with class label 10:hat  instance:"bursa anatolium müşteriyi kandırma 15 eylül günü bursa anatolium turkcell mağazasına iphone cihazım için şarj kablosu almaya gittim. aksesuar için etikette yazan fiyat 89,90dı turkcell uygulamada son bahar indiriminden dolayı fiyatın 63 tl olduğunu gösterdim; aldığım cevap uygulamadaki ürünün orijinal olmadığıydı. "o ürün orijinal değil, sıkıntı yaşamak istemiyorsanız bunu alın" gibi bir cevap verildi. ürünü aldım kartımı uzattım şifremi girmek için cihaza yöneldiğimde ekranda 90,00 tl yazdığını fark ettim. sorduğumda ben size 10 kuruş geri veririm ablacım diye bit yanıt aldım. bugün turkcell müşteri hizmetlerini aradım ve uygulamadaki ürünün orijinal olduğunu satış fiyatının farklı olabileceğini öğrendim. satış fiyatı farklı olabilir evet, ama turkcell'i temsil eden bir çalışan nasıl ürünün sahte olduğunu söyleyebilir, ikincisi benden 10 kuruş başkasından 50 kuruş diye diye neyin hesabı bu?"
+21/12/2020 12:36:44.361 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 7:konu  instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
+21/12/2020 12:36:44.377 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 9:cihaz instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
+21/12/2020 12:36:44.397 [InstanceTagger] INFO user id:5 RandomLabelingMechanism5 tagged instance id:5 with class label 4:müşteri instance:"turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir."
+21/12/2020 12:36:49.745 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 12:36:49.746 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 12:36:49.746 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 12:36:49.746 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 12:36:49.746 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 12:36:49.746 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 12:36:49.747 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 12:36:49.747 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 12:36:49.747 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 12:36:49.747 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:21:11.993 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:21:11.994 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:21:11.994 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:21:11.994 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:21:11.994 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:21:11.995 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:21:11.995 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:21:11.995 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:21:11.995 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:21:11.995 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:21:12.102 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:21:12.103 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:21:12.157 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:21:12.157 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:21:12.178 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:21:12.179 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 1:Positive instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:21:12.201 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:21:12.227 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+21/12/2020 14:21:12.257 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 3:Notr instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:21:12.258 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:21:12.274 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:21:12.285 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 1:Positive instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:21:12.295 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:21:12.307 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+21/12/2020 14:21:12.317 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+21/12/2020 14:22:21.930 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:22:21.931 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:22:21.931 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:22:21.931 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:22:21.931 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:22:21.931 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:22:21.932 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:22:21.932 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:22:21.932 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:22:21.932 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:22:22.028 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:22:22.028 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:22:22.095 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:22:22.095 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 1:Positive instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:22:22.124 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+21/12/2020 14:22:22.124 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+21/12/2020 14:22:22.159 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:22:22.159 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:22:22.210 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 1:Positive instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:22:22.228 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:22:22.229 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:22:22.247 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:22:22.248 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:24:06.803 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:24:06.803 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:24:06.804 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:24:06.805 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:24:06.805 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:24:06.897 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:24:06.968 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:24:06.969 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:24:13.367 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:24:13.368 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:24:13.368 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:24:13.369 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:24:13.466 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:24:20.584 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:24:20.584 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:24:20.584 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:24:20.584 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:24:20.585 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:24:20.682 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:24:20.753 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 3:Notr instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:24:23.906 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:24:23.907 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:24:23.908 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:24:23.908 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:24:23.908 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:24:23.909 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:24:23.909 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:24:23.909 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:24:23.909 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:24:23.909 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:24:29.546 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:24:29.547 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:24:29.548 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:24:29.548 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:31:07.951 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:31:07.951 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:31:07.951 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:31:07.951 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:31:07.952 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:31:07.952 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:31:07.952 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:31:07.952 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:31:07.954 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:31:07.954 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:31:45.867 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:31:45.868 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:31:45.869 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:31:45.869 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:31:45.869 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:31:46.018 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:31:46.040 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 1:Positive instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:31:46.064 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:31:46.087 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 3:Notr instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:31:46.124 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:31:46.150 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:31:46.176 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:31:46.199 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:31:46.217 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:31:46.239 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:31:46.253 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+21/12/2020 14:31:46.267 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:31:46.276 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:31:46.286 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:31:46.293 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:31:46.305 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+21/12/2020 14:31:46.313 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+21/12/2020 14:31:46.322 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+21/12/2020 14:31:46.333 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:31:46.344 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:31:46.355 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+21/12/2020 14:31:46.363 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:31:46.379 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 2:Negative instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+21/12/2020 14:32:00.184 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:00.184 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:00.185 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:00.185 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:00.185 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:00.185 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:00.186 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:00.186 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:00.186 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:00.186 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:00.354 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+21/12/2020 14:32:00.381 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 3:Notr instance:"şarjı hemen bitiriyor"
+21/12/2020 14:32:00.401 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 1:Positive instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+21/12/2020 14:32:00.425 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:32:00.441 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+21/12/2020 14:32:08.981 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:08.982 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:08.982 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:08.982 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:08.982 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:08.982 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:08.983 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:08.983 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:08.983 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:08.983 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:09.127 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+21/12/2020 14:32:16.521 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:16.523 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:16.523 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:16.523 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:16.523 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:16.524 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:16.524 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:16.524 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:16.524 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:16.525 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:21.427 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:21.428 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:21.428 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:21.428 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:21.428 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:21.429 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:21.429 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:21.429 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:21.429 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:21.429 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:21.619 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:32:21.659 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 2:Negative instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+21/12/2020 14:32:25.938 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:25.938 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:25.939 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:25.939 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:25.939 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:25.939 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:25.940 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:25.940 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:25.940 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:25.940 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:29.333 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:29.334 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:29.334 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:29.334 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:29.334 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:29.335 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:29.335 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:29.335 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:29.335 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:29.336 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:33.049 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:33.050 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:33.050 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:33.050 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:33.050 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:33.050 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:33.051 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:33.051 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:33.051 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:33.051 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+21/12/2020 14:32:33.193 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+21/12/2020 14:32:36.430 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+21/12/2020 14:32:36.431 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+21/12/2020 14:32:36.431 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+21/12/2020 14:32:36.431 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+21/12/2020 14:32:36.431 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+21/12/2020 14:32:36.431 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+21/12/2020 14:32:36.432 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+21/12/2020 14:32:36.432 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+21/12/2020 14:32:36.432 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+21/12/2020 14:32:36.432 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
