@@ -207,7 +207,10 @@ public class JsonFileReader {
                                     try {
                                         tempInstance.setTimeStamp(LocalDateTime.parse(((JSONObject) assignments).get("date time").toString(),datetimeFormat)); 
                                     } catch (Exception e) {}
-                                    user.addInstanceToUser(dataset,tempInstance);
+                                    try {
+                                        tempInstance.setTimeElapsed((long)(1000*Float.parseFloat(((JSONObject) assignments).get("time elapsed").toString())));                                      
+                                    } catch (Exception e) {}
+                                   user.addInstanceToUser(dataset,tempInstance);
                                     break;
                                 }
 
