@@ -6,6 +6,11 @@ import Project.Instance;
 import Project.Label;
 
 import java.util.LinkedHashMap;
+
+import javax.xml.stream.events.StartElement;
+
+import org.w3c.dom.UserDataHandler;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -58,7 +63,7 @@ public class UserMetrics {
                 {totalTimeElapsed+=instance.getTimeElapsed();
                 totalLabeling++;}
         try {
-            return (float)(totalTimeElapsed/totalLabeling)/1000;
+            return ((float)totalTimeElapsed/totalLabeling)/1000;
         } catch (Exception e) {
             return 0;
         }
@@ -80,30 +85,47 @@ public class UserMetrics {
         }
     }
 
-    // public float consistencyPercentage(User user){
-    //     // NEEDS TO BE REVISED AGAIN !!!!
-    //     int totalNumberOftheSame=0;
-    //     for(Object key:FrequencyListOfInstances(user).values())
-    //         try {
-    //           for(Object value:((HashMap<Object,Object>)key).values())
-    //             totalNumberOftheSame+=(int)value-1;
-    //         } catch (ClassCastException e) { }
-    //     return ((float)totalNumberOftheSame/(float)numberOfInstancesLabeled(user))*100;
-    // }
+    public float consistency(Dataset dataset,User user){
+        ArrayList<Dataset> datasets=new ArrayList<>();
+        datasets.add(dataset);
+        return consistency(datasets, user);
+    }
 
+    public float consistency(ArrayList<Dataset> datasets,User user){
+        int recurrentLabeling=0;
+        int consistentCount=0;
+        for(Dataset dataset:datasets){
+            Dataset userDataset=user.assignedDataset(dataset);
+            if(userDataset==null)continue;
+            HashMap<Object,Object> tempFrequencyList=FrequencyListOfInstances(userDataset, user);
+            for(Object key:tempFrequencyList.keySet()){
+                HashMap<Object,Object> tempObject=(HashMap<Object,Object>)tempFrequencyList.get(key);
+                if(tempObject.size()>1)recurrentLabeling++;
+                else if (!tempObject.isEmpty() && (int)(tempObject.values().toArray())[0]>1){consistentCount++;
+                recurrentLabeling++;}
+            }
+        }
+        try {
+            return (((float)consistentCount/recurrentLabeling)*100);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
 
-    protected HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
+    public /*protected*/ HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
         HashMap<Object,Object> list=new HashMap<>();
         if(!user.getDatasets().contains(userDataset))
             return null;
         for(Instance instance:user.getInstances(userDataset))
         {
-            HashMap<Object,Object> subList=new HashMap<>();
+            HashMap<Object,Object> subList;
+            if(list.containsKey(instance.getId()))subList=(HashMap<Object,Object>)list.get(instance.getId());
+            else {subList=new HashMap<>();
+                list.put(instance.getId(), subList);}
             for(Label label:instance.getLabels()){
                 if(!subList.containsKey(label.getId()))subList.put(label.getId(), 1);
-                else subList.replace(label.getId(),(int)subList.get(label.getId())+1);
+                else {subList.replace(label.getId(),(int)subList.get(label.getId())+1);}
             }
-            list.put(instance.getId(), subList);
         }
         return list;
     }
