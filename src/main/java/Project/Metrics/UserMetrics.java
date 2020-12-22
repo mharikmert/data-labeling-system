@@ -50,6 +50,36 @@ public class UserMetrics {
         return totalNumber;
     }
 
+    public float averageTimeSpentInLabeling(User user){
+        long totalTimeElapsed=0;
+        long totalLabeling=0;
+        for(Dataset dataset:user.getDatasets())
+            for(Instance instance:dataset.getInstances())
+                {totalTimeElapsed+=instance.getTimeElapsed();
+                totalLabeling++;}
+        try {
+            return (float)(totalTimeElapsed/totalLabeling)/1000;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public float stdDeviationOfTimeSpentInLabeling(User user){
+        float averageTime=averageTimeSpentInLabeling(user);
+        long totalLabeling=0;
+        double total=0;
+        for(Dataset dataset:user.getDatasets())
+            for(Instance instance:dataset.getInstances()){
+                total+=Math.pow(instance.getTimeElapsed()/1000-averageTime,2);
+                totalLabeling++;
+            }
+        try {
+            return (float)(total/totalLabeling);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
     // public float consistencyPercentage(User user){
     //     // NEEDS TO BE REVISED AGAIN !!!!
     //     int totalNumberOftheSame=0;
