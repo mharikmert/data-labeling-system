@@ -54,7 +54,7 @@ public class RandomMechanism extends LabelingMechanism {
             instance.setTimeStamp(LocalDateTime.now());
             user.addInstanceToUser(dataset,instance);
             JsonFileWriter jsonfilewriter=new JsonFileWriter();
-            jsonfilewriter.export(datasets, users, user);
+            jsonfilewriter.export(datasets, users, dataset);
 
             logger.info("user id:"+user.getUserID()+" "+user.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+randomLabel.getId()+":"+randomLabel.getText()+" instance:\""+instance.getInstance()+"\"");
 
