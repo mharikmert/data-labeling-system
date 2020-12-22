@@ -42,6 +42,16 @@ public class DatasetMetrics {
         return assignedUsers(dataset,users).size();
     }
 
+    public HashMap<Object,Object> listOfUsersAssignedAndConsistencyPercentage(Dataset dataset,ArrayList<User>users){
+        HashMap<Object,Object> list=new HashMap<>();
+        for(User user:users)
+        {
+            if (user.assignedDataset(dataset)==null)continue;
+            list.put("user"+user.getUserID(), UserMetrics.getUserMetrics().consistency(dataset,user)+"%");
+        }
+        return list;
+    }
+
     protected ArrayList<User> assignedUsers(Dataset dataset,ArrayList<User> users){
         ArrayList<User> userList=new ArrayList<>();
         for(User user:users){
