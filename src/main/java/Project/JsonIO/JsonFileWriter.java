@@ -117,6 +117,7 @@ public class JsonFileWriter {
                         }
                         assignmentObject.put("class label ids",labelIDs);
                         assignmentObject.put("user id",user.getUserID());
+                        assignmentObject.put("time elapsed",(float)instance.getTimeElapsed()/1000);
                         // date time operations
                         LocalDateTime myDateObj = instance.getTimeStamp();
                         assignmentObject.put("date time",myDateObj.format(datetimeFormat));
@@ -170,8 +171,12 @@ public class JsonFileWriter {
             MetricObject.put("Total number of instances labeled ",UserMetrics.getUserMetrics().numberOfInstancesLabeled(user));
             MetricObject.put("Total number of unique instances labeled ",UserMetrics.getUserMetrics().numberOfUniqueInstancesLabeled(user));
             MetricObject.put("Consistency Percentage","");
-            MetricObject.put("Average time spent in labeling an instance in seconds","");
-            MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","");
+            MetricObject.put("Average time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().averageTimeSpentInLabeling(user));
+           try {
+               MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().stdDeviationOfTimeSpentInLabeling(user));
+           } catch (Exception e) {
+               MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","NaN");
+           }
             userJSONobject.put("Metrics",MetricObject);
             userJSONArray.put(userJSONobject);
         }
