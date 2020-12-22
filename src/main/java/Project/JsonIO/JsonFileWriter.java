@@ -23,13 +23,29 @@ import org.json.JSONObject;
 public class JsonFileWriter {
     final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
-    public void export(ArrayList<Dataset> datasets,ArrayList<User> users,User user){
-        for(Dataset dataset:datasets)
-            if(user.assignedDataset(dataset)!=null)export(dataset,users);
-    }
+    public void export(ArrayList<Dataset> datasets,ArrayList<User> users,Dataset dataset){
+        filewriter(datasetJson(dataset,users).toString(2), dataset.getPath());
+        filewriter(UsersMetric(datasets,users).toString(2),"UserMetrics.json");
+   }
 
-    // export method takes dataset and users as parameters then puts the information to a json object
-    private void export(Dataset dataset, ArrayList<User> users){
+   private void filewriter(String written,String path){
+        try(FileWriter file=new FileWriter(path+".tmp")) {
+            file.write(written);
+            file.close();
+            while(true){
+                File f1 = new File(path+".tmp");
+                if(f1.length()!=0){
+                    File f2=new File(path);
+                    f2.delete();
+                    f2=new File(path);
+                    if(f1.renameTo(f2))break;
+                }
+            }
+        } catch (Exception e) {}
+   }
+
+    // dataset method takes dataset and users as parameters then puts the information to a json object
+    private JSONObject datasetJson(Dataset dataset, ArrayList<User> users){
 	 // dataset part   
 	JSONObject details = newJSONObject();
         details.put("dataset id",dataset.getId());
@@ -76,15 +92,6 @@ public class JsonFileWriter {
             userJSONobject.put("user id",user.getUserID());
             userJSONobject.put("user name",user.getUserName());
             userJSONobject.put("user type",user.getUserType());
-            JSONObject MetricObject=newJSONObject();
-            MetricObject.put("Number of datasets assigned",UserMetrics.getUserMetrics().numberOfDatasetsAssigned(user));
-            MetricObject.put("all datasets with their completeness percentage",UserMetrics.getUserMetrics().completenessPercentageOfDatasets(user.getDatasets(),user));
-            MetricObject.put("Total number of instances labeled ",UserMetrics.getUserMetrics().numberOfInstancesLabeled(user));
-            MetricObject.put("Total number of unique instances labeled ",UserMetrics.getUserMetrics().numberOfUniqueInstancesLabeled(user));
-            MetricObject.put("Consistency Percentage","");
-            MetricObject.put("Average time spent in labeling an instance in seconds","");
-            MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","");
-            userJSONobject.put("Metrics",MetricObject);
             userList.put(userJSONobject);
         }
         details.put("users",userList);
@@ -117,23 +124,7 @@ public class JsonFileWriter {
                     }
         }
         details.put("class label assignments",SortingForAssignments(assignments,"date time"));
-           
-        try (FileWriter file = new FileWriter(dataset.getPath()+".tmp")) {
-            file.write(details.toString(2));
-            file.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        while(true){
-            File f1 = new File(dataset.getPath()+".tmp");
-            if(f1.length()!=0){
-                File f2=new File(dataset.getPath());
-                f2.delete();
-                f2=new File(dataset.getPath());
-                if(f1.renameTo(f2))break;
-            }
-        }
-
+        return details;
     }
 
     private JSONObject newJSONObject(){
@@ -164,6 +155,27 @@ public class JsonFileWriter {
             list.put(tempObject);
         }
         return list;
+    }
+
+    private JSONArray UsersMetric(ArrayList<Dataset> datasets,ArrayList<User>users){
+        JSONArray userJSONArray=new JSONArray();
+        for(User user:users){
+            JSONObject userJSONobject = newJSONObject();
+            userJSONobject.put("user id",user.getUserID());
+            userJSONobject.put("user name",user.getUserName());
+            userJSONobject.put("user type",user.getUserType());
+            JSONObject MetricObject=newJSONObject();
+            MetricObject.put("Number of datasets assigned",UserMetrics.getUserMetrics().numberOfDatasetsAssigned(user));
+            MetricObject.put("all datasets with their completeness percentage",UserMetrics.getUserMetrics().completenessPercentageOfDatasets(datasets,user));
+            MetricObject.put("Total number of instances labeled ",UserMetrics.getUserMetrics().numberOfInstancesLabeled(user));
+            MetricObject.put("Total number of unique instances labeled ",UserMetrics.getUserMetrics().numberOfUniqueInstancesLabeled(user));
+            MetricObject.put("Consistency Percentage","");
+            MetricObject.put("Average time spent in labeling an instance in seconds","");
+            MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","");
+            userJSONobject.put("Metrics",MetricObject);
+            userJSONArray.put(userJSONobject);
+        }
+        return userJSONArray;
     }
 
 }
