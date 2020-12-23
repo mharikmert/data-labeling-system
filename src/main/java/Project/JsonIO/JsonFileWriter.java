@@ -71,8 +71,8 @@ public class JsonFileWriter {
             JSONObject MetricObject=newJSONObject();
             MetricObject.put("Total number of label assignments",InstanceMetrics.getInstanceMetrics().numberOfLabelAssignments(dataset, instance, users));
             MetricObject.put("Number of unique label assignments",InstanceMetrics.getInstanceMetrics().numberOfUniqueLabelAssignments(dataset, instance, users));
-            MetricObject.put("Number of unique users",InstanceMetrics.getInstanceMetrics().numberOfUniqueLabelAssignments(dataset, instance, users));
-            MetricObject.put("Most frequent class label and percentage","");
+            MetricObject.put("Number of unique users",InstanceMetrics.getInstanceMetrics().numberOfUsers(dataset, instance, users));
+            MetricObject.put("Most frequent class label and percentage",InstanceMetrics.getInstanceMetrics().mostFrequentClassLabelwithPercentage(dataset, instance, users));
             MetricObject.put("Class labels and percentages",InstanceMetrics.getInstanceMetrics().frequencyListOfLabelsWithPercentages(dataset, instance, users));
             MetricObject.put("Entropy",InstanceMetrics.getInstanceMetrics().entropy(dataset, instance, users)); 
             instanceObject.put("Metrics",MetricObject);
@@ -94,8 +94,8 @@ public class JsonFileWriter {
 
         JSONObject DatasetMetricObject=newJSONObject();
         DatasetMetricObject.put("Completeness percentage",DatasetMetrics.getDatasetMetrics().complenessPercentage(dataset, users));
-        DatasetMetricObject.put("Class distribution based on final instance labels","");
-        DatasetMetricObject.put("List number of unique instances for each class label","");
+        DatasetMetricObject.put("Class distribution based on final instance labels",DatasetMetrics.getDatasetMetrics().classDistribuionBasedOnFinal(dataset));
+        DatasetMetricObject.put("List number of unique instances for each class label",DatasetMetrics.getDatasetMetrics().numberOfUniqueInstancesForEachLabels(dataset, users));
         DatasetMetricObject.put("Number of users assigned to this dataset",DatasetMetrics.getDatasetMetrics().numberOfUsersAssigned(dataset, users));
         DatasetMetricObject.put("List of users assigned and their completeness percentage",DatasetMetrics.getDatasetMetrics().listOfAssignedUsersWithComplenessPercentage(dataset, users));
         DatasetMetricObject.put("List of users assigned and their consistency percentage",DatasetMetrics.getDatasetMetrics().listOfUsersAssignedAndConsistencyPercentage(dataset, users));
