@@ -6,6 +6,7 @@ import Project.Instance;
 import Project.Label;
 
 import java.util.LinkedHashMap;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -34,12 +35,13 @@ public class InstanceMetrics{
     public int numberOfUsers(Dataset dataset, Instance instance, ArrayList<User>users){
         int totalNumber=0;
         for(User user:users)
-            for(Dataset userDataset:user.getDatasets())
-                if(userDataset.getId()==dataset.getId()){
-                    for(Instance userInstance:dataset.getInstances())
-                        if(instance.getId()==userInstance.getId()){totalNumber++;
-                            break;}
+        {
+            Dataset userDataset=user.assignedDataset(dataset);
+            if(userDataset==null)continue;
+            for(Instance userInstance:userDataset.getInstances())
+                if(instance.getId()==userInstance.getId()){totalNumber++;
                     break;}
+            break;}
         return totalNumber;
     }
 
@@ -62,7 +64,35 @@ public class InstanceMetrics{
         return 0;
     }
 
-    private HashMap<Object,Object> frequencyListOfLabels(Dataset dataset, Instance instance, ArrayList<User>users){
+    public HashMap<Object,Object> mostFrequentClassLabelwithPercentage(Dataset dataset,Instance instance,ArrayList<User>users){
+        ArrayList<Object> list=new ArrayList<>();
+        int listFrequency=0;
+        HashMap<Object,Object> tempFrequencyList=frequencyListOfLabels(dataset,instance,users);
+        for(Object tempObject:tempFrequencyList.keySet())
+            if((int)tempFrequencyList.get(tempObject)>=listFrequency){
+                if((int)tempFrequencyList.get(tempObject)!=listFrequency)list.clear();
+                list.add(tempObject);
+                listFrequency=(int)tempFrequencyList.get(tempObject);
+            }
+       Object theMostFrequentOne;
+        if(list.size()==0)return null;
+        theMostFrequentOne=list.get((int)(Math.random()*list.size()));
+        for(Label label:dataset.getLabels())
+            {
+                if(label.getId()==(long)theMostFrequentOne){
+                    theMostFrequentOne=label;
+                    break;
+                }
+            }
+        instance.addLabelToInstance((Label)theMostFrequentOne);
+        int numberOflabelAssignment=numberOfLabelAssignments(dataset,instance,users);
+        HashMap<Object,Object> theMost=new HashMap<>();
+        theMost.put(((Label)theMostFrequentOne).getId(), ((float)listFrequency/numberOflabelAssignment)*100);      
+      return theMost;
+    }
+
+
+    public /*private*/ HashMap<Object,Object> frequencyListOfLabels(Dataset dataset, Instance instance, ArrayList<User>users){
         HashMap<Object,Object> list=new HashMap<>();
         for(Object hashMapObject:labelAssignments(dataset, instance, users))
             for(Object LabelId:((HashMap<Object,Object>)hashMapObject).values())
@@ -71,7 +101,7 @@ public class InstanceMetrics{
         return list;
     }
 
-    private ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
+    public /*private*/ ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
         ArrayList<HashMap<Object,Object>> list=new ArrayList<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())
@@ -85,7 +115,6 @@ public class InstanceMetrics{
                                 subList.put(user.getUserID(), label.getId());
                                 list.add(subList);
                             }
-                            break;
                         }
                     break;
                 }
