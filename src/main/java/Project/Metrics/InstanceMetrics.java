@@ -58,7 +58,8 @@ public class InstanceMetrics{
         double entropy=0;
         for(Object labelId:list.keySet())
             entropy+=(double)((int)list.get(labelId))*-1/numberofLabels*(double)(Math.log(((double)(int)list.get(labelId))/numberofLabels)/Math.log(numberOfUniqueLabels));
-        return entropy;
+        if (Double.isFinite(entropy)) return entropy;
+        return 0;
     }
 
     private HashMap<Object,Object> frequencyListOfLabels(Dataset dataset, Instance instance, ArrayList<User>users){
