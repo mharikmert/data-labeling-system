@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 import Project.Dataset;
 import Project.Instance;
-
+import Project.Label;
 import Project.User;
 
 public class DatasetMetrics {
@@ -27,9 +27,6 @@ public class DatasetMetrics {
     }
 
     public HashMap<Object,Object> listOfAssignedUsersWithComplenessPercentage(Dataset dataset,ArrayList<User> users){
-        /*
-         Maybe we can find a way to generalize this method with UserMetrics.completenessPercentageOfDatasets
-        */
         HashMap<Object,Object> list=new HashMap<>();
         for(User user:assignedUsers(dataset,users))
             for(Dataset userDataset:user.getDatasets())
@@ -52,6 +49,34 @@ public class DatasetMetrics {
         return list;
     }
 
+    public HashMap<Object,Object> classDistribuionBasedOnFinal(Dataset dataset){
+        HashMap<Object,Object> list=new HashMap<>();
+        for(Instance instance:dataset.getInstances()){
+            if(instance.getLabels().size()==0)continue;
+            if(!list.containsKey(instance.getId()))list.put(instance.getLabels().get(0).getId(), 1);
+            else list.put(instance.getLabels().get(0).getId(), (int)list.get(instance.getLabels().get(0).getId())+1);
+        }
+        for(Object o:list.keySet()){
+            list.replace(o,(float)((int)list.get(o))/list.size()*100);
+        }
+        return list;
+    }
+
+    public HashMap<Object,Object> numberOfUniqueInstancesForEachLabels(Dataset dataset,ArrayList<User>users){
+        HashMap<Object,Object> list=new HashMap<>();
+        for(Instance instance:dataset.getInstances())
+        {
+            HashMap<Object,Object> instanceFrequencyList=InstanceMetrics.getInstanceMetrics().frequencyListOfLabels(dataset, instance, users);
+            for(Label label:dataset.getLabels())
+                if(instanceFrequencyList.keySet().contains(label.getId()))
+                {
+                    if(list.keySet().contains(label.getId()))list.replace(label.getId(), (int)list.get(label.getId())+1);
+                    else list.put(label.getId(), 1);
+                }
+        }
+        return list;   
+    }
+
     protected ArrayList<User> assignedUsers(Dataset dataset,ArrayList<User> users){
         ArrayList<User> userList=new ArrayList<>();
         for(User user:users){
@@ -61,7 +86,7 @@ public class DatasetMetrics {
         return userList;
     }
 
-    protected HashSet<Object> LabeledInstanceList(Dataset dataset,ArrayList<User>users){
+    public /*protected*/ HashSet<Object> LabeledInstanceList(Dataset dataset,ArrayList<User>users){
         HashSet<Object> list = new HashSet<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())
