@@ -62,11 +62,9 @@ public class UserMetrics {
             for(Instance instance:dataset.getInstances())
                 {totalTimeElapsed+=instance.getTimeElapsed();
                 totalLabeling++;}
-        try {
-            return ((float)totalTimeElapsed/totalLabeling)/1000;
-        } catch (Exception e) {
-            return 0;
-        }
+        float tempReturn=((float)totalTimeElapsed/totalLabeling)/1000;
+        if (Float.isFinite(tempReturn)) return tempReturn;
+        return 0;
     }
 
     public float stdDeviationOfTimeSpentInLabeling(User user){
@@ -78,11 +76,9 @@ public class UserMetrics {
                 total+=Math.pow(instance.getTimeElapsed()/1000-averageTime,2);
                 totalLabeling++;
             }
-        try {
-            return (float)(total/totalLabeling);
-        } catch (Exception e) {
-            return 0;
-        }
+        float tempReturn=(float)(total/totalLabeling);
+        if (Float.isFinite(tempReturn)) return tempReturn;
+        return 0;
     }
 
     public float consistency(Dataset dataset,User user){
@@ -105,11 +101,9 @@ public class UserMetrics {
                 recurrentLabeling++;}
             }
         }
-        try {
-            return (((float)consistentCount/recurrentLabeling)*100);
-        } catch (Exception e) {
-            return 0;
-        }
+        float tempReturn=(((float)consistentCount/recurrentLabeling)*100);
+        if (Float.isFinite(tempReturn)) return tempReturn;
+        return 0;
     }
 
     public /*protected*/ HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
