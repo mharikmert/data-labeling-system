@@ -74,11 +74,7 @@ public class JsonFileWriter {
             MetricObject.put("Number of unique users",InstanceMetrics.getInstanceMetrics().numberOfUniqueLabelAssignments(dataset, instance, users));
             MetricObject.put("Most frequent class label and percentage","");
             MetricObject.put("Class labels and percentages",InstanceMetrics.getInstanceMetrics().frequencyListOfLabelsWithPercentages(dataset, instance, users));
-            try {
-                MetricObject.put("Entropy",InstanceMetrics.getInstanceMetrics().entropy(dataset, instance, users)); 
-            } catch (Exception e) {
-                MetricObject.put("Entropy","NaN");                
-            }
+            MetricObject.put("Entropy",InstanceMetrics.getInstanceMetrics().entropy(dataset, instance, users)); 
             instanceObject.put("Metrics",MetricObject);
             instances.put(instanceObject);
         }
@@ -102,7 +98,7 @@ public class JsonFileWriter {
         DatasetMetricObject.put("List number of unique instances for each class label","");
         DatasetMetricObject.put("Number of users assigned to this dataset",DatasetMetrics.getDatasetMetrics().numberOfUsersAssigned(dataset, users));
         DatasetMetricObject.put("List of users assigned and their completeness percentage",DatasetMetrics.getDatasetMetrics().listOfAssignedUsersWithComplenessPercentage(dataset, users));
-        DatasetMetricObject.put("List of users assigned and their consistency percentag",DatasetMetrics.getDatasetMetrics().listOfUsersAssignedAndConsistencyPercentage(dataset, users));
+        DatasetMetricObject.put("List of users assigned and their consistency percentage",DatasetMetrics.getDatasetMetrics().listOfUsersAssignedAndConsistencyPercentage(dataset, users));
         details.put("Metrics",DatasetMetricObject);
         // writing the results of assignments
         JSONArray assignments = new JSONArray();
@@ -170,13 +166,9 @@ public class JsonFileWriter {
             MetricObject.put("all datasets with their completeness percentage",UserMetrics.getUserMetrics().completenessPercentageOfDatasets(datasets,user));
             MetricObject.put("Total number of instances labeled ",UserMetrics.getUserMetrics().numberOfInstancesLabeled(user));
             MetricObject.put("Total number of unique instances labeled ",UserMetrics.getUserMetrics().numberOfUniqueInstancesLabeled(user));
-            MetricObject.put("Consistency Percentage",UserMetrics.getUserMetrics().consistency(datasets, user));
-            MetricObject.put("Average time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().averageTimeSpentInLabeling(user));
-           try {
-               MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().stdDeviationOfTimeSpentInLabeling(user));
-           } catch (Exception e) {
-               MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds","NaN");
-           }
+            MetricObject.put("Consistency Percentage",UserMetrics.getUserMetrics().consistency(datasets, user));            
+            MetricObject.put("Average time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().averageTimeSpentInLabeling(user));             
+            MetricObject.put("Std. dev. of  time spent in labeling an instance in seconds",UserMetrics.getUserMetrics().stdDeviationOfTimeSpentInLabeling(user));
             userJSONobject.put("Metrics",MetricObject);
             userJSONArray.put(userJSONobject);
         }
