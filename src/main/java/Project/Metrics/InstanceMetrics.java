@@ -84,6 +84,7 @@ public class InstanceMetrics{
                     break;
                 }
             }
+        if(instance.getLabels().size()>0)instance.setLabels(new ArrayList<Label>());
         instance.addLabelToInstance((Label)theMostFrequentOne);
         int numberOflabelAssignment=numberOfLabelAssignments(dataset,instance,users);
         HashMap<Object,Object> theMost=new HashMap<>();
