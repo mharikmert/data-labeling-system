@@ -53,11 +53,14 @@ public class DatasetMetrics {
         HashMap<Object,Object> list=new HashMap<>();
         for(Instance instance:dataset.getInstances()){
             if(instance.getLabels().size()==0)continue;
-            if(!list.containsKey(instance.getId()))list.put(instance.getLabels().get(0).getId(), 1);
+            if(!list.containsKey(instance.getLabels().get(0).getId()))list.put(instance.getLabels().get(0).getId(), 1);
             else list.put(instance.getLabels().get(0).getId(), (int)list.get(instance.getLabels().get(0).getId())+1);
         }
+        int totalNumber=0;
+        for(Object o:list.values())
+             totalNumber+=(int)o;
         for(Object o:list.keySet()){
-            list.replace(o,(float)((int)list.get(o))/list.size()*100);
+            list.replace(o,(float)((int)list.get(o))/totalNumber*100);
         }
         return list;
     }
