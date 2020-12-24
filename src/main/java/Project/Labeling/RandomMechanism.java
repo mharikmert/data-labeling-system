@@ -28,9 +28,6 @@ public class RandomMechanism extends LabelingMechanism {
         for (int i=0 ; i<numberOfLabels ; i++){
             // select random label with createRandomLabel method
 
-            if (i!=0)
-                user.getInstances(dataset).remove(user.getInstances(dataset).size()-1);
-
             Label randomLabel = createRandomLabel(dataset.getLabels());
             // if the instance has no label , add the label directly , we don't need to control.
             if (instance.getLabels().size() == 0){
@@ -52,7 +49,7 @@ public class RandomMechanism extends LabelingMechanism {
             }
 
             instance.setTimeStamp(LocalDateTime.now());
-            user.addInstanceToUser(dataset,instance);
+            if(i==0)user.addInstanceToUser(dataset,instance);
             JsonFileWriter jsonfilewriter=new JsonFileWriter();
             jsonfilewriter.export(datasets, users, dataset);
 
