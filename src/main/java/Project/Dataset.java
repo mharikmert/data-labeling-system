@@ -2,9 +2,6 @@ package Project;
 
 import java.util.ArrayList;
 
-import javax.swing.text.StringContent;
-
-
 public class Dataset {
 
     //Class attributes definitions
