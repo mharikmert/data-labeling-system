@@ -22,19 +22,20 @@ public class DatasetMetrics {
         return datasetMetrics;
     }
 
-    public float complenessPercentage(Dataset dataset,ArrayList<User> users){
-        return ((float)getDatasetMetrics().LabeledInstanceList(dataset, users).size()/dataset.getInstances().size())*100;
+    public float completenessPercentage(Dataset dataset, ArrayList<User> users){
+        return ((float)getDatasetMetrics().labeledInstanceList(dataset, users).size()/dataset.getInstances().size())*100;
     }
 
-    public HashMap<Object,Object> listOfAssignedUsersWithComplenessPercentage(Dataset dataset,ArrayList<User> users){
+    public HashMap<Object,Object> listOfAssignedUsersWithCompletenessPercentage(Dataset dataset, ArrayList<User> users){
         HashMap<Object,Object> list=new HashMap<>();
         for(User user:assignedUsers(dataset,users))
             for(Dataset userDataset:user.getDatasets())
                 if(userDataset.getId()==dataset.getId()){
-                    list.put("user"+user.getUserID(),((float)UserMetrics.getUserMetrics().FrequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");
+                    list.put("user"+user.getUserID(),((float)UserMetrics.getUserMetrics().frequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");
                     break;}
         return list;
     }
+
     public int numberOfUsersAssigned(Dataset dataset,ArrayList<User>users){
         return assignedUsers(dataset,users).size();
     }
@@ -89,7 +90,7 @@ public class DatasetMetrics {
         return userList;
     }
 
-    public /*protected*/ HashSet<Object> LabeledInstanceList(Dataset dataset,ArrayList<User>users){
+    public /*protected*/ HashSet<Object> labeledInstanceList(Dataset dataset, ArrayList<User>users){
         HashSet<Object> list = new HashSet<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())

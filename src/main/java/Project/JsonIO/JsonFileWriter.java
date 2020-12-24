@@ -1,7 +1,6 @@
 package Project.JsonIO;// import necessary libraries
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
@@ -24,11 +23,11 @@ public class JsonFileWriter {
     final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
     public void export(ArrayList<Dataset> datasets,ArrayList<User> users,Dataset dataset){
-        filewriter(datasetJson(dataset,users).toString(2), dataset.getPath());
-        filewriter(UsersMetric(datasets,users).toString(2),"UserMetrics.json");
+        fileWriter(datasetJson(dataset,users).toString(2), dataset.getPath());
+        fileWriter(usersMetric(datasets,users).toString(2),"UserMetrics.json");
    }
 
-   private void filewriter(String written,String path){
+   private void fileWriter(String written, String path){
         try(FileWriter file=new FileWriter(path+".tmp")) {
             file.write(written);
             file.close();
@@ -93,11 +92,11 @@ public class JsonFileWriter {
         details.put("users",userList);
 
         JSONObject DatasetMetricObject=newJSONObject();
-        DatasetMetricObject.put("Completeness percentage",DatasetMetrics.getDatasetMetrics().complenessPercentage(dataset, users));
+        DatasetMetricObject.put("Completeness percentage",DatasetMetrics.getDatasetMetrics().completenessPercentage(dataset, users));
         DatasetMetricObject.put("Class distribution based on final instance labels",DatasetMetrics.getDatasetMetrics().classDistribuionBasedOnFinal(dataset));
         DatasetMetricObject.put("List number of unique instances for each class label",DatasetMetrics.getDatasetMetrics().numberOfUniqueInstancesForEachLabels(dataset, users));
         DatasetMetricObject.put("Number of users assigned to this dataset",DatasetMetrics.getDatasetMetrics().numberOfUsersAssigned(dataset, users));
-        DatasetMetricObject.put("List of users assigned and their completeness percentage",DatasetMetrics.getDatasetMetrics().listOfAssignedUsersWithComplenessPercentage(dataset, users));
+        DatasetMetricObject.put("List of users assigned and their completeness percentage",DatasetMetrics.getDatasetMetrics().listOfAssignedUsersWithCompletenessPercentage(dataset, users));
         DatasetMetricObject.put("List of users assigned and their consistency percentage",DatasetMetrics.getDatasetMetrics().listOfUsersAssignedAndConsistencyPercentage(dataset, users));
         details.put("Metrics",DatasetMetricObject);
         // writing the results of assignments
@@ -120,7 +119,7 @@ public class JsonFileWriter {
                         assignments.put(assignmentObject);
                     }
         }
-        details.put("class label assignments",SortingForAssignments(assignments,"date time"));
+        details.put("class label assignments", sortingForAssignments(assignments,"date time"));
         return details;
     }
 
@@ -138,7 +137,7 @@ public class JsonFileWriter {
             return newjsonobject;
     }
     
-    private JSONArray SortingForAssignments(JSONArray list,String key){
+    private JSONArray sortingForAssignments(JSONArray list, String key){
         for(int i=list.length();i>0;i--){
             int index=0;
             for(int j=1;j<i;j++) 
@@ -154,7 +153,7 @@ public class JsonFileWriter {
         return list;
     }
 
-    private JSONArray UsersMetric(ArrayList<Dataset> datasets,ArrayList<User>users){
+    private JSONArray usersMetric(ArrayList<Dataset> datasets, ArrayList<User>users){
         JSONArray userJSONArray=new JSONArray();
         for(User user:users){
             JSONObject userJSONobject = newJSONObject();

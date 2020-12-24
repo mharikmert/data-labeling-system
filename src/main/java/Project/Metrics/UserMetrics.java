@@ -7,10 +7,6 @@ import Project.Label;
 
 import java.util.LinkedHashMap;
 
-import javax.xml.stream.events.StartElement;
-
-import org.w3c.dom.UserDataHandler;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,7 +33,7 @@ public class UserMetrics {
         for(Dataset dataset:datasets){
             Dataset userDataset=user.assignedDataset(dataset);
             if(userDataset==null)continue;
-            complenessPercentage.put("dataset"+dataset.getId(),((float)getUserMetrics().FrequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");}
+            complenessPercentage.put("dataset"+dataset.getId(),((float)getUserMetrics().frequencyListOfInstances(userDataset,user).keySet().size()/(float)dataset.getInstances().size())*100+"%");}
         return complenessPercentage;
     }
 
@@ -51,7 +47,7 @@ public class UserMetrics {
     public int numberOfUniqueInstancesLabeled(User user){
         int totalNumber=0;
         for(Dataset dataset:user.getDatasets())
-            totalNumber+=FrequencyListOfInstances(dataset,user).keySet().size();
+            totalNumber+= frequencyListOfInstances(dataset,user).keySet().size();
         return totalNumber;
     }
 
@@ -93,7 +89,7 @@ public class UserMetrics {
         for(Dataset dataset:datasets){
             Dataset userDataset=user.assignedDataset(dataset);
             if(userDataset==null)continue;
-            HashMap<Object,Object> tempFrequencyList=FrequencyListOfInstances(userDataset, user);
+            HashMap<Object,Object> tempFrequencyList= frequencyListOfInstances(userDataset, user);
             for(Object key:tempFrequencyList.keySet()){
                 HashMap<Object,Object> tempObject=(HashMap<Object,Object>)tempFrequencyList.get(key);
                 if(tempObject.size()>1)recurrentLabeling++;
@@ -106,7 +102,7 @@ public class UserMetrics {
         return 0;
     }
 
-    public /*protected*/ HashMap<Object,Object> FrequencyListOfInstances(Dataset userDataset,User user){
+    public /*protected*/ HashMap<Object,Object> frequencyListOfInstances(Dataset userDataset, User user){
         HashMap<Object,Object> list=new HashMap<>();
         if(!user.getDatasets().contains(userDataset))
             return null;
