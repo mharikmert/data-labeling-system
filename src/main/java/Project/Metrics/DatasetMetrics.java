@@ -90,7 +90,7 @@ public class DatasetMetrics {
         return userList;
     }
 
-    public /*protected*/ HashSet<Object> labeledInstanceList(Dataset dataset, ArrayList<User>users){
+    protected HashSet<Object> labeledInstanceList(Dataset dataset, ArrayList<User>users){
         HashSet<Object> list = new HashSet<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())
