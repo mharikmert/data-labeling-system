@@ -1,7 +1,6 @@
 package Project.JsonIO;//import necessary libraries
 
 import Project.Dataset;
-import Project.Exception.InputValidationException;
 import Project.Instance;
 import Project.Label;
 import Project.User;
@@ -10,7 +9,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -31,6 +29,7 @@ public class JsonFileReader {
 
     }
 
+    // this method for get dataset path from config
     public void getDatasetPath(ArrayList<Dataset> datasets,ArrayList<User> users,String path){
 
         JSONParser jsonParser = new JSONParser();
@@ -160,6 +159,7 @@ public class JsonFileReader {
 
     }
 
+    // this method is used by reading class label assignment before run for reruns
     public void readClassLabelAssignments(ArrayList<Dataset> datasets , ArrayList<User> users){
 
         //creating a json parser to parse read json file
@@ -202,10 +202,14 @@ public class JsonFileReader {
                                     }
                                     try {
                                         tempInstance.setTimeStamp(LocalDateTime.parse(((JSONObject) assignments).get("date time").toString(),datetimeFormat)); 
-                                    } catch (Exception e) {}
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
                                     try {
                                         tempInstance.setTimeElapsed((long)(1000*Float.parseFloat(((JSONObject) assignments).get("time elapsed").toString())));                                      
-                                    } catch (Exception e) {}
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
                                    user.addInstanceToUser(dataset,tempInstance);
                                     break;
                                 }
@@ -221,11 +225,7 @@ public class JsonFileReader {
 
                 }
 
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
+            } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
         }
