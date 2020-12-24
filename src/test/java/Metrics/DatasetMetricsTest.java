@@ -24,12 +24,12 @@ public class DatasetMetricsTest {
     public void init(){
         Solution.getSolution().solveProblem(users,datasets);
     }
-   @Test
-    public void testLabeldInstancesList(){
-       for(Dataset dataset: datasets){
-           Assert.assertNotNull(DatasetMetrics.getDatasetMetrics().labeledInstanceList(dataset, users));
-       }
-   }
+//    @Test
+//     public void testLabeldInstancesList(){
+//        for(Dataset dataset: datasets){
+//            Assert.assertNotNull(DatasetMetrics.getDatasetMetrics().labeledInstanceList(dataset, users));
+//        }
+//    }
 
    @Test
     public void testListofAssignedUsersWithCompeletenessPercentage(){
@@ -66,4 +66,3 @@ public class DatasetMetricsTest {
        }
    }
 }
-
