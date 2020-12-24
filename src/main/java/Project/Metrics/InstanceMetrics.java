@@ -91,7 +91,7 @@ public class InstanceMetrics{
     }
 
 
-    public /*private*/ HashMap<Object,Object> frequencyListOfLabels(Dataset dataset, Instance instance, ArrayList<User>users){
+    protected HashMap<Object,Object> frequencyListOfLabels(Dataset dataset, Instance instance, ArrayList<User>users){
         HashMap<Object,Object> list=new HashMap<>();
         for(Object hashMapObject:labelAssignments(dataset, instance, users))
             for(Object LabelId:((HashMap<Object,Object>)hashMapObject).values())
@@ -100,7 +100,7 @@ public class InstanceMetrics{
         return list;
     }
 
-    public /*private*/ ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
+    private ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
         ArrayList<HashMap<Object,Object>> list=new ArrayList<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())
