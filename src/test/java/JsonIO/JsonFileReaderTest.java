@@ -23,7 +23,7 @@ public class JsonFileReaderTest {
         JsonFileReader jsonFileReader = new JsonFileReader("config.json",datasets,users);
 
         Assert.assertTrue(users.size() > 0 && datasets.size() > 0);
-        
+
     }
 
 
