@@ -8,15 +8,15 @@ public class User {
     private long userID;
     private String userName;
     private String userType;
-    private double consistenctCheckProbability;
+    private double consistencyCheckProbability;
     private ArrayList<Dataset> datasets ;
 
     //Overloaded Constructor
-    public User(long userID, String userName, String userType, double consistenctCheckProbability) {
+    public User(long userID, String userName, String userType, double consistencyCheckProbability) {
         this.userID = userID;
         this.userName = userName;
         this.userType = userType;
-        this.consistenctCheckProbability = consistenctCheckProbability ;
+        this.consistencyCheckProbability = consistencyCheckProbability;
         this.datasets = new ArrayList<>();
     }
 
@@ -25,7 +25,7 @@ public class User {
                 "userID=" + userID +
                 ", userName='" + userName + '\'' +
                 ", userType='" + userType + '\'' +
-                ", consistenctCheckProbability=" + consistenctCheckProbability +
+                ", consistenctCheckProbability=" + consistencyCheckProbability +
                 ", \ndatasets=" + datasets.toString() +
                 "'}'";
     }
@@ -108,12 +108,12 @@ public class User {
         return null;
     }
 
-    public double getConsistenctCheckProbability() {
-        return consistenctCheckProbability;
+    public double getConsistencyCheckProbability() {
+        return consistencyCheckProbability;
     }
 
-    public void setConsistenctCheckProbability(double consistenctCheckProbability) {
-        this.consistenctCheckProbability = consistenctCheckProbability;
+    public void setConsistencyCheckProbability(double consistencyCheckProbability) {
+        this.consistencyCheckProbability = consistencyCheckProbability;
     }
 
 
