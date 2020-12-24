@@ -31,13 +31,13 @@ public class UserMetricsTest {
         }
     }
 
-    @Test
-    public void testFrequencyListOfInstances(){
-        for(User user: users){
-            for(Dataset dataset: datasets)
-                Assert.assertNotNull(UserMetrics.getUserMetrics().frequencyListOfInstances(dataset,user));
-        }
-    }
+    // @Test
+    // public void testFrequencyListOfInstances(){
+    //     for(User user: users){
+    //         for(Dataset dataset: datasets)
+    //             Assert.assertNotNull(UserMetrics.getUserMetrics().frequencyListOfInstances(dataset,user));
+    //     }
+    // }
 
     @Test
     public void testNumberOfInstancesLabeled(){
