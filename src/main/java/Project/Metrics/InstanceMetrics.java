@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class InstanceMetrics{
 
     // this class can not be instantiated
-    private InstanceMetrics(){};
+    private InstanceMetrics(){}
 
     //create an object of InstanceMetrics
     private static final InstanceMetrics instanceMetrics = new InstanceMetrics();
@@ -57,7 +57,7 @@ public class InstanceMetrics{
         HashMap<Object,Object> list=frequencyListOfLabels(dataset,instance,users);
         double entropy=0;
         for(Object labelId:list.keySet())
-            entropy+=(double)((int)list.get(labelId))*-1/numberofLabels*(double)(Math.log(((double)(int)list.get(labelId))/numberofLabels)/Math.log(numberOfUniqueLabels));
+            entropy+=(double)((int)list.get(labelId))*-1/numberofLabels*(Math.log(((double)(int)list.get(labelId))/numberofLabels)/Math.log(numberOfUniqueLabels));
         if (Double.isFinite(entropy)) return entropy;
         return 0;
     }
