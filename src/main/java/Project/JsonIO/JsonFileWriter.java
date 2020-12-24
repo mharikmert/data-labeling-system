@@ -124,7 +124,7 @@ public class JsonFileWriter {
         return details;
     }
 
-    private JSONObject newJSONObject(){
+    /*private*/public  JSONObject newJSONObject(){
         JSONObject newjsonobject = new JSONObject();
         //This part enable us to print everything in order
         try{
