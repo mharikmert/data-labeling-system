@@ -1,7 +1,5 @@
 package Project.Labeling;
 
-import java.time.Duration;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -13,10 +11,6 @@ import Project.User;
 import org.apache.log4j.Logger;
 
 public class RandomMechanism extends LabelingMechanism {
-
-    /*
-        For the first iteration , instance of this class will be used for random solution
-    */
 
     @Override
     public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset, ArrayList<User> users,ArrayList<Dataset>datasets) {
