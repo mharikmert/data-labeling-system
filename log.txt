@@ -813,3 +813,13 @@
 24/12/2020 11:01:08.072 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
 24/12/2020 11:01:08.072 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
 24/12/2020 11:01:08.072 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+24/12/2020 11:04:19.059 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+24/12/2020 11:04:19.060 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+24/12/2020 11:04:19.061 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+24/12/2020 11:04:19.062 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+24/12/2020 11:04:19.062 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+24/12/2020 11:04:19.062 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+24/12/2020 11:04:19.062 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+24/12/2020 11:04:19.063 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+24/12/2020 11:04:19.063 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+24/12/2020 11:04:19.063 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
