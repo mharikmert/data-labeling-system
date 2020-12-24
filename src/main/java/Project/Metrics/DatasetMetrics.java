@@ -12,7 +12,7 @@ import Project.User;
 public class DatasetMetrics {
 
     // this class can not be instantiated
-    private DatasetMetrics(){};
+    private DatasetMetrics(){}
 
     //create an object of DatasetMetrics
     private static final DatasetMetrics datasetMetrics = new DatasetMetrics();
