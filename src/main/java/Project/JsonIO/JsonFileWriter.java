@@ -40,7 +40,9 @@ public class JsonFileWriter {
                     if(f1.renameTo(f2))break;
                 }
             }
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
    }
 
     // dataset method takes dataset and users as parameters then puts the information to a json object
