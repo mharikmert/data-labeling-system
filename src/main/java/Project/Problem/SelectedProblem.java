@@ -2,6 +2,7 @@ package Project.Problem;
 
 import Project.Dataset;
 import Project.Instance;
+import Project.JsonIO.JsonFileWriter;
 import Project.Labeling.RandomMechanism;
 import Project.User;
 
@@ -52,7 +53,12 @@ public class SelectedProblem extends Problem {
                 control=false ;
             }
 
-            System.out.println("\n\nuser : " + currentUser.getUserID());
+            if (instancesToLabel.size()==0){
+                JsonFileWriter jsonfilewriter=new JsonFileWriter();
+                jsonfilewriter.export(datasets, users, dataset);
+            }
+
+/*          System.out.println("\n\nuser : " + currentUser.getUserID());
             System.out.println("labellanacakların listesi");
             for(Instance currentInstance : instancesToLabel)
                 System.out.println(currentInstance.getId());
@@ -60,6 +66,8 @@ public class SelectedProblem extends Problem {
             for (Instance currentInstance : labeledInstances)
                 System.out.println(currentInstance.getId());
             System.out.println("\n\n");
+*/
+
             for(Instance currentInstance : instancesToLabel){
 
                // yüzde 10 ihtimalle öncekilerden alacak
