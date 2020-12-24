@@ -58,16 +58,6 @@ public class SelectedProblem extends Problem {
                 jsonfilewriter.export(datasets, users, dataset);
             }
 
-/*          System.out.println("\n\nuser : " + currentUser.getUserID());
-            System.out.println("labellanacakların listesi");
-            for(Instance currentInstance : instancesToLabel)
-                System.out.println(currentInstance.getId());
-            System.out.println("labellanmışların listesi");
-            for (Instance currentInstance : labeledInstances)
-                System.out.println(currentInstance.getId());
-            System.out.println("\n\n");
-*/
-
             for(Instance currentInstance : instancesToLabel){
 
                // yüzde 10 ihtimalle öncekilerden alacak
