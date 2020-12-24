@@ -78,25 +78,25 @@ public class InstanceMetricsTest {
         }
     }
 
-    @Test
-    public void testFrequencyListOfLabels(){
-        for(Dataset dataset: datasets){
-            int i = 0;
-            MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().frequencyListOfLabels(dataset,dataset.getInstances().get(i),users).size(),
-                    Matchers.equalTo(0));
-            i++;
-        }
-    }
+    // @Test
+    // public void testFrequencyListOfLabels(){
+    //     for(Dataset dataset: datasets){
+    //         int i = 0;
+    //         MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().frequencyListOfLabels(dataset,dataset.getInstances().get(i),users).size(),
+    //                 Matchers.equalTo(0));
+    //         i++;
+    //     }
+    // }
 
-    @Test
-    public void testLabelAssignments(){
-        for(Dataset dataset: datasets){
-            int i = 0;
-            MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().labelAssignments(dataset,dataset.getInstances().get(i),users).size(),
-                    Matchers.equalTo(0));
-            i++;
-        }
+    // @Test
+    // public void testLabelAssignments(){
+    //     for(Dataset dataset: datasets){
+    //         int i = 0;
+    //         MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().labelAssignments(dataset,dataset.getInstances().get(i),users).size(),
+    //                 Matchers.equalTo(0));
+    //         i++;
+    //     }
 
-    }
+    // }
 
 }
