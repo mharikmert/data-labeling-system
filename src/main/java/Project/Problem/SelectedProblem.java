@@ -6,7 +6,6 @@ import Project.JsonIO.JsonFileWriter;
 import Project.Labeling.RandomMechanism;
 import Project.User;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -25,12 +24,8 @@ public class SelectedProblem extends Problem {
 
         ArrayList<User> selectedUsers = new ArrayList<>();
         selectedUsers = selectUsers(users,selectedUsers,dataset);    // select users from dataset
-        selectedUsers.sort(new Comparator<User>() {             // sort the list
-            @Override
-            public int compare(User o1, User o2) {
-                return Long.compare(o1.getUserID(), o2.getUserID());
-            }
-        });
+        // sort the list
+        selectedUsers.sort(Comparator.comparingLong(User::getUserID));
    //     dataset.setAssignedUsers(selectedUsers);                // write users to dataset
 
         for(User currentUser : selectedUsers){
@@ -62,7 +57,7 @@ public class SelectedProblem extends Problem {
 
                // yüzde 10 ihtimalle öncekilerden alacak
                 double consistencyCheckRandom = (int)(Math.random()*100);
-                double consistencyCheckProbability = currentUser.getConsistenctCheckProbability()*100;
+                double consistencyCheckProbability = currentUser.getConsistencyCheckProbability()*100;
 
                 if (consistencyCheckRandom < consistencyCheckProbability && labeledInstances.size()!=0){
                     int previousSelectRandom = (int)(Math.random()*(labeledInstances.size()));
