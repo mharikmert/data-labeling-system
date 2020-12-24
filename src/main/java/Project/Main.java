@@ -1,15 +1,8 @@
 package Project;//import necessary libraries
 
 import Project.JsonIO.JsonFileReader;
-import Project.JsonIO.JsonFileWriter;
-import Project.Metrics.UserMetrics;
 import Project.Solution.Solution;
-
-import java.io.File;
 import java.util.ArrayList;
-
-import org.json.JSONWriter;
-
 
 public class Main {
 
