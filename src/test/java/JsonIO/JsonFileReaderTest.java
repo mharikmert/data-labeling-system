@@ -25,17 +25,4 @@ public class JsonFileReaderTest {
         Assert.assertTrue(users.size() > 0 && datasets.size() > 0);
 
     }
-
-
-
-/*
-    @Test
-    public void testReadDataset(){
-            JsonFileReader jsonFileReader = new JsonFileReader();
-
-            Dataset temp = jsonFileReader.readDatasetFile("input_dataset1.json",1);
-
-            MatcherAssert.assertThat(temp.getDatasetName(), Matchers.equalTo("Sentiment Dataset"));
-
-    }*/
 }
