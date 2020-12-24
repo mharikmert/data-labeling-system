@@ -105,8 +105,7 @@ public class JsonFileReader {
                 //like the class labels create a current instance
                 int a=0;
                 for (Instance instance : temp.getInstances()) {
-                    if (instance.getId()==((long) ((JSONObject) classInstance).get("id")) &&
-                        instance.getInstance().equals((String) ((JSONObject) classInstance).get("instance")))
+                    if (instance.getId()==((long) ((JSONObject) classInstance).get("id")))
                         a=1;
                 }
                 if(a==0){
