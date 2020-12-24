@@ -1,0 +1,155 @@
+[
+  {
+    "user id": 1,
+    "user name": "RandomLabelingMechanism1",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 3,
+      "all datasets with their completeness percentage": {
+        "dataset1": "100.0%",
+        "dataset2": "0.0%",
+        "dataset3": "0.0%"
+      },
+      "Total number of instances labeled ": 10,
+      "Total number of unique instances labeled ": 10,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0.0187,
+      "Std. dev. of  time spent in labeling an instance in seconds": 3.4969E-4
+    }
+  },
+  {
+    "user id": 2,
+    "user name": "RandomLabelingMechanism2",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 2,
+      "all datasets with their completeness percentage": {
+        "dataset2": "0.0%",
+        "dataset3": "0.0%"
+      },
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 3,
+    "user name": "RandomLabelingMechanism3",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 2,
+      "all datasets with their completeness percentage": {
+        "dataset1": "100.0%",
+        "dataset2": "0.0%"
+      },
+      "Total number of instances labeled ": 11,
+      "Total number of unique instances labeled ": 10,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0.015272727,
+      "Std. dev. of  time spent in labeling an instance in seconds": 2.332562E-4
+    }
+  },
+  {
+    "user id": 4,
+    "user name": "RandomLabelingMechanism4",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 5,
+    "user name": "RandomLabelingMechanism5",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 2,
+      "all datasets with their completeness percentage": {
+        "dataset2": "0.0%",
+        "dataset3": "0.0%"
+      },
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 6,
+    "user name": "RandomLabelingMechanism6",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 7,
+    "user name": "RandomLabelingMechanism7",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 8,
+    "user name": "RandomLabelingMechanism8",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 9,
+    "user name": "RandomLabelingMechanism9",
+    "user type": "RandomBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  },
+  {
+    "user id": 10,
+    "user name": "MachineLearningLabelingMechanism",
+    "user type": "MachineLearningBot",
+    "Metrics": {
+      "Number of datasets assigned": 0,
+      "all datasets with their completeness percentage": {},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
+      "Consistency Percentage": 0,
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
+    }
+  }
+]
