@@ -13,13 +13,10 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
-
-import javax.xml.crypto.Data;
 
 //JsonIO.JsonFileReader class
 public class JsonFileReader {
