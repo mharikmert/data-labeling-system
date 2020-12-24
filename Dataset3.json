@@ -1,7 +1,7 @@
 {
   "dataset id": 3,
   "dataset name": "Sentiment Dataset",
-  "maximum number of labels per instance": 4,
+  "maximum number of labels per instance": 1,
   "class labels": [
     {
       "label id": 1,
