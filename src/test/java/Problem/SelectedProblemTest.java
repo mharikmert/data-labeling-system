@@ -4,6 +4,8 @@ import Project.Dataset;
 import Project.JsonIO.JsonFileReader;
 import Project.Problem.SelectedProblem;
 import Project.User;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -30,6 +32,14 @@ public class SelectedProblemTest {
             selectedProblem.selectUsers(this.users,selectedUsers,dataset);
 
             Assert.assertTrue(selectedUsers.size() > 0);
+        }
+
+    }
+    //test user controle method with user type
+    @Test
+    public void testUserControl(){
+        for(User user : users){
+            Assert.assertNotNull(user.getUserType(), user);
         }
 
     }
