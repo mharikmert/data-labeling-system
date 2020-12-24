@@ -102,7 +102,7 @@ public class UserMetrics {
         return 0;
     }
 
-    public /*protected*/ HashMap<Object,Object> frequencyListOfInstances(Dataset userDataset, User user){
+    protected HashMap<Object,Object> frequencyListOfInstances(Dataset userDataset, User user){
         HashMap<Object,Object> list=new HashMap<>();
         if(!user.getDatasets().contains(userDataset))
             return null;
