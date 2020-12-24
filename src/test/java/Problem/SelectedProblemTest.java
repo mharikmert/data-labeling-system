@@ -10,45 +10,28 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 public class SelectedProblemTest {
-/*
+
     //Creating necessary objects for testing of SelectRandomUser
-    JsonFileReader jsonFileReader = new JsonFileReader();
-    ArrayList<User> users = jsonFileReader.readUserFile("input_users.json");
-    Dataset dataset = jsonFileReader.readDatasetFile("input_dataset1.json");
-    ArrayList<User> selectedUsers = new ArrayList<>();
-/*
+    ArrayList<User> users = new ArrayList<>();
+    ArrayList<Dataset> datasets =new ArrayList<>();
+    //create a json file reader
+    JsonFileReader jsonFileReader = new JsonFileReader("config.json",datasets,users);
+
     @Test
-    public void testSelectRandomUser(){
-        /*
-        * After running this method , selectedUser's size must be greater than 0
-        *
+    public void testSelectUsers(){
+
+        ArrayList<User> selectedUsers = new ArrayList<>();
 
         SelectedProblem selectedProblem = new SelectedProblem();
-        selectedProblem.selectRandomUser(users , selectedUsers ,);
 
-        // size of arraylist is greater than 0 or not
-        Assert.assertTrue(selectedUsers.size() > 0 );
-    }
-*/
-/*
-    @Test
-    public void testUserControl(){
+        for (Dataset dataset:
+                datasets) {
 
-        //lets made first user in user list like
-        users.clear();
-        users.add(new User(1,"test","test"));
-        //made the selected user same as users first user
-        selectedUsers.add(new User(1,"test","test"));
-        int testRandom = 0 ;
-        SelectedProblem selectedProblem = new SelectedProblem();
-        /*
-        *  in userControl method , if users.get(testRandom) equals any of the user in selectedUsers array
-        *  method should return false .
+            selectedProblem.selectUsers(this.users,selectedUsers,dataset);
 
-        Assert.assertFalse(selectedProblem.userControl(selectedUsers, users, testRandom));
+            Assert.assertTrue(selectedUsers.size() > 0);
+        }
 
     }
-*/
-
-
 }
+
