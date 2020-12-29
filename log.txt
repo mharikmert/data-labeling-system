@@ -1,0 +1,595 @@
+28/12/2020 00:00:44.898 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:00:44.898 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:00:44.898 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:00:44.899 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:00:44.899 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:00:44.899 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:00:44.899 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:00:44.899 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:00:44.901 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:00:44.901 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:00:44.901 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:00:44.901 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:06:12.662 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:06:12.663 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:06:12.664 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:06:12.664 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:06:12.664 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:06:12.664 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:06:38.429 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:06:38.430 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:06:38.431 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:06:38.431 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:06:38.431 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:06:38.431 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:06:38.431 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:09:01.436 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:09:01.437 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:09:01.438 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:09:01.438 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:09:01.438 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:09:01.438 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:09:01.438 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:12:32.252 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:12:32.253 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:12:32.253 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:12:32.254 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:13:50.298 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:13:50.299 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:13:50.299 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:13:50.299 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:13:50.299 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:13:50.300 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:16:55.809 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:16:55.810 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:16:55.810 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:16:55.810 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:16:55.810 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:16:55.811 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:16:55.811 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:16:55.811 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:16:55.811 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:16:55.811 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:16:55.812 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:16:55.812 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:17:26.016 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:17:26.017 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:17:26.017 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:17:26.017 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:17:26.017 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:17:26.018 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:17:42.285 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:17:42.286 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:17:42.287 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:17:42.287 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:17:42.287 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:17:42.287 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:17:42.287 [UserManager] INFO userManager: created Yunus as Human
+28/12/2020 00:17:54.982 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+28/12/2020 00:17:54.983 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+28/12/2020 00:17:54.984 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+28/12/2020 00:17:54.984 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+28/12/2020 00:17:54.985 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+28/12/2020 00:17:54.985 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+28/12/2020 00:17:54.985 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+28/12/2020 00:17:54.985 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+28/12/2020 00:17:54.986 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+28/12/2020 00:17:54.986 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+28/12/2020 00:17:54.986 [UserManager] INFO userManager: created Enes as Human
+28/12/2020 00:17:54.986 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:11:40.506 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:11:40.507 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:11:40.508 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:11:40.508 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:11:40.508 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:11:40.508 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:11:40.509 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:12:52.766 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:12:52.767 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:12:52.768 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:12:52.768 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:12:52.768 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:12:52.768 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:13:06.186 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:13:06.186 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:13:06.186 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:13:06.186 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:13:06.186 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:13:06.187 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:13:21.957 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:13:21.958 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:13:21.959 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:13:21.959 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:13:21.959 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:14:41.419 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:14:41.420 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:14:41.421 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:14:41.421 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:14:41.421 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:14:43.254 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 3:Notr instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:14:43.265 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 3:Notr instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:14:43.275 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:14:43.288 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:14:43.298 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:14:43.307 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:14:43.314 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:14:43.322 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:14:43.329 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:14:43.336 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:14:43.342 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:14:43.349 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:14:43.354 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+29/12/2020 03:14:43.360 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:14:43.369 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:14:43.378 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:14:43.385 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:14:43.397 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:14:43.406 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:14:43.412 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:14:43.418 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:6 with class label 1:Positive instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:14:43.424 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:14:43.431 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+29/12/2020 03:14:43.439 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:14:43.448 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:16:21.505 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:16:21.506 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:16:21.506 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:16:21.506 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:16:21.506 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:16:21.506 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:16:21.507 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:16:23.672 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:16:23.690 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:16:23.703 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 2:Negative instance:"şarjı hemen bitiriyor"
+29/12/2020 03:16:23.715 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:16:23.727 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:16:23.737 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 1:Positive instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:16:47.677 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:16:47.678 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:16:47.679 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:16:47.679 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:16:47.679 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:16:47.679 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:16:47.679 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:16:50.689 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:17:07.965 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:17:07.965 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:17:07.966 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:17:07.967 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:17:07.967 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:17:07.967 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:17:09.443 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:17:13.428 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:17:13.429 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:17:13.429 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:17:13.429 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:17:13.429 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:17:13.430 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:17:13.431 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:17:20.720 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:17:20.721 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:17:20.722 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:17:20.722 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:17:20.722 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:17:20.722 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:17:30.005 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:17:30.007 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:17:30.008 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:17:30.008 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:17:30.008 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:17:30.008 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:17:30.009 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:17:30.009 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:17:30.009 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:17:30.010 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:17:30.010 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:17:30.010 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:17:58.827 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:17:58.827 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:17:58.827 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:17:58.828 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:17:58.829 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:17:58.829 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:18:01.148 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:18:01.158 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 1:Positive instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:18:01.165 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:18:01.172 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:18:01.179 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:18:01.186 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 2:Negative instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:18:01.194 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 1:Positive instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:18:01.203 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:18:01.212 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:18:01.219 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:18:01.225 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:18:01.232 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:6 with class label 1:Positive instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:18:01.239 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:7 with class label 2:Negative instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:19:02.047 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:19:02.049 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:19:02.049 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:19:02.049 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:19:02.049 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:19:02.049 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:19:02.050 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:19:03.769 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:19:03.782 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:19:03.795 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:19:03.805 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:19:03.814 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:19:03.822 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 3:Notr instance:"şarjı hemen bitiriyor"
+29/12/2020 03:19:03.830 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:19:03.837 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:19:03.844 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 2:Negative instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:19:03.851 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:19:03.859 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:19:03.868 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:19:03.875 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:19:03.887 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:19:03.894 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:19:03.901 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:19:03.908 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:19:03.917 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+29/12/2020 03:19:03.927 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:19:03.935 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:19:03.942 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:20:14.705 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:20:14.706 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:20:14.706 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:20:14.706 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:20:14.706 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:20:14.707 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:20:14.707 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:20:14.707 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:20:14.707 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:20:14.707 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:20:14.708 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:20:14.708 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:24:59.306 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:24:59.307 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:24:59.307 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:24:59.307 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:24:59.307 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:24:59.307 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:24:59.308 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:25:01.335 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:25:01.345 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 1:Positive instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:25:01.352 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:25:01.359 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:25:01.365 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 3:Notr instance:"şarjı hemen bitiriyor"
+29/12/2020 03:25:01.372 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:25:01.379 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:25:01.385 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:25:01.393 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:25:01.400 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:25:01.408 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:25:01.416 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:8 with class label 1:Positive instance:"şarjı hemen bitiriyor"
+29/12/2020 03:25:01.423 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:9 with class label 2:Negative instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:25:01.432 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:25:01.440 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:25:01.451 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:25:01.457 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:25:01.463 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:8 with class label 2:Negative instance:"şarjı hemen bitiriyor"
+29/12/2020 03:25:36.087 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:25:36.088 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:25:36.088 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:25:36.088 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:25:36.088 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:25:36.089 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:28:09.045 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:28:09.045 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:28:09.046 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:28:09.047 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:28:09.047 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:28:10.948 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:28:10.958 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:28:10.964 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:28:10.971 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:5 with class label 2:Negative instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:28:10.977 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:28:10.983 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:28:10.990 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:8 with class label 3:Notr instance:"şarjı hemen bitiriyor"
+29/12/2020 03:28:10.996 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:10 with class label 1:Positive instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:28:11.003 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 1:Positive instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:28:11.010 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 1:Positive instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:28:11.017 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 3:Notr instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:28:11.027 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:28:11.034 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:7 with class label 1:Positive instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:28:11.041 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:28:11.048 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:3 with class label 1:Positive instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:28:11.054 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:4 with class label 3:Notr instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:28:11.061 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:5 with class label 3:Notr instance:"şimdilik memnun kaldım umarım kararım değişmez"
+29/12/2020 03:28:11.068 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:28:11.074 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:9 with class label 1:Positive instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:28:11.075 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:28:11.076 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:28:11.076 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:28:11.076 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:28:11.076 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:28:18.862 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:28:18.863 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:28:18.863 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:28:26.296 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:28:26.296 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:28:26.296 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:28:26.297 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:28:37.800 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:3 with class label 2:Negative instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:28:37.805 [InstanceTagger] INFO user id:1 RandomLabelingMechanism1 tagged instance id:9 with class label 3:Notr instance:"in yeni kampanyasi cok basarili"
+29/12/2020 03:28:37.811 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:1 with class label 2:Negative instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:28:37.817 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:3 with class label 3:Notr instance:"mesela kamerası aldık yoktu"
+29/12/2020 03:28:37.822 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:2 with class label 2:Negative instance:"yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler"
+29/12/2020 03:28:37.828 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:4 with class label 1:Positive instance:"siteniz çalışmıyor kaç gündür"
+29/12/2020 03:28:37.834 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:6 with class label 2:Negative instance:"durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi"
+29/12/2020 03:28:37.845 [InstanceTagger] INFO user id:3 RandomLabelingMechanism3 tagged instance id:8 with class label 2:Negative instance:"şarjı hemen bitiriyor"
+29/12/2020 03:28:37.851 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:1 with class label 3:Notr instance:"aldım eve gidince kutusundan çıkardım hasarlıydı"
+29/12/2020 03:28:37.857 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:7 with class label 3:Notr instance:"filmin büyük artısı uzun zamandır görmediğimiz oyunculuğunu döktürmesini sağlamasıydı"
+29/12/2020 03:28:37.862 [InstanceTagger] INFO user id:7 RandomLabelingMechanism7 tagged instance id:10 with class label 3:Notr instance:"kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz"
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:28:37.865 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:28:37.866 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:28:37.866 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:28:37.866 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:28:37.866 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:34:49.123 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:34:49.123 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:34:49.123 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:34:49.124 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:34:49.124 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:34:49.124 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:34:49.124 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:34:49.124 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:34:49.125 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:34:49.125 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:34:49.125 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:34:49.125 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:35:12.452 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:35:12.452 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:35:12.452 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:35:12.453 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:35:17.129 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:35:17.130 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:35:17.131 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:35:46.917 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:35:46.918 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:35:46.919 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:35:46.919 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:35:46.919 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:35:46.919 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:37:01.659 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:37:01.660 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:37:01.661 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:37:01.661 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:37:01.661 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:37:01.661 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:37:01.661 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:37:11.913 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:37:11.914 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:37:11.915 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:37:11.915 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:37:16.837 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:37:16.838 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:39:13.953 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:39:13.954 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:39:13.955 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:39:13.955 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:39:13.955 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:39:13.955 [UserManager] INFO userManager: created Yunus as Human
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism1 as RandomBot
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism2 as RandomBot
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism3 as RandomBot
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism4 as RandomBot
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism5 as RandomBot
+29/12/2020 03:39:17.069 [UserManager] INFO userManager: created RandomLabelingMechanism6 as RandomBot
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created RandomLabelingMechanism7 as RandomBot
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created RandomLabelingMechanism8 as RandomBot
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created RandomLabelingMechanism9 as RandomBot
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created MachineLearningLabelingMechanism as MachineLearningBot
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created Enes as Human
+29/12/2020 03:39:17.070 [UserManager] INFO userManager: created Yunus as Human
