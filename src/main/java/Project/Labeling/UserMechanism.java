@@ -11,15 +11,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserMechanism extends LabelingMechanism {
-
     private Scanner scanner = new Scanner(System.in) ;
-
-    @Override
-    public void labelingMechanism(User user, Instance instance, Dataset dataset, ArrayList<User> users, ArrayList<Dataset> datasets) {
-
+    public void labelingMechanism(User user , Instance instance , ArrayList<Label> labels , Dataset dataset, ArrayList<User> users, ArrayList<Dataset> datasets){
         String select = null ;
         boolean control = false ;
-
+        long start = System.currentTimeMillis();
         System.out.println(instance.getId()+ "-->"+instance.getInstance());
         for (Label label : dataset.getLabels()){
             System.out.println(label.getId() + "->" + label.getText());
@@ -43,6 +39,8 @@ public class UserMechanism extends LabelingMechanism {
         user.addInstanceToUser(dataset,instance);
         JsonFileWriter jsonfilewriter=new JsonFileWriter();
         jsonfilewriter.export(datasets, users, dataset);
-
-    }
+   
+        long finish = System.currentTimeMillis();
+        instance.setTimeElapsed(finish-start);
+    }    
 }
