@@ -16,117 +16,77 @@ public class SelectedProblem extends Problem {
         For the first iteration , instance of this class will be used
     */
 
-    @Override
-    public void run(ArrayList<User> users, Dataset dataset, ArrayList<Dataset> datasets){
-
-        findInstancesToLabel(users,dataset,datasets);
-        ArrayList<User> tempUsers = new ArrayList<>(users);
-        UserInterface.getUserInterface().run(tempUsers);
-        if (tempUsers.size()==1){
-            if (tempUsers.get(0).assignedDataset(dataset).getInstancesToLabel().size()==0)
-                System.out.println("There is no instance left for you");
-            runUser(tempUsers.get(0),users,dataset,datasets);
-        }
-        else
-            runBot(users,dataset,datasets);
-
-    }
-
-    public void findInstancesToLabel(ArrayList<User> users, Dataset dataset, ArrayList<Dataset> datasets){
-
-        for(User user : users){
-            if(user.assignedDataset(dataset)!=null) {
-                boolean control = false;
-                for (Instance currentInstance : dataset.getInstances()) {
-                    for (Instance userInstances : user.getInstances(dataset)) {
-                        if (userInstances.getId() == currentInstance.getId() &&
-                                userInstances.getInstance().equals(currentInstance.getInstance())) {
-                            control = true;
-                            break;
-                        }
-                    }
-                    if (!control)
-                        user.assignedDataset(dataset).addInstanceToLabel(currentInstance);
-                    control = false;
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void runUser(User user, ArrayList<User> users, Dataset dataset, ArrayList<Dataset> datasets) {
-
-        if(user.assignedDataset(dataset)!=null){
-
-            if (user.assignedDataset(dataset).getInstancesToLabel().size()==0){
-                JsonFileWriter jsonfilewriter=new JsonFileWriter();
-                jsonfilewriter.export(datasets, users, dataset);
-            }
-
-            for (Instance currentInstance : user.assignedDataset(dataset).getInstancesToLabel()){
-                // at the consistencyChechParameter user can label previous labeled instances again
-                double consistencyCheckRandom = (int)(Math.random()*100);
-                double consistencyCheckProbability = user.getConsistencyCheckProbability()*800;
-                if (consistencyCheckRandom < consistencyCheckProbability && user.assignedDataset(dataset).getInstances().size()!=0){
-                    int previousSelectRandom = (int)(Math.random()*(user.assignedDataset(dataset).getInstances().size()));
-                    Instance copyInstance = new Instance(user.assignedDataset(dataset).getInstances().get(previousSelectRandom).getId(),
-                            user.assignedDataset(dataset).getInstances().get(previousSelectRandom).getInstance());
-                    super.labelingMechanism = new UserMechanism() ;
-                    super.labelingMechanism.labelingMechanism(user,copyInstance,dataset,users,datasets);
-                }
-                super.labelingMechanism = new UserMechanism() ;
-                super.labelingMechanism.labelingMechanism(user,currentInstance,dataset,users,datasets);
-            }
-
-        }else
-            System.out.println("This user not allowed for current dataset");
-
-    }
-
     //Solution mechanism for this class
     @Override
-    public void runBot(ArrayList<User> users, Dataset dataset,ArrayList<Dataset>datasets) {
+    public void runMechanism(ArrayList<User> users, Dataset dataset,ArrayList<Dataset>datasets) {
         // defining problem type , for now we just use randomLabeling
         // with this method , we randomly select the number of users which labels the instance , for example
         // for 1. instance , program selects random number of users , it can select 1 user or 3 user for 1 instance ,
         // for each instance , users labels the instances different.
-
+        UserInterface.getUserInterface().run(users);
         ArrayList<User> selectedUsers = new ArrayList<>();
-        selectedUsers = selectUsers(users,selectedUsers,dataset);           // select users from dataset
-        selectedUsers.sort(Comparator.comparingLong(User::getUserID));      // sort the list
+        if(UserInterface.getUserInterface().getAuthenticatedUser()==null){
+            selectedUsers = selectUsers(users,selectedUsers,dataset);    // select users from dataset
+        // sort the list
+        selectedUsers.sort(Comparator.comparingLong(User::getUserID));
+        }
+        else
+            selectedUsers.add(UserInterface.getUserInterface().getAuthenticatedUser());
+   //     dataset.setAssignedUsers(selectedUsers);                // write users to dataset
 
         for(User currentUser : selectedUsers){
             if(currentUser.assignedDataset(dataset)==null)continue;
 
-            if (currentUser.assignedDataset(dataset).getInstancesToLabel().size()==0){
+            ArrayList<Instance> instancesToLabel = new ArrayList<>() ;
+            ArrayList<Instance> labeledInstances = new ArrayList<>() ;
+            boolean control = false ;
+            for(Instance currentInstance : dataset.getInstances()){
+                for (Instance userInstances : currentUser.getInstances(dataset)){
+                    if (userInstances.getId()==currentInstance.getId() &&
+                            userInstances.getInstance().equals(currentInstance.getInstance())){
+                        labeledInstances.add(currentInstance);
+                        control = true ;
+                        break;
+                    }
+                }
+                if (!control)
+                    instancesToLabel.add(currentInstance);
+                control=false ;
+            }
+
+            if (instancesToLabel.size()==0){
                 JsonFileWriter jsonfilewriter=new JsonFileWriter();
                 jsonfilewriter.export(datasets, users, dataset);
             }
 
-            for(Instance currentInstance : currentUser.assignedDataset(dataset).getInstancesToLabel()){
+            for(Instance currentInstance : instancesToLabel){
 
                // yüzde 10 ihtimalle öncekilerden alacak
                 double consistencyCheckRandom = (int)(Math.random()*100);
                 double consistencyCheckProbability = currentUser.getConsistencyCheckProbability()*100;
 
-                if (consistencyCheckRandom < consistencyCheckProbability && currentUser.assignedDataset(dataset).getInstances().size()!=0){
-                    int previousSelectRandom = (int)(Math.random()*(currentUser.assignedDataset(dataset).getInstances().size()));
-                    Instance copyInstance = new Instance(currentUser.assignedDataset(dataset).getInstances().get(previousSelectRandom).getId(),
-                            currentUser.assignedDataset(dataset).getInstances().get(previousSelectRandom).getInstance());
-                    super.labelingMechanism = new RandomMechanism();
-                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset,users,datasets);
+                if (consistencyCheckRandom < consistencyCheckProbability && labeledInstances.size()!=0){
+                    int previousSelectRandom = (int)(Math.random()*(labeledInstances.size()));
+                    Instance copyInstance = new Instance(labeledInstances.get(previousSelectRandom).getId(),
+                                                         labeledInstances.get(previousSelectRandom).getInstance());
+                    if (currentUser.getUserType().equals("RandomBot")) super.labelingMechanism=new RandomMechanism();
+                    else if(currentUser.getUserType().equals("Human")) super.labelingMechanism=new UserMechanism();
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
                 // yüzde 60 sıradakini ekleyecek
                 int nextCheckRandom = (int)(Math.random()*100);
-                if (nextCheckRandom < 60){
+                if (currentUser.getUserType().equals("Human") || nextCheckRandom < 60){
                     Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
-                    super.labelingMechanism = new RandomMechanism();
-                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset,users,datasets);
+                    if (currentUser.getUserType().equals("RandomBot")) super.labelingMechanism=new RandomMechanism();
+                    else if(currentUser.getUserType().equals("Human")) super.labelingMechanism=new UserMechanism();
+                    super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
             }
+
+            labeledInstances.clear();
+            instancesToLabel.clear();
 
         }
 
