@@ -7,17 +7,19 @@ public class User {
     //Class attributes definitions
     private long userID;
     private String userName;
+    private String password;
     private String userType;
     private double consistencyCheckProbability;
     private ArrayList<Dataset> datasets ;
 
     //Overloaded Constructor
-    public User(long userID, String userName, String userType, double consistencyCheckProbability) {
+    public User(long userID, String userName, String userType, double consistencyCheckProbability, String password) {
         this.userID = userID;
         this.userName = userName;
         this.userType = userType;
         this.consistencyCheckProbability = consistencyCheckProbability;
         this.datasets = new ArrayList<>();
+        this.password = password ;
     }
 
     public String toString() {
@@ -116,5 +118,11 @@ public class User {
         this.consistencyCheckProbability = consistencyCheckProbability;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
