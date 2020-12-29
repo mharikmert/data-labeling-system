@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 public class RandomMechanism extends LabelingMechanism {
 
     @Override
-    public void labelingMechanism(User user, Instance instance, Dataset dataset, ArrayList<User> users,ArrayList<Dataset>datasets) {
+    public void labelingMechanism(User user, Instance instance, ArrayList<Label> labels , Dataset dataset, ArrayList<User> users,ArrayList<Dataset>datasets) {
         final Logger logger = Logger.getLogger("InstanceTagger");
         // we create random number for number of labels for an instance
         long start = System.currentTimeMillis();
@@ -60,6 +60,7 @@ public class RandomMechanism extends LabelingMechanism {
     public Label createRandomLabel(ArrayList<Label> labels){
         // randomly select one label from labels array
         return labels.get((int)(Math.random()*labels.size()));
+
     }
 
 }
