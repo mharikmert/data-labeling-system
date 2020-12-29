@@ -10,7 +10,6 @@ public class Dataset {
     private long maxNumberOfLabelsPerInstance;
     private ArrayList<Label> labels;
     private ArrayList<Instance> instances;
-    private ArrayList<Instance> instancesToLabel ;
     private String path;
     private Boolean flag;
 
@@ -29,7 +28,6 @@ public class Dataset {
         this.instances = instances;
         this.path=path;
         this.flag=flag;
-        instancesToLabel = new ArrayList<>() ;
     }
 
     //Overridden toString Method for DataSet class
@@ -88,8 +86,6 @@ public class Dataset {
         return instances;
     }
 
-    public ArrayList<Instance> getInstancesToLabel() { return instancesToLabel; }
-
     //Set method for instances
     public void setInstances(ArrayList<Instance> instances) {
         this.instances = instances;
@@ -117,10 +113,6 @@ public class Dataset {
 
     public void addInstance(Instance instance){
         this.instances.add(instance);
-    }
-
-    public void addInstanceToLabel(Instance instance){
-        this.instancesToLabel.add(instance);
     }
 
 }
