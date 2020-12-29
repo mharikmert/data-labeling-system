@@ -12,12 +12,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class SelectedProblem extends Problem {
-    /*
-        For the first iteration , instance of this class will be used
-    */
 
     //Solution mechanism for this class
-    @Override
     public void runMechanism(ArrayList<User> users, Dataset dataset,ArrayList<Dataset>datasets) {
         // defining problem type , for now we just use randomLabeling
         // with this method , we randomly select the number of users which labels the instance , for example
