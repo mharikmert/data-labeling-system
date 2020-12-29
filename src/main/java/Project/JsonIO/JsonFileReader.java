@@ -146,7 +146,7 @@ public class JsonFileReader {
                 //create a current user in the same manner
                 User currentUser = new User((long) ((JSONObject) o).get("userID"),
                         (String) ((JSONObject) o).get("userName"), (String) ((JSONObject) o).get("userType"),
-                        (double) ((JSONObject) o).get("ConsistencyCheckProbability"));
+                        (double) ((JSONObject) o).get("ConsistencyCheckProbability"), (String) ((JSONObject) o).get("userPassword"));
                 //adding users to the users
                 users.add(currentUser);
                 logger.info("userManager: created " + currentUser.getUserName() + " as " + currentUser.getUserType());
