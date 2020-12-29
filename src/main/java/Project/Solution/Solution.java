@@ -4,7 +4,6 @@ import Project.Dataset;
 import Project.User;
 import Project.Problem.Problem;
 import Project.Problem.SelectedProblem;
-import Project.UserInterface;
 
 import java.util.ArrayList;
 
@@ -30,15 +29,15 @@ import java.util.ArrayList;
             for(Dataset dataset:datasets)
                 if (dataset.isFlag()){
                 // in this switch case statement , solutions differ for datasets , but for first iteration , we have just random labeling and we
-                // can not create different problem types , we just create selectedProblem() object
-                    switch(dataset.getDatasetName()){
-                        case "Sentiment Dataset":
-                        case "Multi-label Topic Classification Dataset":
-                            problem = new SelectedProblem();
-                            problem.run(users,dataset,datasets);
-                            break;
-                        default:
-                            System.out.println("Undetermined problem type !");
+                // can not create different problem types , we just create selectedProblem() object.
+                switch(dataset.getDatasetName()){
+                    case "Sentiment Dataset":
+                    case "Multi-label Topic Classification Dataset":
+                        problem = new SelectedProblem();
+                        problem.runMechanism(users,dataset,datasets);
+                        break;
+                    default:
+                        System.out.println("Undetermined problem type !");
                 }
             }
         }
