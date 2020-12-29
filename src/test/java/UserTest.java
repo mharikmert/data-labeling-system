@@ -11,7 +11,7 @@ public class UserTest {
     //constructor test with check arraylist datasets
     @Test
     public void constructorTest(){
-        User user = new User(userID,userName, userType, consistenctCheckProbability);
+        User user = new User(userID,userName, userType, consistenctCheckProbability, " ");
         Assert.assertNotNull(user.getDatasets());
     }
 }
