@@ -5,12 +5,10 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    private String userName ;
-    private String password ;
+    private User authenticatedUser;
 
     private UserInterface(){
-        setUserName("");
-        setPassword("");
+        
     }
 
     private static final UserInterface userInterface = new UserInterface();
@@ -25,43 +23,28 @@ public class UserInterface {
             System.out.println("If you want to exit write exit to User Name..");
             Scanner scanner = new Scanner(System.in);
             System.out.print("User Name : ");
-            setUserName(scanner.nextLine());
-            if (getUserName().equals("Exit"))       System.exit(1);                   // if user write exit to name
+            String username=scanner.nextLine();
+            if (username.toLowerCase().equals("exit"))
+                System.exit(1);                   // if user write exit to name
             System.out.print("Password : ");
-            setPassword(scanner.nextLine());
-            if (getUserName().equals("") && getPassword().equals(""))       break;          // if it is bot
-        }while(userCheck(users)) ;    // user control
-
+            String password=scanner.nextLine();
+            User usergotten=getUser(users, username, password);
+            if(username.equals("") && password.equals("")) {break;}
+            else if (usergotten!=null){authenticatedUser=usergotten;break;}
+            else System.out.println("Wrong username or password");
+            scanner.close();
+        }while(true) ;    // user control
     }
 
-    public boolean userCheck(ArrayList<User> users){
-
+    private User getUser(ArrayList<User> users,Object username,Object password){
         for(User user : users){
-            if ( user.getUserName().equals(getUserName()) && user.getPassword().equals(getPassword())){
-                users.clear();
-                users.add(user);
-                return false ;
-            }
+            if (user.getUserName().equals(username) && user.getPassword().equals(password))
+                return user;
         }
-        System.out.println("Wrong username or password");
-        return true ;
-
+        return null;
     }
 
-    public String getUserName() {
-        return userName;
+    public User getAuthenticatedUser(){
+        return authenticatedUser;
     }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
 }
