@@ -22,7 +22,7 @@ import org.json.JSONObject;
 public class JsonFileWriter {
     final DateTimeFormatter datetimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 
-    public void export(ArrayList<Dataset> datasets,ArrayList<User> users,Dataset dataset){
+   public void export(ArrayList<Dataset> datasets,ArrayList<User> users,Dataset dataset){
         fileWriter(datasetJson(dataset,users).toString(2), dataset.getPath());
         fileWriter(usersMetric(datasets,users).toString(2),"UserMetrics.json");
    }

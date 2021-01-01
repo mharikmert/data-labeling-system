@@ -12,14 +12,6 @@ public class Label {
         this.text = text;
     }
 
-    @Override
-    public String toString() {
-        return "Label{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                '}';
-    }
-
     //Get method for ID
     public long getId() {
         return id;
