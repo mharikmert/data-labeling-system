@@ -2,63 +2,58 @@
   {
     "user id": 1,
     "user name": "RandomLabelingMechanism1",
-    "user type": "RuleBasedBot",
+    "user type": "RandomBot",
     "Metrics": {
-      "Number of datasets assigned": 3,
+      "Number of datasets assigned": 2,
       "all datasets with their completeness percentage": {
-        "dataset1": "60.000004%",
-        "dataset2": "80.0%",
+        "dataset1": "0.0%",
         "dataset3": "0.0%"
       },
-      "Total number of instances labeled ": 10,
-      "Total number of unique instances labeled ": 10,
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 0.010100001,
-      "Std. dev. of  time spent in labeling an instance in seconds": 1.0201001E-4
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {
     "user id": 2,
     "user name": "RandomLabelingMechanism2",
-    "user type": "RuleBasedBot",
+    "user type": "RandomBot",
     "Metrics": {
-      "Number of datasets assigned": 3,
+      "Number of datasets assigned": 2,
       "all datasets with their completeness percentage": {
-        "dataset1": "60.000004%",
-        "dataset2": "60.000004%",
+        "dataset2": "0.0%",
         "dataset3": "0.0%"
       },
-      "Total number of instances labeled ": 9,
-      "Total number of unique instances labeled ": 9,
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 0.007111111,
-      "Std. dev. of  time spent in labeling an instance in seconds": 5.05679E-5
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {
     "user id": 3,
     "user name": "RandomLabelingMechanism3",
-    "user type": "RuleBasedBot",
+    "user type": "RandomBot",
     "Metrics": {
-      "Number of datasets assigned": 2,
-      "all datasets with their completeness percentage": {
-        "dataset1": "20.0%",
-        "dataset2": "100.0%"
-      },
-      "Total number of instances labeled ": 7,
-      "Total number of unique instances labeled ": 7,
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset1": "0.0%"},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 0.008142858,
-      "Std. dev. of  time spent in labeling an instance in seconds": 6.630614E-5
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {
     "user id": 4,
     "user name": "RandomLabelingMechanism4",
-    "user type": "RuleBasedBot",
+    "user type": "RandomBot",
     "Metrics": {
-      "Number of datasets assigned": 0,
-      "all datasets with their completeness percentage": {},
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset2": "0.0%"},
       "Total number of instances labeled ": 0,
       "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
@@ -69,28 +64,27 @@
   {
     "user id": 5,
     "user name": "RandomLabelingMechanism5",
-    "user type": "RuleBasedBot",
+    "user type": "RandomBot",
     "Metrics": {
-      "Number of datasets assigned": 3,
+      "Number of datasets assigned": 2,
       "all datasets with their completeness percentage": {
-        "dataset1": "70.0%",
-        "dataset2": "80.0%",
+        "dataset2": "0.0%",
         "dataset3": "0.0%"
       },
-      "Total number of instances labeled ": 11,
-      "Total number of unique instances labeled ": 11,
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 0.0054545454,
-      "Std. dev. of  time spent in labeling an instance in seconds": 2.9752066E-5
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {
     "user id": 6,
-    "user name": "RandomLabelingMechanism6",
+    "user name": "RuleBasedLabelingMechanism1",
     "user type": "RuleBasedBot",
     "Metrics": {
-      "Number of datasets assigned": 0,
-      "all datasets with their completeness percentage": {},
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset1": "0.0%"},
       "Total number of instances labeled ": 0,
       "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
@@ -100,25 +94,25 @@
   },
   {
     "user id": 7,
-    "user name": "RandomLabelingMechanism7",
+    "user name": "RuleBasedLabelingMechanism2",
     "user type": "RuleBasedBot",
     "Metrics": {
       "Number of datasets assigned": 1,
-      "all datasets with their completeness percentage": {"dataset1": "50.0%"},
-      "Total number of instances labeled ": 5,
-      "Total number of unique instances labeled ": 5,
+      "all datasets with their completeness percentage": {"dataset2": "0.0%"},
+      "Total number of instances labeled ": 0,
+      "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 0.0048,
-      "Std. dev. of  time spent in labeling an instance in seconds": 2.3040002E-5
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {
     "user id": 8,
-    "user name": "RandomLabelingMechanism8",
+    "user name": "RuleBasedLabelingMechanism3",
     "user type": "RuleBasedBot",
     "Metrics": {
-      "Number of datasets assigned": 0,
-      "all datasets with their completeness percentage": {},
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset1": "0.0%"},
       "Total number of instances labeled ": 0,
       "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
@@ -128,11 +122,11 @@
   },
   {
     "user id": 9,
-    "user name": "RandomLabelingMechanism9",
+    "user name": "RuleBasedLabelingMechanism4",
     "user type": "RuleBasedBot",
     "Metrics": {
-      "Number of datasets assigned": 0,
-      "all datasets with their completeness percentage": {},
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset2": "0.0%"},
       "Total number of instances labeled ": 0,
       "Total number of unique instances labeled ": 0,
       "Consistency Percentage": 0,
@@ -142,7 +136,7 @@
   },
   {
     "user id": 10,
-    "user name": "MachineLearningLabelingMechanism",
+    "user name": "RuleBasedLabelingMechanism5",
     "user type": "RuleBasedBot",
     "Metrics": {
       "Number of datasets assigned": 0,
@@ -159,16 +153,13 @@
     "user name": "Enes",
     "user type": "Human",
     "Metrics": {
-      "Number of datasets assigned": 2,
-      "all datasets with their completeness percentage": {
-        "dataset1": "0.0%",
-        "dataset2": "100.0%"
-      },
-      "Total number of instances labeled ": 5,
-      "Total number of unique instances labeled ": 5,
+      "Number of datasets assigned": 1,
+      "all datasets with their completeness percentage": {"dataset2": "80.0%"},
+      "Total number of instances labeled ": 4,
+      "Total number of unique instances labeled ": 4,
       "Consistency Percentage": 0,
-      "Average time spent in labeling an instance in seconds": 2.9376001,
-      "Std. dev. of  time spent in labeling an instance in seconds": 2.129014
+      "Average time spent in labeling an instance in seconds": 0,
+      "Std. dev. of  time spent in labeling an instance in seconds": 0
     }
   },
   {

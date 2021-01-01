@@ -69,140 +69,99 @@
       "id": 1,
       "instance": "35 tl kesinti yapmış turkcell'den üzerime kayıtlı numara olmamasına rağmen iki aydır ekstremden 35'er tl. kesilmiştir.",
       "Metrics": {
-        "Total number of label assignments": 22,
-        "Number of unique label assignments": 12,
-        "Number of unique users": 1,
-        "Most frequent class label and percentage": {"9": 13.636364},
-        "Class labels and percentages": {
-          "11": 4.5454545,
-          "12": 4.5454545,
-          "13": 9.090909,
-          "3": 9.090909,
-          "14": 13.636364,
-          "4": 13.636364,
-          "15": 9.090909,
-          "5": 9.090909,
-          "6": 4.5454545,
-          "7": 4.5454545,
-          "9": 13.636364,
-          "10": 4.5454545
-        },
-        "Entropy": 0.9616283305648055
+        "Total number of label assignments": 1,
+        "Number of unique label assignments": 1,
+        "Number of unique users": 0,
+        "Most frequent class label and percentage": {"1": 100},
+        "Class labels and percentages": {"1": 100},
+        "Entropy": 0
       }
     },
     {
       "id": 2,
       "instance": "tele kurye işık hızında turkcell'den aldığım cihaz tele kurye denen ilgisiz, telefonlara bakmayan bir kurye tarafından 10 gündür elime ulaşılmadı. telefonlarıma bakılmıyor ne ciddiyetsiz kurumsallaşmamış bir kurye firması turkcell'e bu katkılarından dolayı teşekkürler!",
       "Metrics": {
-        "Total number of label assignments": 22,
-        "Number of unique label assignments": 9,
-        "Number of unique users": 1,
-        "Most frequent class label and percentage": {"7": 18.181818},
+        "Total number of label assignments": 3,
+        "Number of unique label assignments": 3,
+        "Number of unique users": 0,
+        "Most frequent class label and percentage": {"6": 33.333336},
         "Class labels and percentages": {
-          "1": 13.636364,
-          "2": 13.636364,
-          "14": 4.5454545,
-          "4": 13.636364,
-          "15": 4.5454545,
-          "6": 4.5454545,
-          "7": 18.181818,
-          "8": 18.181818,
-          "9": 9.090909
+          "5": 33.333336,
+          "2": 33.333336,
+          "6": 33.333336
         },
-        "Entropy": 0.9441409651012924
+        "Entropy": 1
       }
     },
     {
       "id": 3,
       "instance": "bursa anatolium müşteriyi kandırma 15 eylül günü bursa anatolium turkcell mağazasına iphone cihazım için şarj kablosu almaya gittim. aksesuar için etikette yazan fiyat 89,90dı turkcell uygulamada son bahar indiriminden dolayı fiyatın 63 tl olduğunu gösterdim; aldığım cevap uygulamadaki ürünün orijinal olmadığıydı. \"o ürün orijinal değil, sıkıntı yaşamak istemiyorsanız bunu alın\" gibi bir cevap verildi. ürünü aldım kartımı uzattım şifremi girmek için cihaza yöneldiğimde ekranda 90,00 tl yazdığını fark ettim. sorduğumda ben size 10 kuruş geri veririm ablacım diye bit yanıt aldım. bugün turkcell müşteri hizmetlerini aradım ve uygulamadaki ürünün orijinal olduğunu satış fiyatının farklı olabileceğini öğrendim. satış fiyatı farklı olabilir evet, ama turkcell'i temsil eden bir çalışan nasıl ürünün sahte olduğunu söyleyebilir, ikincisi benden 10 kuruş başkasından 50 kuruş diye diye neyin hesabı bu?",
       "Metrics": {
-        "Total number of label assignments": 23,
-        "Number of unique label assignments": 10,
-        "Number of unique users": 1,
-        "Most frequent class label and percentage": {"7": 17.391304},
+        "Total number of label assignments": 3,
+        "Number of unique label assignments": 3,
+        "Number of unique users": 0,
+        "Most frequent class label and percentage": {"2": 33.333336},
         "Class labels and percentages": {
-          "1": 8.695652,
-          "2": 13.043478,
-          "3": 8.695652,
-          "14": 8.695652,
-          "4": 8.695652,
-          "15": 4.347826,
-          "5": 13.043478,
-          "6": 13.043478,
-          "7": 17.391304,
-          "8": 4.347826
+          "5": 33.333336,
+          "2": 33.333336,
+          "7": 33.333336
         },
-        "Entropy": 0.9656160437088684
+        "Entropy": 1
       }
     },
     {
       "id": 4,
       "instance": "turkcell haksız borçlar turkcell **** numaralı ödediğim faturalardan devir bakiyesini almıyor sonra 2011 yılındaki 1 kuruşluk faturayı ödemediği iddia ederek borcu tarafıma 10 tl olarak icra başlatıyor ve bunu avukat ıvır zıvır olarak 500 tl bitirecek. borcu, reel alacak diye bir firmaya devrediyor turkcell ismine yakışmayan bir şey. 2011 'den bu yana 6 sene içerisinde tarafıma bir tebligat bile yapmıyor yazık yazık.",
       "Metrics": {
-        "Total number of label assignments": 17,
-        "Number of unique label assignments": 10,
+        "Total number of label assignments": 3,
+        "Number of unique label assignments": 3,
         "Number of unique users": 0,
-        "Most frequent class label and percentage": {"1": 17.647058},
+        "Most frequent class label and percentage": {"7": 33.333336},
         "Class labels and percentages": {
-          "11": 11.764706,
-          "1": 17.647058,
-          "12": 5.882353,
-          "2": 11.764706,
-          "14": 5.882353,
-          "5": 5.882353,
-          "6": 5.882353,
-          "7": 11.764706,
-          "8": 11.764706,
-          "9": 11.764706
+          "5": 33.333336,
+          "2": 33.333336,
+          "7": 33.333336
         },
-        "Entropy": 0.9691745848606974
+        "Entropy": 1
       }
     },
     {
       "id": 5,
       "instance": "turkcell bana sormadan paket tanımlanmış! turkcell internet paketim bitince bana sormadan otomatik olarak 1 gb internet tanımlamış ve 10 tl yansıtmış, ayrıca fatura kesim tarihim 1 gün kala bu paketi tanımlamış ve fatura kesim tarihi yani 1 gün sonrasında bu paketi iptal etmiş ve ücreti iptal etmemiştir.",
       "Metrics": {
-        "Total number of label assignments": 28,
-        "Number of unique label assignments": 12,
-        "Number of unique users": 1,
-        "Most frequent class label and percentage": {"3": 10.714286},
-        "Class labels and percentages": {
-          "11": 10.714286,
-          "1": 10.714286,
-          "12": 3.5714288,
-          "2": 7.1428576,
-          "13": 10.714286,
-          "3": 10.714286,
-          "14": 3.5714288,
-          "4": 3.5714288,
-          "15": 10.714286,
-          "8": 10.714286,
-          "9": 10.714286,
-          "10": 7.1428576
-        },
-        "Entropy": 0.9695431689900248
+        "Total number of label assignments": 0,
+        "Number of unique label assignments": 0,
+        "Number of unique users": 0,
+        "Most frequent class label and percentage": {},
+        "Class labels and percentages": {},
+        "Entropy": 0
       }
     }
   ],
   "users": [
     {
-      "user id": 1,
-      "user name": "RandomLabelingMechanism1",
-      "user type": "RuleBasedBot"
-    },
-    {
       "user id": 2,
       "user name": "RandomLabelingMechanism2",
-      "user type": "RuleBasedBot"
+      "user type": "RandomBot"
     },
     {
-      "user id": 3,
-      "user name": "RandomLabelingMechanism3",
-      "user type": "RuleBasedBot"
+      "user id": 4,
+      "user name": "RandomLabelingMechanism4",
+      "user type": "RandomBot"
     },
     {
       "user id": 5,
       "user name": "RandomLabelingMechanism5",
+      "user type": "RandomBot"
+    },
+    {
+      "user id": 7,
+      "user name": "RuleBasedLabelingMechanism2",
+      "user type": "RuleBasedBot"
+    },
+    {
+      "user id": 9,
+      "user name": "RuleBasedLabelingMechanism4",
       "user type": "RuleBasedBot"
     },
     {
@@ -217,47 +176,80 @@
     }
   ],
   "Metrics": {
-    "Completeness percentage": 100,
+    "Completeness percentage": 80,
     "Class distribution based on final instance labels": {
-      "1": 20,
-      "9": 20,
-      "3": 20,
-      "7": 40
+      "1": 25,
+      "2": 25,
+      "6": 25,
+      "7": 25
     },
     "List number of unique instances for each class label": {
-      "11": 3,
-      "12": 3,
-      "13": 2,
-      "14": 5,
-      "15": 4,
-      "1": 4,
-      "2": 4,
-      "3": 3,
-      "4": 4,
+      "1": 1,
+      "2": 3,
       "5": 3,
-      "6": 4,
-      "7": 4,
-      "8": 4,
-      "9": 4,
-      "10": 2
+      "6": 1,
+      "7": 2
     },
-    "Number of users assigned to this dataset": 6,
+    "Number of users assigned to this dataset": 7,
     "List of users assigned and their completeness percentage": {
-      "user1": "80.0%",
-      "user11": "100.0%",
-      "user2": "60.000004%",
-      "user5": "80.0%",
-      "user3": "100.0%",
-      "user12": "0.0%"
+      "user11": "80.0%",
+      "user2": "0.0%",
+      "user12": "0.0%",
+      "user9": "0.0%",
+      "user7": "0.0%",
+      "user5": "0.0%",
+      "user4": "0.0%"
     },
     "List of users assigned and their consistency percentage": {
-      "user1": "0.0%",
       "user11": "0.0%",
       "user2": "0.0%",
+      "user12": "0.0%",
+      "user9": "0.0%",
+      "user7": "0.0%",
       "user5": "0.0%",
-      "user3": "0.0%",
-      "user12": "0.0%"
+      "user4": "0.0%"
     }
   },
-  "class label assignments": []
+  "class label assignments": [
+    {
+      "instance id": 1,
+      "class label ids": [1],
+      "user id": 11,
+      "time elapsed": 0,
+      "date time": "01/01/2021 23:22:32.434"
+    },
+    {
+      "instance id": 2,
+      "class label ids": [
+        2,
+        5,
+        6
+      ],
+      "user id": 11,
+      "time elapsed": 0,
+      "date time": "01/01/2021 23:35:58.842"
+    },
+    {
+      "instance id": 3,
+      "class label ids": [
+        2,
+        5,
+        7
+      ],
+      "user id": 11,
+      "time elapsed": 0,
+      "date time": "01/01/2021 23:37:02.598"
+    },
+    {
+      "instance id": 4,
+      "class label ids": [
+        2,
+        5,
+        7
+      ],
+      "user id": 11,
+      "time elapsed": 0,
+      "date time": "01/01/2021 23:37:47.418"
+    }
+  ]
 }
