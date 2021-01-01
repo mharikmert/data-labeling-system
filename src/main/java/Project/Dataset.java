@@ -30,17 +30,6 @@ public class Dataset {
         this.flag=flag;
     }
 
-    //Overridden toString Method for DataSet class
-    @Override
-    public String toString() {
-        return "Dataset{" +
-                "id=" + id +
-                ", datasetName='" + datasetName + '\'' +
-                ", maxNumberOfLabelsPerInstance=" + maxNumberOfLabelsPerInstance +
-                ",\nlabels=" + labels +
-                ",\ninstances=" + instances +
-                '}';
-    }
     //Get method for ID
     public long getId() {
         return id;
