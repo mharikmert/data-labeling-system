@@ -19,10 +19,10 @@ public class UserInterface {
     }
 
     public void run(ArrayList<User> users){
-
+        authenticatedUser=null;
+        Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("If you want to exit write exit to User Name..");
-            Scanner scanner = new Scanner(System.in);
             System.out.print("User Name : ");
             String username=scanner.nextLine();
             if (username.toLowerCase().equals("exit"))
@@ -33,7 +33,6 @@ public class UserInterface {
             if(username.equals("") && password.equals("")) {break;}
             else if (usergotten!=null){authenticatedUser=usergotten;break;}
             else System.out.println("Wrong username or password");
-            scanner.close();
         }while(true) ;    // user control
     }
 
