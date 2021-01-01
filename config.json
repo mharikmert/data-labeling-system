@@ -1,17 +1,17 @@
 {
-  "currentDatasetID": 2 ,
+  "currentDatasetID": 1 ,
   "datasets":[
     {
       "dataset id":1,
       "dataset name":"Sentiment Dataset",
       "path":"Dataset1.json",
-      "users": [1 , 2 , 3 , 5 , 7 , 11 , 13]
+      "users": [1 , 3 , 6, 8, 13]
     },
     {
       "dataset id":2,
       "dataset name":"Multi-label Topic Classification Dataset",
       "path":"Dataset2.json",
-      "users": [1 , 3 , 5, 2 , 11 , 12]
+      "users": [2 , 4 , 5, 7, 9, 12]
     },
     {
       "dataset id":3,
@@ -25,68 +25,68 @@
       "userID":1,
       "userName":"RandomLabelingMechanism1",
       "userPassword":"",
-      "userType":"RuleBasedBot",
+      "userType":"RandomBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":2,
       "userName":"RandomLabelingMechanism2",
       "userPassword":"",
-      "userType":"RuleBasedBot",
+      "userType":"RandomBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":3,
       "userName":"RandomLabelingMechanism3",
       "userPassword":"",
-      "userType":"RuleBasedBot",
+      "userType":"RandomBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":4,
       "userName":"RandomLabelingMechanism4",
       "userPassword":"",
-      "userType":"RuleBasedBot",
+      "userType":"RandomBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":5,
       "userName":"RandomLabelingMechanism5",
       "userPassword":"",
-      "userType":"RuleBasedBot",
+      "userType":"RandomBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":6,
-      "userName":"RandomLabelingMechanism6",
+      "userName":"RuleBasedLabelingMechanism1",
       "userPassword":"",
       "userType":"RuleBasedBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":7,
-      "userName":"RandomLabelingMechanism7",
+      "userName":"RuleBasedLabelingMechanism2",
       "userPassword":"",
       "userType":"RuleBasedBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":8,
-      "userName":"RandomLabelingMechanism8",
+      "userName":"RuleBasedLabelingMechanism3",
       "userPassword":"",
       "userType":"RuleBasedBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":9,
-      "userName":"RandomLabelingMechanism9",
+      "userName":"RuleBasedLabelingMechanism4",
       "userPassword":"",
       "userType":"RuleBasedBot",
       "ConsistencyCheckProbability": 0.1
     },
     {
       "userID":10,
-      "userName":"MachineLearningLabelingMechanism",
+      "userName":"RuleBasedLabelingMechanism5",
       "userPassword":"",
       "userType":"RuleBasedBot",
       "ConsistencyCheckProbability": 0.1
