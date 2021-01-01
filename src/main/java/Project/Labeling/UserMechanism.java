@@ -1,10 +1,7 @@
 package Project.Labeling;
 
-import Project.Dataset;
-import Project.Instance;
+import Project.*;
 import Project.JsonIO.JsonFileWriter;
-import Project.Label;
-import Project.User;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,27 +10,8 @@ import java.util.Scanner;
 public class UserMechanism extends LabelingMechanism {
     private Scanner scanner = new Scanner(System.in) ;
     public void labelingMechanism(User user , Instance instance , ArrayList<Label> labels , Dataset dataset, ArrayList<User> users, ArrayList<Dataset> datasets){
-        String select = null ;
-        boolean control = false ;
         long start = System.currentTimeMillis();
-        System.out.println(instance.getId()+ "-->"+instance.getInstance());
-        for (Label label : dataset.getLabels()){
-            System.out.println(label.getId() + "->" + label.getText());
-        }
-
-        do {
-            System.out.print("Select label : ");
-            select = scanner.nextLine();
-            for (Label label : dataset.getLabels()){
-                if (String.valueOf(label.getId()).equals(select)){
-                    instance.addLabelToInstance(label);
-                    instance.setTimeStamp(LocalDateTime.now());
-                    control=true;
-                }
-            }
-            if (!control)
-                System.out.println("Select one of the labels from the list : ");
-        }while (!control);
+        UserInterface.getUserInterface().runLabel(dataset,instance);
 
         instance.setTimeStamp(LocalDateTime.now());
         user.addInstanceToUser(dataset,instance);
