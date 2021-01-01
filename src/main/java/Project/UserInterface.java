@@ -1,5 +1,6 @@
 package Project;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,6 +35,37 @@ public class UserInterface {
             else System.out.println("Wrong username or password");
             scanner.close();
         }while(true) ;    // user control
+    }
+
+    public void runLabel(Dataset dataset , Instance instance){
+
+        Scanner scanner = new Scanner(System.in);
+        String select = null ;
+        boolean control = false ;
+        System.out.println(instance.getId()+ "-->"+instance.getInstance());
+        for (Label label : dataset.getLabels()){
+            System.out.println(label.getId() + "->" + label.getText());
+        }
+
+        do {
+            System.out.println("Select labels from the list (between " + 1 + "-" + dataset.getMaxNumberOfLabelsPerInstance() + "): ");
+            select = scanner.nextLine();
+            String[] selects = select.split(",");
+            for (int i=0 ; i<selects.length ; i++){
+                selects[i]=selects[i].trim();
+                for (Label label : dataset.getLabels()){
+                    if (String.valueOf(label.getId()).equals(selects[i])){
+                        instance.addLabelToInstance(label);
+                        control=true;
+                        break;
+                    }
+                }
+            }
+            instance.setTimeStamp(LocalDateTime.now());
+            if (!control)
+                System.out.println("Select labels from the list : ");
+        }while (!control);
+
     }
 
     private User getUser(ArrayList<User> users,Object username,Object password){
