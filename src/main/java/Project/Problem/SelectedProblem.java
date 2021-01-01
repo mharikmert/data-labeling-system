@@ -30,7 +30,6 @@ public class SelectedProblem extends Problem {
         else
             selectedUsers.add(UserInterface.getUserInterface().getAuthenticatedUser());
    //     dataset.setAssignedUsers(selectedUsers);                // write users to dataset
-
         for(User currentUser : selectedUsers){
             if(currentUser.assignedDataset(dataset)==null)continue;
 
@@ -107,7 +106,7 @@ public class SelectedProblem extends Problem {
     // we find new user it works again and again
     public boolean userControl(User user){
 
-        return user.getUserType().equals("RuleBasedBot") ;
+        return !user.getUserType().equals("Human") ;
 
     }
 
