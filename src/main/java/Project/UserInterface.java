@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.Logger;
+
 public class UserInterface {
 
     private User authenticatedUser;
@@ -37,7 +40,9 @@ public class UserInterface {
     }
 
     public void runLabel(Dataset dataset , Instance instance){
-
+        final Logger logger = Logger.getLogger("InstanceTagger");
+        Appender consoleAppender=logger.getRootLogger().getAppender("consoleAppender");
+        logger.getRootLogger().removeAppender(consoleAppender);
         Scanner scanner = new Scanner(System.in);
         String select = null ;
         boolean control = false ;
@@ -56,15 +61,16 @@ public class UserInterface {
                     if (String.valueOf(label.getId()).equals(selects[i])){
                         instance.addLabelToInstance(label);
                         control=true;
+                        logger.info("user id:"+authenticatedUser.getUserID()+" "+authenticatedUser.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+label.getId()+":"+label.getText()+" instance:\""+instance.getInstance()+"\"");
                         break;
-                    }
+                   }
                 }
             }
             instance.setTimeStamp(LocalDateTime.now());
             if (!control)
                 System.out.println("Select labels from the list : ");
         }while (!control);
-
+        logger.getRootLogger().addAppender(consoleAppender);
     }
 
     private User getUser(ArrayList<User> users,Object username,Object password){
