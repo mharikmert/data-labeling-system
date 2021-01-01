@@ -61,7 +61,7 @@ public class RuleBasedMechanism extends LabelingMechanism {
 
             }
             int usersCount=3;
-            if(usersSet.size()>3)usersCount=usersSet.size();
+            usersCount+=usersSet.size();
                 // multilabel için kullanılmış labelları listeden çıkarıyor.
                 for (Label usedLabels : instance.getLabels()){
                     tempLabels.removeIf(removeUsedLabels -> removeUsedLabels.getId() == usedLabels.getId());
