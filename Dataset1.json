@@ -21,11 +21,11 @@
       "id": 1,
       "instance": "aldım eve gidince kutusundan çıkardım hasarlıydı",
       "Metrics": {
-        "Total number of label assignments": 2,
-        "Number of unique label assignments": 1,
+        "Total number of label assignments": 0,
+        "Number of unique label assignments": 0,
         "Number of unique users": 0,
-        "Most frequent class label and percentage": {"2": 100},
-        "Class labels and percentages": {"2": 100},
+        "Most frequent class label and percentage": {},
+        "Class labels and percentages": {},
         "Entropy": 0
       }
     },
@@ -33,11 +33,11 @@
       "id": 2,
       "instance": "yöneticisi bizzat ilgilenerek gerekli özverili örneği göstererek güzel teşekkürler",
       "Metrics": {
-        "Total number of label assignments": 4,
+        "Total number of label assignments": 3,
         "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"2": 100},
-        "Class labels and percentages": {"2": 100},
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"3": 100},
+        "Class labels and percentages": {"3": 100},
         "Entropy": 0
       }
     },
@@ -45,12 +45,15 @@
       "id": 3,
       "instance": "mesela kamerası aldık yoktu",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"1": 100},
-        "Class labels and percentages": {"1": 100},
-        "Entropy": 0
+        "Total number of label assignments": 3,
+        "Number of unique label assignments": 2,
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"3": 66.66667},
+        "Class labels and percentages": {
+          "1": 33.333336,
+          "3": 66.66667
+        },
+        "Entropy": 0.9182958340544896
       }
     },
     {
@@ -60,7 +63,7 @@
         "Total number of label assignments": 2,
         "Number of unique label assignments": 2,
         "Number of unique users": 0,
-        "Most frequent class label and percentage": {"3": 50},
+        "Most frequent class label and percentage": {"1": 50},
         "Class labels and percentages": {
           "1": 50,
           "3": 50
@@ -72,24 +75,30 @@
       "id": 5,
       "instance": "şimdilik memnun kaldım umarım kararım değişmez",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
+        "Total number of label assignments": 2,
+        "Number of unique label assignments": 2,
         "Number of unique users": 0,
-        "Most frequent class label and percentage": {"3": 100},
-        "Class labels and percentages": {"3": 100},
-        "Entropy": 0
+        "Most frequent class label and percentage": {"2": 50},
+        "Class labels and percentages": {
+          "1": 50,
+          "2": 50
+        },
+        "Entropy": 1
       }
     },
     {
       "id": 6,
       "instance": "durduğu yerde sessiz moduna geçmesi başta fazla giden bataryasının ayda kapasitesinin ciddi anlamda düşmesi dışında fiyatı düşünüldüğünde iyi",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"1": 100},
-        "Class labels and percentages": {"1": 100},
-        "Entropy": 0
+        "Total number of label assignments": 2,
+        "Number of unique label assignments": 2,
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"1": 50},
+        "Class labels and percentages": {
+          "1": 50,
+          "2": 50
+        },
+        "Entropy": 1
       }
     },
     {
@@ -98,9 +107,9 @@
       "Metrics": {
         "Total number of label assignments": 3,
         "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"2": 100},
-        "Class labels and percentages": {"2": 100},
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"3": 100},
+        "Class labels and percentages": {"3": 100},
         "Entropy": 0
       }
     },
@@ -108,36 +117,46 @@
       "id": 8,
       "instance": "şarjı hemen bitiriyor",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"1": 100},
-        "Class labels and percentages": {"1": 100},
-        "Entropy": 0
+        "Total number of label assignments": 4,
+        "Number of unique label assignments": 2,
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"2": 75},
+        "Class labels and percentages": {
+          "2": 75,
+          "3": 25
+        },
+        "Entropy": 0.8112781244591328
       }
     },
     {
       "id": 9,
       "instance": "in yeni kampanyasi cok basarili",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
-        "Number of unique users": 0,
-        "Most frequent class label and percentage": {"1": 100},
-        "Class labels and percentages": {"1": 100},
-        "Entropy": 0
+        "Total number of label assignments": 3,
+        "Number of unique label assignments": 2,
+        "Number of unique users": 1,
+        "Most frequent class label and percentage": {"1": 66.66667},
+        "Class labels and percentages": {
+          "1": 66.66667,
+          "3": 33.333336
+        },
+        "Entropy": 0.9182958340544896
       }
     },
     {
       "id": 10,
       "instance": "kullanışlı fiyata alınabilecek güzel düsünmeden alabilirsiniz",
       "Metrics": {
-        "Total number of label assignments": 1,
-        "Number of unique label assignments": 1,
+        "Total number of label assignments": 4,
+        "Number of unique label assignments": 3,
         "Number of unique users": 0,
-        "Most frequent class label and percentage": {"2": 100},
-        "Class labels and percentages": {"2": 100},
-        "Entropy": 0
+        "Most frequent class label and percentage": {"2": 50},
+        "Class labels and percentages": {
+          "1": 25,
+          "2": 50,
+          "3": 25
+        },
+        "Entropy": 0.9463946303571862
       }
     }
   ],
@@ -145,169 +164,70 @@
     {
       "user id": 1,
       "user name": "RandomLabelingMechanism1",
-      "user type": "RandomBot"
+      "user type": "RuleBasedBot"
+    },
+    {
+      "user id": 2,
+      "user name": "RandomLabelingMechanism2",
+      "user type": "RuleBasedBot"
     },
     {
       "user id": 3,
       "user name": "RandomLabelingMechanism3",
-      "user type": "RandomBot"
+      "user type": "RuleBasedBot"
+    },
+    {
+      "user id": 5,
+      "user name": "RandomLabelingMechanism5",
+      "user type": "RuleBasedBot"
     },
     {
       "user id": 7,
       "user name": "RandomLabelingMechanism7",
-      "user type": "RandomBot"
+      "user type": "RuleBasedBot"
     },
     {
       "user id": 11,
       "user name": "Enes",
       "user type": "Human"
+    },
+    {
+      "user id": 13,
+      "user name": "1",
+      "user type": "Human"
     }
   ],
   "Metrics": {
-    "Completeness percentage": 100,
+    "Completeness percentage": 90,
     "Class distribution based on final instance labels": {
-      "1": 40,
-      "2": 40,
-      "3": 20
+      "1": 33.333336,
+      "2": 33.333336,
+      "3": 33.333336
     },
     "List number of unique instances for each class label": {
-      "1": 5,
+      "1": 6,
       "2": 4,
-      "3": 2
+      "3": 7
     },
-    "Number of users assigned to this dataset": 4,
+    "Number of users assigned to this dataset": 7,
     "List of users assigned and their completeness percentage": {
-      "user1": "0.0%",
-      "user11": "100.0%",
-      "user7": "0.0%",
-      "user3": "0.0%"
+      "user1": "60.000004%",
+      "user11": "0.0%",
+      "user2": "60.000004%",
+      "user13": "0.0%",
+      "user7": "50.0%",
+      "user5": "70.0%",
+      "user3": "20.0%"
     },
     "List of users assigned and their consistency percentage": {
       "user1": "0.0%",
-      "user11": "75.0%",
+      "user11": "0.0%",
+      "user2": "0.0%",
+      "user13": "0.0%",
       "user7": "0.0%",
+      "user5": "0.0%",
       "user3": "0.0%"
     }
   },
-  "class label assignments": [
-    {
-      "instance id": 1,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:50.925"
-    },
-    {
-      "instance id": 1,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:52.400"
-    },
-    {
-      "instance id": 2,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:54.200"
-    },
-    {
-      "instance id": 2,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:55.242"
-    },
-    {
-      "instance id": 3,
-      "class label ids": [1],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:56.070"
-    },
-    {
-      "instance id": 2,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:57.299"
-    },
-    {
-      "instance id": 4,
-      "class label ids": [1],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:58.228"
-    },
-    {
-      "instance id": 2,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:35:59.399"
-    },
-    {
-      "instance id": 5,
-      "class label ids": [3],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:36:00.391"
-    },
-    {
-      "instance id": 6,
-      "class label ids": [1],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:36:07.371"
-    },
-    {
-      "instance id": 7,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:36:08.921"
-    },
-    {
-      "instance id": 7,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:36:10.280"
-    },
-    {
-      "instance id": 8,
-      "class label ids": [1],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:36:11.091"
-    },
-    {
-      "instance id": 7,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:37:06.148"
-    },
-    {
-      "instance id": 9,
-      "class label ids": [1],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:37:09.740"
-    },
-    {
-      "instance id": 4,
-      "class label ids": [3],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:37:10.894"
-    },
-    {
-      "instance id": 10,
-      "class label ids": [2],
-      "user id": 11,
-      "time elapsed": 0,
-      "date time": "29/12/2020 03:37:11.902"
-    }
-  ]
+  "class label assignments": []
 }
