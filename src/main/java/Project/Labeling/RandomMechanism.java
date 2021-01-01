@@ -22,7 +22,7 @@ public class RandomMechanism extends LabelingMechanism {
         for (int i=0 ; i<numberOfLabels ; i++){
             // select random label with createRandomLabel method
 
-            Label randomLabel = createRandomLabel(dataset.getLabels());
+            Label randomLabel = labels.get((int)(Math.random()*labels.size()));
             // if the instance has no label , add the label directly , we don't need to control.
             if (instance.getLabels().size() == 0){
                 instance.addLabelToInstance(randomLabel);
@@ -34,7 +34,7 @@ public class RandomMechanism extends LabelingMechanism {
                     // this instance , don't add same label again
                     while (instance.getLabels().get(j).getId() == randomLabel.getId()){
                         // create new label
-                        randomLabel = createRandomLabel(dataset.getLabels());
+                        randomLabel = labels.get((int)(Math.random()*labels.size())) ;
                         j=0 ;
                     }
                 }
@@ -54,12 +54,6 @@ public class RandomMechanism extends LabelingMechanism {
 
         long finish = System.currentTimeMillis();
         instance.setTimeElapsed(finish-start);
-
-    }
-
-    public Label createRandomLabel(ArrayList<Label> labels){
-        // randomly select one label from labels array
-        return labels.get((int)(Math.random()*labels.size()));
 
     }
 
