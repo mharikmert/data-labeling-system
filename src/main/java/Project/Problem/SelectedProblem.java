@@ -92,21 +92,12 @@ public class SelectedProblem extends Problem {
 
     // in this method , we create com.User array which we select the number of user and select the user or users randomly.
     public ArrayList<User> selectUsers(ArrayList<User> users, ArrayList<User> selectedUsers,Dataset dataset){
-            for (User user: users) {
-                if(user.assignedDataset(dataset)!=null && userControl(user)){
+        for (User user: users) {
+                if(user.assignedDataset(dataset)!=null && !user.getUserType().equals("Human")){
                     selectedUsers.add(user);
                 }
         }
-
         return selectedUsers ;
-
-    }
-
-    // in this method , we check if one user added before the selectedUsers array , if user added before , return false and while
-    // we find new user it works again and again
-    public boolean userControl(User user){
-
-        return !user.getUserType().equals("Human") ;
 
     }
 
