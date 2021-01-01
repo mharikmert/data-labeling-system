@@ -4,6 +4,7 @@ import Project.Dataset;
 import Project.Instance;
 import Project.JsonIO.JsonFileWriter;
 import Project.Labeling.RandomMechanism;
+import Project.Labeling.RuleBasedMechanism;
 import Project.Labeling.UserMechanism;
 import Project.User;
 import Project.UserInterface;
@@ -67,6 +68,7 @@ public class SelectedProblem extends Problem {
                                                          labeledInstances.get(previousSelectRandom).getInstance());
                     if (currentUser.getUserType().equals("RandomBot")) super.labelingMechanism=new RandomMechanism();
                     else if(currentUser.getUserType().equals("Human")) super.labelingMechanism=new UserMechanism();
+                    else if(currentUser.getUserType().equals("RuleBasedBot")) super.labelingMechanism=new RuleBasedMechanism();
                     super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
@@ -76,6 +78,7 @@ public class SelectedProblem extends Problem {
                     Instance copyInstance = new Instance(currentInstance.getId(),currentInstance.getInstance());
                     if (currentUser.getUserType().equals("RandomBot")) super.labelingMechanism=new RandomMechanism();
                     else if(currentUser.getUserType().equals("Human")) super.labelingMechanism=new UserMechanism();
+                    else if(currentUser.getUserType().equals("RuleBasedBot")) super.labelingMechanism=new RuleBasedMechanism();
                     super.labelingMechanism.labelingMechanism(currentUser,copyInstance,dataset.getLabels(),dataset,users,datasets);
                 }
 
@@ -104,7 +107,7 @@ public class SelectedProblem extends Problem {
     // we find new user it works again and again
     public boolean userControl(User user){
 
-        return user.getUserType().equals("RandomBot") ;
+        return user.getUserType().equals("RuleBasedBot") ;
 
     }
 
