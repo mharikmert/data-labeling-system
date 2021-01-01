@@ -100,7 +100,7 @@ public class InstanceMetrics{
         return list;
     }
 
-    private ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
+    public ArrayList<HashMap<Object,Object>> labelAssignments(Dataset dataset, Instance instance, ArrayList<User> users){
         ArrayList<HashMap<Object,Object>> list=new ArrayList<>();
         for(User user:users)
             for(Dataset userDataset:user.getDatasets())
