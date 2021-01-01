@@ -19,17 +19,6 @@ public class Instance {
         labels = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return "Instance{" +
-                "id=" + id +
-                ", instance='" + instance + '\'' +
-                ", labels=" + labels +
-                ", timeElapsed=" + timeElapsed +
-                ", timestamp=" + timestamp +
-                '}';
-    }
-
     //Get method for ID
     public long getId() {
         return id;
@@ -60,31 +49,29 @@ public class Instance {
         this.labels = labels;
     }
 
+    //Get method for timeElapsed
+    public long getTimeElapsed() {
+        return timeElapsed;
+    }
+
+    //Set method for timeElapsed
+    public void setTimeElapsed(long timeElapsed) {
+        this.timeElapsed = timeElapsed;
+    }
+
+    //Get method for timeStamp
+    public LocalDateTime getTimeStamp(){
+        return this.timestamp;
+    }
+
+    //Set method for timeStamp
+    public void setTimeStamp(LocalDateTime timestamp){
+        this.timestamp=timestamp;
+    }
+
     //This method is for add label to the instance
     public void addLabelToInstance(Label label){
         labels.add(label);
     }
 
-    //This method is for to write the labels
-    void writeLabels(){
-        for (Label label : labels) {
-            System.out.println("label id ->" +label.getId());
-        }
-    }
-
-    public long getTimeElapsed() {
-        return timeElapsed;
-    }
-
-    public void setTimeElapsed(long timeElapsed) {
-        this.timeElapsed = timeElapsed;
-    }
-
-    public LocalDateTime getTimeStamp(){
-        return this.timestamp;        
-    }
-
-    public void setTimeStamp(LocalDateTime timestamp){
-        this.timestamp=timestamp;
-    }
 }
