@@ -55,18 +55,24 @@ public class UserInterface {
             System.out.println("Select labels from the list (between " + 1 + "-" + dataset.getMaxNumberOfLabelsPerInstance() + "): ");
             select = scanner.nextLine();
             String[] selects = select.split(",");
-            for (int i=0 ; i<selects.length ; i++){
-                selects[i]=selects[i].trim();
-                for (Label label : dataset.getLabels()){
-                    if (String.valueOf(label.getId()).equals(selects[i])){
-                        instance.addLabelToInstance(label);
-                        control=true;
-                        logger.info("user id:"+authenticatedUser.getUserID()+" "+authenticatedUser.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+label.getId()+":"+label.getText()+" instance:\""+instance.getInstance()+"\"");
-                        break;
-                   }
+            try {
+                for (String s:selects){
+                    long sTemp=Long.parseLong(s);
+                    if(selects.length>dataset.getMaxNumberOfLabelsPerInstance()|| sTemp<1 || sTemp>dataset.getMaxNumberOfLabelsPerInstance())throw new Exception();}
+                for (int i=0 ; i<selects.length ; i++){
+                    selects[i]=selects[i].trim();
+                    for (Label label : dataset.getLabels()){
+                        if (String.valueOf(label.getId()).equals(selects[i])){
+                            instance.addLabelToInstance(label);
+                            control=true;
+                            logger.info("user id:"+authenticatedUser.getUserID()+" "+authenticatedUser.getUserName()+" tagged instance id:"+instance.getId()+" with class label "+label.getId()+":"+label.getText()+" instance:\""+instance.getInstance()+"\"");
+                            break;
+                        }
+                    }
                 }
+                instance.setTimeStamp(LocalDateTime.now());
             }
-            instance.setTimeStamp(LocalDateTime.now());
+            catch (Exception e) {}
             if (!control)
                 System.out.println("Select labels from the list : ");
         }while (!control);
