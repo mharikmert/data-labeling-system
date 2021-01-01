@@ -22,16 +22,6 @@ public class User {
         this.password = password ;
     }
 
-    public String toString() {
-        return "\nUser{" +
-                "userID=" + userID +
-                ", userName='" + userName + '\'' +
-                ", userType='" + userType + '\'' +
-                ", consistenctCheckProbability=" + consistencyCheckProbability +
-                ", \ndatasets=" + datasets.toString() +
-                "'}'";
-    }
-
     //Get method for ID
     public long getUserID() {
         return userID;
@@ -52,6 +42,15 @@ public class User {
         this.userName = userName;
     }
 
+    //Set method for password
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     //Get method for UserType
     public String getUserType() {
         return userType;
@@ -62,19 +61,19 @@ public class User {
         this.userType = userType;
     }
 
-    //Get method for Instances
-    public ArrayList<Instance> getInstances(Dataset dataset) {
-        for (Dataset d:datasets)
-            if (dataset.getId()==d.getId())
-                return d.getInstances();
-        return null;
+    //Get method for consistency check probability
+    public double getConsistencyCheckProbability() {
+        return consistencyCheckProbability;
     }
 
-    //Set method for Instances
-    public void setInstances(Dataset dataset,ArrayList<Instance> instances) {
-        for(Dataset d:datasets)
-            if(dataset.getId()==d.getId())
-                d.setInstances(instances);
+    //Set method for consistency check probability
+    public void setConsistencyCheckProbability(double consistencyCheckProbability) {
+        this.consistencyCheckProbability = consistencyCheckProbability;
+    }
+
+    //Get method for Dataset
+    public ArrayList<Dataset> getDatasets() {
+        return datasets;
     }
 
     //This method is for to add instance to the user
@@ -84,24 +83,14 @@ public class User {
                 d.getInstances().add(instance);
     }
 
-    //This method to print the instances of current user
-    public void writeInstances(){
-        for(Dataset d:datasets)
-            for(Instance instance:d.getInstances()){
-                System.out.println("instance id ->"+instance.getId());
-                instance.writeLabels();
-        }
-    }
-
-    public ArrayList<Dataset> getDatasets() {
-        return datasets;
-    }
-
+    //This method for assignin dataset
     public void assignDataset(Dataset dataset){
         Dataset newDataset;
         newDataset=new Dataset(dataset.getId(),null,0,null, new ArrayList<Instance>(),null,false);
         datasets.add(newDataset);
     }
+
+    //This method returns assigned dataset of users
     public Dataset assignedDataset(Dataset dataset){
         for(Dataset d:datasets)
             if(d.getId()==dataset.getId()){
@@ -110,19 +99,13 @@ public class User {
         return null;
     }
 
-    public double getConsistencyCheckProbability() {
-        return consistencyCheckProbability;
+    //Get all Instances from dataset parameter
+    public ArrayList<Instance> getInstances(Dataset dataset) {
+        for (Dataset d:datasets)
+            if (dataset.getId()==d.getId())
+                return d.getInstances();
+        return null;
     }
 
-    public void setConsistencyCheckProbability(double consistencyCheckProbability) {
-        this.consistencyCheckProbability = consistencyCheckProbability;
-    }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
