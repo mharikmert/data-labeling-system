@@ -1,6 +1,7 @@
 package Metrics;
 
 import Project.Dataset;
+import Project.Instance;
 import Project.JsonIO.JsonFileReader;
 import Project.Metrics.InstanceMetrics;
 import Project.Solution.Solution;
@@ -11,6 +12,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class InstanceMetricsTest {
@@ -77,26 +80,14 @@ public class InstanceMetricsTest {
             i++;
         }
     }
-
-    // @Test
-    // public void testFrequencyListOfLabels(){
-    //     for(Dataset dataset: datasets){
-    //         int i = 0;
-    //         MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().frequencyListOfLabels(dataset,dataset.getInstances().get(i),users).size(),
-    //                 Matchers.equalTo(0));
-    //         i++;
-    //     }
-    // }
-
-    // @Test
-    // public void testLabelAssignments(){
-    //     for(Dataset dataset: datasets){
-    //         int i = 0;
-    //         MatcherAssert.assertThat(InstanceMetrics.getInstanceMetrics().labelAssignments(dataset,dataset.getInstances().get(i),users).size(),
-    //                 Matchers.equalTo(0));
-    //         i++;
-    //     }
-
-    // }
-
+    @Test // test for protected frequencyListOfLabels method
+    public void testFrequencyListOfLabels() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method method = InstanceMetrics.class.getDeclaredMethod("frequencyListOfLabels", Dataset.class, Instance.class, ArrayList.class);
+        method.setAccessible(true);
+        InstanceMetrics instanceMetrics = InstanceMetrics.getInstanceMetrics();
+        for(Dataset dataset: datasets){
+            int i = 0;
+            Assert.assertNotNull(method.invoke(instanceMetrics, dataset,users));
+        }
+    }
 }
