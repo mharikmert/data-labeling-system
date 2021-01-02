@@ -4,8 +4,6 @@ import Project.Dataset;
 import Project.JsonIO.JsonFileReader;
 import Project.Problem.SelectedProblem;
 import Project.User;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -35,7 +33,7 @@ public class SelectedProblemTest {
         }
 
     }
-    //test user controle method with user type
+    //test user control method with user type
     @Test
     public void testUserControl(){
         for(User user : users){
