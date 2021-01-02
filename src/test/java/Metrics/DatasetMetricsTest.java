@@ -2,7 +2,6 @@ package Metrics;
 
 import Project.Dataset;
 import Project.JsonIO.JsonFileReader;
-import Project.Main;
 import Project.Metrics.DatasetMetrics;
 import Project.Solution.Solution;
 import Project.User;
@@ -12,25 +11,19 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class DatasetMetricsTest {
-    private ArrayList<User> users = new ArrayList<>();
-    private ArrayList<Dataset> datasets =new ArrayList<>();
-    //create a json file reader
-    JsonFileReader jsonFileReader = new JsonFileReader("config.json",datasets,users);
+    private final ArrayList<User> users = new ArrayList<>();
+    private final ArrayList<Dataset> datasets =new ArrayList<>();
 
     @BeforeEach
     public void init(){
+        new JsonFileReader("config.json",datasets,users);
         Solution.getSolution().solveProblem(users,datasets);
     }
-//    @Test
-//     public void testLabeldInstancesList(){
-//        for(Dataset dataset: datasets){
-//            Assert.assertNotNull(DatasetMetrics.getDatasetMetrics().labeledInstanceList(dataset, users));
-//        }
-//    }
-
    @Test
     public void testListofAssignedUsersWithCompeletenessPercentage(){
        for(Dataset dataset: datasets){
@@ -59,10 +52,22 @@ public class DatasetMetricsTest {
        }
    }
 
-   @Test
-    public void testAssignedUsers(){
-       for(Dataset dataset:datasets){
-           MatcherAssert.assertThat(DatasetMetrics.getDatasetMetrics().classDistribuionBasedOnFinal(dataset).size(),Matchers.equalTo(0));
-       }
-   }
+   @Test // test for protected assignUsers method
+    public void testAssignedUsers() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        //reach the method with java Method Library and set it accessible to invoke
+       Method method = DatasetMetrics.class.getDeclaredMethod("assignedUsers", Dataset.class, ArrayList.class);
+        method.setAccessible(true);
+       DatasetMetrics datasetMetrics = DatasetMetrics.getDatasetMetrics();
+       for(Dataset dataset: datasets)
+           Assert.assertNotNull(method.invoke(datasetMetrics,dataset,users));
+    }
+
+   @Test //test for protected labeledInstanceList method
+    public void testLabeledInstanceList() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+       Method method = DatasetMetrics.class.getDeclaredMethod("labeledInstanceList", Dataset.class, ArrayList.class);
+       method.setAccessible(true);
+       DatasetMetrics datasetMetrics = DatasetMetrics.getDatasetMetrics();
+       for(Dataset dataset: datasets)
+            Assert.assertNotNull(method.invoke(datasetMetrics,dataset,users));
+    }
 }
