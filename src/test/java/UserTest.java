@@ -6,12 +6,11 @@ public class UserTest {
     private long userID;
     private String userName;
     private String userType;
-    private double consistenctCheckProbability;
+    private double consistencyCheckProbability;
 
-    //constructor test with check arraylist datasets
-    @Test
+    @Test //constructor test with check arraylist datasets
     public void constructorTest(){
-        User user = new User(userID,userName, userType, consistenctCheckProbability, " ");
+        User user = new User(userID,userName, userType, consistencyCheckProbability, "");
         Assert.assertNotNull(user.getDatasets());
     }
 }
